@@ -1,0 +1,51 @@
+{
+ "name": "categories",
+ "children": [
+  {
+   "name": "moebel",
+   "children": [
+    {
+     "name": "sofa",
+     "children": [
+      {"name": "3er-Sofa", "value": 30},
+      {"name": "2er-Sofa", "value": 10}
+     ]
+    },
+    {
+     "name": "tisch",
+     "children": [
+      {"name": "Holztisch", "value": 20},
+      {"name": "Plastetisch", "value": 10}
+     ]
+    },
+    {
+     "name": "stuhl",
+     "children": [
+      {"name": "Klappstuhl", "value": 3}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "T-Shirts",
+   "children": [
+    {"name": "langaermlig", "value": 100},
+    {"name": "kurz", "value": 200}
+   ]
+  },
+  {
+   "name": "Elektronik",
+   "children": [
+    {
+     "name": "Computer",
+     "children": [
+      {"name": "TestPC", "value": 300},
+      {"name": "Laptop", "value": 20}
+     ]
+    },
+    {"name": "MP3-Player", "value": 50},
+    {"name": "Kamera", "value": 25}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,281 @@
+body{
+    padding: 0;
+}
+
+/* Top links ================================================================================ */
+@media screen and (max-width: 600px) {
+    
+    .col-main { float: none; width:100%;}
+    
+    .header { 
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        
+        display: box;
+        box-orient: horizontal;
+    }
+    .header > div:nth-child(2){
+        -webkit-box-flex: 1;
+        box-flex: 1;
+    }
+
+    .cartDiv{
+        width: 40px;
+        height: 30px;
+        background: url(../images/cart_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
+        cursor: pointer;
+        border: solid 1px #666;
+        border-radius: 5px;
+        margin: 2% 5% 0 2%;
+    }
+    
+    .naviDiv{
+        width: 40px;
+        height: 30px;
+        background: url(../images/menu_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
+        cursor: pointer;
+        border: solid 1px #666;
+        border-radius: 5px;
+        margin: 2% 5% 0 2%;
+    }
+
+    #menu-icon {
+        /*color: #000;
+        width: 100%;
+        height: 30px;
+        background: url(../images/menu_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
+        padding: 8px 10px 0 20%;
+        cursor: pointer;
+        border: solid 1px #666;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);
+        display: block;*/
+    }
+    #cart-icon {
+        /*color: #000;
+        width: 100%;
+        height: 30px;
+        background: url(../images/cart_icon_tall.png) no-repeat scroll center #ECEBEB; /*10px center #ECEBEB;*/
+        /*padding: 8px 10px 0 20%;
+        cursor: pointer;
+        border: solid 1px #666;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.3);*/
+    }
+    
+    .top-links {
+        clear: both;
+        position: absolute;
+        top: 38px;
+        width: 160px;
+        z-index: 10000;
+        padding: 5px;
+        background: #f8f8f8;
+        border: solid 1px #999;
+        margin: 0;
+        display: none;
+    }
+    
+    
+    
+    .home-slider{
+        display: none;
+    }
+    
+    #main{
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+    
+    .std /*#main > aside*/{
+        -webkit-order: 0;
+        order: 0;
+    }
+    
+    #main > aside {
+        -webkit-order: 0;
+        order: 0;
+    }
+    
+/* Reviews on product page ================================================================================ */
+
+    .add-review-icon{
+        width: 35px;
+        height: 30px;
+        background: url(../images/add_icon_tall.png) no-repeat scroll 5px center #ECEBEB;
+        cursor: pointer;
+        border: solid 1px #666;
+        border-radius: 5px;
+    }
+    
+    .add-review-icon{
+        float: left;
+    }
+    #product-description-header, #product-additional-header{
+        background-color: #ECEBEB;
+        width: 100%;
+    }
+    #product-description-header span, #product-additional-header span{
+        clear: both;
+        float: none;
+    }
+    #product-description-header img, #product-additional-header img{
+        float: right;
+    }
+    #description-content-hidden{
+        display: none;
+    }
+    #product-attribute-specs-table{
+        display: none;
+    }
+    #description-down-icon, #additional-down-icon{
+        cursor: pointer;
+    }
+    .product-img-box{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .rating-links img{
+        float: right;
+    }
+    .short-description{
+        margin: 0 10px 0 10px;
+        /*font-family: sans-serif;*/
+        font-size: 1.166666667em; /*14px / 12px*/
+    }
+    .add-to-cart input{
+        width: 30%;
+    }
+    .bjqs li img{
+        width: 10%;
+    }
+    
+    
+    /* Category Divs ======================================================= */
+    .main-category-div{
+        margin: 5px 1% 5px 1%;
+        height: 80px;
+        width: 100%;
+        /*float: left;*/
+    }
+    
+    .home-categories-div a{
+        text-decoration: none;
+    }
+    
+    .category-name{
+        text-decoration: none;
+        font-family: sans-serif;
+        
+    }
+    
+    .category-name h2{
+        color: #b94a48;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+    
+    
+  
+  footer {
+    clear:both;
+    background: #373332;
+    color: #a7a3a2;
+    width: 100%;
+    border-top: 1px solid #878382;
+    padding-bottom: 1em;
+   }
+
+  #footer-links-ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  #footer-links-ul li {
+    border: solid #878382;
+    border-width: 0 0 1px 0;
+  }
+
+  #footer-links-ul li.current a {color: #9b9796;}
+  #footer-links-ul li.current a:hover {color: #111;}
+
+  #footer-links-ul a {
+      float: none;
+    color:#fff;
+    padding: 0.75em 5%;
+    text-decoration: none;
+    display: block;
+    background-color: #575352;
+    background-image: -webkit-linear-gradient(top, #777372, #676362);
+    background-image: -moz-linear-gradient(top, #777372, #676362);
+    background-image: -ms-linear-gradient(top, #777372, #676362);
+    background-image: -o-linear-gradient(top, #777372, #676362);
+  }
+
+  #footer-links-ul a:hover {
+    background-color: #777372;
+    background-image: -webkit-linear-gradient(top, #878382, #777372);
+    background-image: -moz-linear-gradient(top, #878382, #777372);
+    background-image: -ms-linear-gradient(top, #878382, #777372);
+    background-image: -o-linear-gradient(top, #878382, #777372);
+    color: #111;
+  }
+  
+  
+  #nav {
+	     position: fixed;
+	     top: 30;
+	     left: 0;
+	     float: none;
+	     width: 100%;
+	     margin: 0;
+	     padding: 0;
+	     -webkit-border-radius: 0;
+	     -moz-border-radius: 0;
+	     border-radius: 0;
+	}
+	 
+	#nav ul li {
+	     float: none;
+	     text-align: center;
+	     border-bottom: 1px solid #555;
+	}
+	 #nav ul li:last-child {
+	     border-bottom: none;
+	}
+	#nav ul li.close {
+	     display: block;
+	}
+	.nav-open {
+	     /*position: fixed;
+	     top: 0;
+	     left: 0;*/
+	     background: #333;
+	     font-family: Arial, sans-serif;
+	     display: block;
+	     width: 50%;
+		height: 30px;
+	}
+	 
+	.nav-open a {
+	     padding: 10px 15px;
+	     display: block;
+	     color: #fff;
+	     text-align: center;
+	     text-decoration: none;
+	}
+#nav {
+     left: -200%;
+}
+#nav:target {
+     left: 0;
+}
+#nav {
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+     -o-transition: all 1s ease-in-out;
+     -ms-transition: all 1s ease-in-out;
+     transition: all 1s ease-in-out;
+}
+}

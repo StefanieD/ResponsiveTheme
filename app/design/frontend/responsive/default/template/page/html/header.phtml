@@ -1,0 +1,31 @@
+<script type="text/javascript">
+jQuery(document).ready(function($){
+
+	/* prepend menu icon */
+	$('#nav-wrap').prepend('<div id="menu-icon"></div>');
+	
+	/* toggle nav */
+	$(".naviDiv").on("click", function(){
+		$(".top-links").slideToggle();
+		$(this).toggleClass("active");
+	});
+
+});
+</script>
+
+<div class="header-container">
+    <div class="header">
+        <div class="naviDiv">
+            <nav id="nav-wrap"> 
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </nav>
+        </div>
+
+        <div class="logoDiv">Logo</div>
+
+        <div class="cartDiv">
+            <div id="cart-icon"></div>
+        </div>
+    </div>
+    
+</div>

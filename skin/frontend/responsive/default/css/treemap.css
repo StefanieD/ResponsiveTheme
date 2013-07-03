@@ -1,0 +1,195 @@
+/*html {
+    min-width: 1040px;
+}
+body {
+    background: none repeat scroll 0 0 #FCFCFA;
+    color: #333333;
+    font-family: "PT Serif",serif;
+    margin: 1em auto 4em;
+    position: relative;
+    width: 960px;
+}
+header, footer, h1, h2, h3, h4, aside {
+    color: #000000;
+    font-family: "PT Sans",sans-serif;
+}
+h1 {
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin: 0.3em 0 0.1em;
+}
+h2 {
+    margin-top: 2em;
+}
+h1, h2 {
+    text-rendering: optimizelegibility;
+}
+h2 a {
+    color: #CCCCCC;
+    left: -20px;
+    position: absolute;
+    width: 740px;
+}
+footer {
+    font-size: small;
+    margin-top: 8em;
+}
+header aside {
+    margin-top: 88px;
+}
+header aside, footer aside {
+    color: #636363;
+    text-align: right;
+}
+aside {
+    font-size: small;
+    position: absolute;
+    right: 0;
+    width: 180px;
+}
+.attribution {
+    font-size: small;
+    margin-bottom: 2em;
+}
+body > p, li > p {
+    line-height: 1.5em;
+}
+body > p {
+    width: 720px;
+}
+body > blockquote {
+    width: 640px;
+}
+blockquote q {
+    display: block;
+    font-style: oblique;
+}
+li {
+    width: 680px;
+}
+a {
+    color: steelblue;
+}
+a:not(:hover) {
+    text-decoration: none;
+}
+pre, code, textarea {
+    font-family: "Menlo",monospace;
+}
+code {
+    line-height: 1em;
+}
+textarea {
+    font-size: 100%;
+}
+body > pre {
+    border-left: 2px solid #CCCCCC;
+    margin: 2em 0 2em -20px;
+    padding-left: 18px;
+}
+.html .value, .javascript .string, .javascript .regexp {
+    color: #756BB1;
+}
+.html .tag, .css .tag, .javascript .keyword {
+    color: #3182BD;
+}
+.comment {
+    color: #636363;
+}
+.html .doctype, .javascript .number {
+    color: #31A354;
+}
+.html .attribute, .css .attribute, .javascript .class, .javascript .special {
+    color: #E6550D;
+}
+svg {
+    font: 10px sans-serif;
+}
+.axis path, .axis line {
+    fill: none;
+    shape-rendering: crispedges;
+    stroke: #000000;
+}
+sup, sub {
+    line-height: 0;
+}
+q:before {
+    content: "“";
+}
+q:after {
+    content: "”";
+}
+blockquote:before {
+    left: 2em;
+    position: absolute;
+}
+blockquote:after {
+    position: absolute;
+}
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Sans"), local("PTSans-Regular"), url("http://themes.googleusercontent.com/static/fonts/ptsans/v4/LKf8nhXsWg5ybwEGXk8UBQ.woff") format("woff");
+}
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Sans Bold"), local("PTSans-Bold"), url("http://themes.googleusercontent.com/static/fonts/ptsans/v4/0XxGQsSc1g4rdRdjJKZrNBsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
+}
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 400;
+    src: local("PT Serif"), local("PTSerif-Regular"), url("http://themes.googleusercontent.com/static/fonts/ptserif/v4/sDRi4fY9bOiJUbgq53yZCfesZW2xOQ-xsNqO47m55DA.woff") format("woff");
+}
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 700;
+    src: local("PT Serif Bold"), local("PTSerif-Bold"), url("http://themes.googleusercontent.com/static/fonts/ptserif/v4/QABk9IxT-LFTJ_dQzv7xpIbN6UDyHWBl620a-IRfuBk.woff") format("woff");
+}
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 400;
+    src: local("PT Serif Italic"), local("PTSerif-Italic"), url("http://themes.googleusercontent.com/static/fonts/ptserif/v4/03aPdn7fFF3H6ngCgAlQzBsxEYwM7FgeyaSgU71cLG0.woff") format("woff");
+}*/
+
+#categorytreemap {
+    /*background: none repeat scroll 0 0 #BBBBBB;
+    height: 500px;
+    width: 100%;*/
+}
+text {
+    pointer-events: none;
+}
+.grandparent text {
+    font-weight: bold;
+}
+rect {
+    fill: none;
+    stroke: #FFFFFF;
+}
+rect.child{
+    fill: #AAAAAA;
+}
+rect.parent, .grandparent rect {
+    stroke-width: 2px;
+}
+.grandparent rect {
+    fill: #FFFFFF;
+}
+.children rect.parent, .grandparent rect {
+    cursor: pointer;
+}
+rect.parent {
+    pointer-events: all;
+}
+.children:hover rect.child, .grandparent:hover rect {
+    fill: #AAAAAA;
+}
+
+

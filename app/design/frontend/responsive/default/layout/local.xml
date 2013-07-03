@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+
+<layout version="0.0.1">
+    <default>
+        
+        <!-- add additional css and javascript -->
+        <reference name="head">
+            <!-- remove default styles -->
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action> 
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action> 
+
+            
+            
+            <action method="addCss"><stylesheet>css/treemap.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery/jquery-1.9.1.min.js</name></action>
+            <block type="core/text" name="google.cdn.jquery">
+                <action method="setText">
+                    <text><![CDATA[<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]></text>
+                </action>
+            </block>
+
+            <!-- add js for home slider -->
+            <action method="addItem"><type>skin_js</type><name>js/slider/modernizr.custom.63321.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/slider/jquery.catslider.js</name></action>
+            
+            
+            <!-- add items for bootstrap framework -->
+            <action method="addCss"><stylesheet>css/bootstrap/bootstrap.min.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/bootstrap/bootstrap-responsive.min.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/bootstrap/bootstrap.min.js</name></action>
+
+            <!-- add main styles -->
+            <action method="addCss"><stylesheet>css/main.css</stylesheet></action>
+            
+            <!-- add responsive css -->
+            <!--<action method="addCss"><stylesheet>css/responsive.css</stylesheet></action>-->
+            <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsive-mobile.css</stylesheet></action>
+            
+            <!-- add d3 framework -->
+            <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>
+        </reference>
+        
+        
+        <reference name="root">
+            
+            <!-- add content block for category treemap -->
+            <block type="core/template" name="treemap" as="treemap" translate="label" template="page/html/categorytreemap.phtml">
+                <label>Treemap</label>
+            </block>
+            
+            <!-- add content block for category treemap -->
+            <block type="core/template" name="divtreemap" as="divtreemap" translate="label" template="page/html/divcategorytreemap.phtml">
+                <label>Div Treemap</label>
+            </block>
+            
+            <!-- add content block for category div boxes -->
+            <block type="core/template" name="categorydivs" as="category-divs" translate="label" template="page/html/categorydivs.phtml">
+                <label>Category Divs</label>
+            </block>
+            
+            <!-- add content block for slider -->
+            <block type="core/template" name="homeslider" as="homeslider" translate="label" template="page/html/homeslider.phtml">
+                <label>Slider</label>
+            </block>
+            
+            <!-- change template for footer -->
+            <reference name="footer_links">
+                <action method="setTemplate">
+                    <template>page/template/footerlinks.phtml</template>
+                </action>
+            </reference>
+            
+            <!-- change template for top links -->
+            <reference name="top.links">
+                <action method="setTemplate">
+                <template>page/template/toplinks.phtml</template>
+            </action>
+                <!--<action method="addLink" translate="label title">
+                    <label>About Us</label>
+                    <url>about</url>  
+                    <title>About Us</title>
+                    <prepare>true</prepare> 
+                    <urlParams helper="core/url/getHomeUrl"/>  base url - thanks @Russ! -->
+                    <!-- there are a few param you can send to do different things in <urlParams> 
+                             dig into app/code/core/Mage/Core/Model/Url.php, around line 803 -->                   
+ 
+                    <!-- below adds #add-fragment to the end of your url -->
+                    <!-- <urlParams><_fragment>add-fragment</_fragment></urlParams> -->
+ 
+                    <!-- below adds ?add-query to the end of your url -->
+                    <!-- <urlParams><_query>add-fragment</_query></urlParams> -->
+ 
+                    <!-- below gives you a new session id (i think...)-->
+                    <!-- <urlParams><_nosid>true</_nosid></urlParams> -->
+ 
+                    <!-- below replaces double quotes, single quotes, greater than, and less than signs 
+                             to their respective url escaped replacements (%22, %27, %3E, %3C) -->
+                    <!-- <urlParams><_escape>i'm-a-blog-url</_escape></urlParams> -->
+ 
+                    <!--<position>1</position>
+                    <liParams/>
+                    <aParams>class="top-link-about-us"</aParams>
+                    <beforeText></beforeText>
+                    <afterText></afterText>
+                </action>-->
+ 
+                <!-- Removes 'My Account' link - Default position: 10 
+                <action method="removeLinkByUrl"><url helper="customer/getAccountUrl"/></action>-->
+ 
+                <!-- Removes 'Wishlist' link - Default position: 20 -->
+                <!-- for Magento 1.3.x 
+                <action method="removeLinkByUrl"><url helper="wishlist/"/></action>-->
+ 
+                <!-- for Magento 1.4.x 
+                <remove name="wishlist_link"/>-->
+ 
+                <!-- Removes 'My Cart' AND 'Checkout' links
+                Default position: 40 and 50 respectively -->
+                <remove name="checkout_cart_link"/>
+ 
+                <!-- To re-add 'My Cart' or 'Checkout' after removing both -->
+                <!--<block type="checkout/links" name="checkout_cart_link_custom">
+                    <action method="addCartLink"></action>
+                    <action method="addCheckoutLink"></action>
+                </block>-->
+            </reference>
+        </reference>
+
+
+        <customer_logged_out>
+        <!-- Removes 'Log In' link - Default position: 60 -->
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+        </reference>
+    </customer_logged_out>
+ 
+    <customer_logged_in>
+        <!-- Removes 'Log Out' link - Default position: 60 -->
+        <reference name="top.links">
+            <action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+        </reference>
+    </customer_logged_in>
+        
+        
+        
+        
+        
+       <!-- remove footer links 
+        <reference name="footer">
+            <remove name="bottom.container" />
+            <remove name="store_switcher" />
+            <remove name="footer_links" />
+        </reference>-->
+        
+        <!-- remove complete footer 
+        <remove name="footer" />-->
+    </default>
+    
+   <catalog_category_layered>
+        <remove name="left" />
+        <remove name="right" />
+       <!-- <reference name="left">
+            <remove name="left.permanent.callout" />
+            <remove name="tags_popular" />
+            <remove name="left.newsletter" />
+        </reference>
+        <reference name="right">
+            <remove name="right.permanent.callout" />
+            <remove name="right.poll" />
+            <remove name="paypal.partner.right.logo" />
+            <remove name="cart_sidebar" />
+        </reference>
+        <reference name="content">
+            <block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml">
+                <block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">
+                    <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                        <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                    </block>
+                    <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+                    <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+                </block>
+            </block>
+        </reference>-->
+    </catalog_category_layered>
+    
+    <!-- remove tags from product view -->
+    <catalog_product_view>
+        
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/product-view-responsive.phtml</template>
+            </action>
+        </reference>
+        <reference name="head">
+            <!-- add items for product slider -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/simpleslider/bjqs-1.3.min.js</name>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/simpleslider/bjqs.css</stylesheet>
+            </action>
+        </reference>
+        <remove name="product_tag_list"/>
+        <remove name="right"/>
+    </catalog_product_view>
+
+</layout>

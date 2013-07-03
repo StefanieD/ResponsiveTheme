@@ -1,0 +1,19 @@
+<?php $categories = Mage::helper('responsive/categories')->getCategories(); ?>
+
+<div class="home-categories-div">
+<?php foreach($categories as $category) : ?>
+    <a href="<?php echo $category->getUrlPath(); ?>">
+        <div class="category-name">
+            <p><h2><?php echo $category->name; ?></h2></p>
+        </div>
+        <div class="category-image">
+            <?php if($category->getImageUrl()) : ?>
+                <img src="<?php echo $category->getImageUrl(); ?>" />
+            <?php else : ?>
+                <img src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
+            <?php endif; ?>
+        </div>
+    </a>
+<?php endforeach; ?>
+</div>
+

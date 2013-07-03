@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Sdrost_Responsive>
+            <version>0.0.1</version>
+        </Sdrost_Responsive>
+    </modules>
+    
+    <!-- add new page layout -->
+    <global>
+        <page>
+            <layouts>
+                <two_columns_right_responsive module="page" translate="label">
+                    <label>2 Columns Right Responsive</label>
+                    <template>page/2columns-right-responsive.phtml</template>
+                    <layout_handle>page_two_columns_right_responsive</layout_handle>
+                </two_columns_right_responsive>
+            </layouts>
+        </page>
+        
+        <!-- define helpers -->
+        <helpers>
+            <responsive>
+                <class>Sdrost_Responsive_Helper</class>
+            </responsive>
+        </helpers>
+    </global>
+</config>

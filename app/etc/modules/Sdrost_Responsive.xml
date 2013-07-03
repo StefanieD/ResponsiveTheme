@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Sdrost_Responsive>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Page />
+                <Mage_Checkout />
+                <Mage_Customer />
+                <Mage_Wishlist />
+            </depends>
+        </Sdrost_Responsive>
+    </modules>
+</config>
