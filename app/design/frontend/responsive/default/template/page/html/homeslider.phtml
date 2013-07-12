@@ -1,22 +1,90 @@
-<?php $rootCategories = Mage::helper('responsive/slider')->getRootCategories();
-$images = Mage::helper('responsive/slider')->getRandomCategoryProducts(); 
+<div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="<?php echo $this->getSkinUrl('images/slider/2.jpg'); ?>" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<?php echo $this->getSkinUrl('images/slider/10.jpg'); ?>" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<?php echo $this->getSkinUrl('images/slider/1.jpg'); ?>" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+<script type="text/javascript">
+     !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php //$rootCategories = Mage::helper('responsive/slider')->getRootCategories();
+//$images = Mage::helper('responsive/slider')->getRandomCategoryProducts(); 
 //var_dump($images); ?>
 
-<div class="home-slider">
+<!--<div class="home-slider">
     <div id="mi-slider" class="mi-slider">
         
-        <?php foreach($images as $categoryImages) : ?>
+        <?php //foreach($images as $categoryImages) : ?>
         <ul>
-            <?php foreach($categoryImages as $product) : ?>
+            <?php// foreach($categoryImages as $product) : ?>
                   <li>
-                      <a href="<?php echo $product->getProductUrl(); ?>">
-                          <img src="<?php echo $product->getImageUrl(); ?>">
-                          <h4><?php echo $product->name ?></h4>
+                      <a href="<?php //echo $product->getProductUrl(); ?>">
+                          <img src="<?php //echo $product->getImageUrl(); ?>">
+                          <h4><?php //echo $product->name ?></h4>
                       </a>
                   </li>
-            <?php endforeach; ?>
+            <?php //endforeach; ?>
         </ul>
-        <?php endforeach; ?>
+        <?php //endforeach; ?>-->
         
         
         <!--
@@ -44,19 +112,19 @@ $images = Mage::helper('responsive/slider')->getRandomCategoryProducts();
             <li><a href="#"><img src="<?php //echo $this->getSkinUrl('images/slider/14.jpg'); ?>" alt="img14"><h4>Laptop Bags</h4></a></li>
             <li><a href="#"><img src="<?php //echo $this->getSkinUrl('images/slider/15.jpg'); ?>" alt="img15"><h4>Briefcases</h4></a></li>
         </ul>-->
-        <nav>
-        <?php foreach($rootCategories as $category) : ?>
-            <a href="#"><?php echo $category['name']; ?></a>
-        <?php endforeach;  ?>
+        <!--<nav>
+        <?php //foreach($rootCategories as $category) : ?>
+            <a href="#"><?php //echo $category['name']; ?></a>
+        <?php //endforeach;  ?>
         </nav>
     </div>
 
 
 </div>
 <script>
-        $(function() {
+       /* $(function() {
 
                 $( '#mi-slider' ).catslider();
 
-        });
-</script>
+        });*/
+</script>-->

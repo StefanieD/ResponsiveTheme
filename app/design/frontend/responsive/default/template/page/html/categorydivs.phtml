@@ -1,19 +1,22 @@
 <?php $categories = Mage::helper('responsive/categories')->getCategories(); ?>
 
-<div class="home-categories-div">
-<?php foreach($categories as $category) : ?>
-    <a href="<?php echo $category->getUrlPath(); ?>">
-        <div class="category-name">
-            <p><h2><?php echo $category->name; ?></h2></p>
+    
+<div class="home-categories-flex-parent-container">   
+    <?php foreach ($categories as $category) : ?>
+        <div class="home-categories-flex-item">
+            <a href="<?php echo $category->getUrlPath(); ?>">
+                <div class="category-name">
+                    <p><h4><?php echo $category->name; ?><span>&raquo;</span></h4></p>
+                </div>
+                <div class="category-image">
+                    <?php if ($category->getImageUrl()) : ?>
+                        <img src="<?php echo $category->getImageUrl(); ?>" />
+                    <?php else : ?>
+                        <img src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
+                    <?php endif; ?>
+                </div>
+            </a> 
         </div>
-        <div class="category-image">
-            <?php if($category->getImageUrl()) : ?>
-                <img src="<?php echo $category->getImageUrl(); ?>" />
-            <?php else : ?>
-                <img src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
-            <?php endif; ?>
-        </div>
-    </a>
-<?php endforeach; ?>
+    <?php endforeach; ?>
 </div>
 
