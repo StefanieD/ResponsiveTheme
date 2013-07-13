@@ -1,31 +1,8 @@
-/**
- * Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE_AFL.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@magentocommerce.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions in the future. If you wish to customize Magento for your
- * needs please refer to http://www.magentocommerce.com for more information.
- *
- * @category    design
- * @package     default_default
- * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
- * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- */
-
 /* Reset ================================================================================= */
-* { margin:0; padding:0; }
-
+* { 
+    margin:0; 
+    padding:0; 
+}
 body{  
     font:Arial, Helvetica, sans-serif; 
     font-size: 75%; /*12px anstatt standard 16px*/
@@ -38,7 +15,10 @@ body{
     background-image: -ms-linear-gradient(bottom, #FAF8ED, #DBD079);
     background-image: -o-linear-gradient(bottom, #FAF8ED, #DBD079);
 }
-
+a{
+    font-size: 120%;
+    letter-spacing: 0.07em;
+}
 li {
     list-style: none;
 }
@@ -48,6 +28,15 @@ li {
     margin: 0;
     padding: 0; 
     width: 100%;
+}
+/* 2columns-left-responsive================================================================================ */
+.left-sidebar{
+    width: 20%;
+    float: left;
+}
+.col-main{
+    width: 80%;
+    float: left;
 }
 
 /* ======================================================================================= */
@@ -120,6 +109,10 @@ li {
 
 
 /* Footer ================================================================================ */
+footer{
+    clear: both;
+    margin-top: 20px;
+}
 .footer-flex-parent-container, .footer-cms-flex-parent-container{
     margin-top: 20px;
     display: inline-flex; /*Darstellung der Items in einer Reihe*/
@@ -199,14 +192,57 @@ li {
 
 
 
-/* Catalog Product View ================================================================================ */
+/* Catalog Product View ===================================================== */
 
 .product-type-data-wrapper{
     border: 1px solid black;
 }
 .product-name h1{
     text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: #D6CECE 3px 2px;;
 }
+
+.flexible-product-shop-parent-container{
+    display: flex-inline;
+    flex-direction: row;
+    justify-content: space-around; 
+    
+    /*Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-around;
+}
+.flexible-product-saleable-item{
+    width: 30%;
+}
+.add-to-cart input{
+    width: 70px;
+}
+.link-wishlist{
+    float: left;
+}
+/* Product Images */
+.product-view .product-img-box { float:left; width:267px; }
+.col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
+.product-view .product-img-box .product-image { border:1px solid #ddd; }
+.product-view .product-img-box .product-image-zoom { position:relative; width:265px; height:265px; overflow:hidden; z-index:9; }
+.product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
+.product-view .product-img-box .zoom-notice { text-align:center; }
+.product-view .product-img-box .zoom { position:relative; z-index:9; height:18px; margin:0 auto 13px; padding:0 28px; background:url(../images/slider_bg.gif) 50% 50% no-repeat; cursor:pointer; }
+.product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }
+.product-view .product-img-box .zoom #track { position:relative; height:18px; }
+.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:-1px; width:9px; height:22px; background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  }
+.product-view .product-img-box .zoom .btn-zoom-out { position:absolute; left:2px; top:0; }
+.product-view .product-img-box .zoom .btn-zoom-in { position:absolute; right:2px; top:0; }
+.product-view .product-img-box .more-views ul { margin-left:-4px }
+.product-view .product-img-box .more-views li { float:left; padding:1px; background-color:#ddd; margin:0 0 8px 4px ; }
+
+.product-image-popup { margin:0 auto; }
+.product-image-popup .buttons-set { float:right; clear:none; border:0; margin:0; padding:0; }
+.product-image-popup .nav { margin:0 100px; text-align:center; }
+.product-image-popup .image { display:block; }
+.product-image-popup .image-label {}
 
 /* Categories on home page ================================================================ */
 /*flex variante*/
@@ -255,18 +291,37 @@ li {
     display: block;
 }
 
+/* Category product top ================================================================ */
+.page-title h1{
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-shadow: #D6CECE 3px 2px;;
+}
+.pages{
+    text-align: center;
+}
+
 /* Category product toolbar ================================================================ */
 .toolbar-flex-parent-container{
-    display: flex-inline;
-    flex-direction: row;
-    justify-content: space-around; 
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     /*Chrome*/
     display: -webkit-flex;
-    -webkit-flex-direction: row;
-    -webkit-justify-content: space-around;
-    -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+}
+.toolbar-flex-parent-container .limiter select{
+    width: 80px;
+}
+.sort-by label, .limiter label{
+    float: left;
+    padding-top: 5px;
+    padding-right: 2px;
+}
+.pages-amount{
+    text-align: center;
 }
 
 
@@ -279,6 +334,8 @@ li {
     justify-content: flex-start; 
     align-items: stretch;
     align-content: space-around;
+    background-color: #FCF7F7;
+    margin-right: 10px;
     
     /*Chrome*/
     display: -webkit-flex;
@@ -288,9 +345,23 @@ li {
     -webkit-align-items: stretch;
     -webkit-align-content: space-around;
 }
-
 .products-grid-flex-item{
     width: 20%;
     text-align: center;
 }
+.products-grid-wrapper{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #D6CECE;
+}
+
+/* Category filter menu ======================================================== */
+.filter-menu-trigger-selector{
+    display: none;
+}
+#filter-menu-selector{
+    margin-left: 10px;
+}
+
+
+
 

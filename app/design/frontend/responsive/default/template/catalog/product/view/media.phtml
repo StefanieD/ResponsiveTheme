@@ -2,39 +2,54 @@
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
 ?>
-
-<div id="my-slideshow">
-    <div style="width: auto;">
-  <ul class="bjqs">
-    <li>
-      <?php        
-        echo '<img src="'.$this->helper('catalog/image')
-                ->init($_product, 'image').
-                '" alt="'.$this->htmlEscape($this->getImageLabel()).
-                '" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
-    ?>
-    </li>
-    <?php if (count($this->getGalleryImages()) > 0): ?>
-    <?php foreach ($this->getGalleryImages() as $_image): ?>
-        <li>
-            <img src="<?php echo $_image->url; ?>" />
-        </li>
-    <?php endforeach; ?>
-    <?php endif; ?>
-  </ul>
+<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl"> 
+    <div class="rg-image-wrapper">
+        
+        <div class="rg-image"></div>
+        <div class="rg-loading"></div>
+        <div class="rg-caption-wrapper">
+            <div class="rg-caption" style="display:none;">
+                <p></p>
+            </div>
         </div>
-</div>
-
-<!-- Activate Slider for product images -->
-<script class="secret-source">
-        $(function() {
-          $('#my-slideshow').bjqs({
-            height      : 320,
-            width       : 960,
-            responsive  : true,
-            usecaptions : false,
-            nexttext : '>', 
-            prevtext : '<'
-          });
-        });
+    </div>
 </script>
+
+<div id="rg-gallery" class="rg-gallery">
+    <div class="rg-thumbs">
+        <!-- Elastislide Carousel Thumbnail Viewer -->
+        <div class="es-carousel-wrapper">
+            <div class="es-nav">
+                <span class="es-nav-prev">Previous</span>
+                <span class="es-nav-next">Next</span>
+            </div>
+            <div class="es-carousel">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" 
+                                 data-large="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" 
+                                 alt="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" 
+                                 data-description="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" />
+                        </a>
+                    </li>
+                    <?php if (count($this->getGalleryImages()) > 0): ?>
+                        <?php foreach ($this->getGalleryImages() as $_image): ?>
+                            <li>
+                                <a href="#">
+                                    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(56); ?>" 
+                                    data-large="<?php echo $this->htmlEscape($_image->getUrl()); ?>" 
+                                    alt="<?php echo $this->htmlEscape($_image->getLabel()); ?>" 
+                                    data-description="<?php echo $this->htmlEscape($_image->getLabel()); ?>" />
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+        <!-- End Elastislide Carousel Thumbnail Viewer -->
+    </div><!-- rg-thumbs -->
+</div><!-- rg-gallery -->
+
+

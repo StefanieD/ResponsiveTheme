@@ -1,9 +1,6 @@
-body{
-    padding: 0;
-}
-
-/* Top links ================================================================================ */
 @media screen and (max-width: 600px) {
+    
+    /* Top links =========================================================== */
     #cartDiv{
         width: 40px;
         height: 30px;
@@ -66,7 +63,7 @@ body{
         display: none;
     }
     
-/* Reviews on product page ================================================================================ */
+/* Catalog product page ================================================================================ */
 
     .add-review-icon{
         width: 35px;
@@ -133,6 +130,20 @@ body{
         width: 10%;
     }
     
+    .flexible-product-shop-parent-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: center;
+    }
+    .flexible-product-saleable-item{
+    width: 100%;
+}
+
     
     /* Category Divs ======================================================= */
     /*flex variante*/

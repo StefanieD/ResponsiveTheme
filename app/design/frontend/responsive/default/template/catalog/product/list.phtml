@@ -56,39 +56,38 @@
     <?php $_columnCount = $this->getColumnCount(); ?>
     <?php $_productCount = count($_productCollection); ?>
     <div class="products-grid-flex-parent-container">
-    <?php $i=0; foreach ($_productCollection as $_product): ?>
-    
-    
-        <div class="products-grid-flex-item">
-            <a href="<?php echo $_product->getProductUrl() ?>" 
-               title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" 
-               class="product-image">
-                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" 
-                     class="img-polaroid" width="135" height="135" 
-                     alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
-            </a>
-            <h4 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" 
-                                        title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h4>
+        <?php $i = 0;
+        foreach ($_productCollection as $_product): ?>
+        
+            <div class="products-grid-flex-item">
+                <div class="products-grid-wrapper">
+                    <a href="<?php echo $_product->getProductUrl() ?>" 
+                       title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" 
+                       class="product-image">
+                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" 
+                             class="img-polaroid" width="135" height="135" 
+                             alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                    </a>
+                    <h4 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" 
+                                                title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h4>
 
-            <?php echo $this->getPriceHtml($_product, true) ?>
-            <div class="actions">
-                <?php if($_product->isSaleable()): ?>
-                    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
-                <?php else: ?>
-                    <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
-                <?php endif; ?>
-
+                        <?php echo $this->getPriceHtml($_product, true) ?>
+                    <div class="actions">
+                        <?php if ($_product->isSaleable()): ?>
+                            <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="btn" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                        <?php else: ?>
+                            <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
-        </div>
-                
-                
-                
+        
         <?php endforeach ?>
-        </div>
-        <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+            </div>
+            <script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
     <?php endif; ?>
 
-    <div class="toolbar-bottom">
+        <div class="toolbar-bottom">
         <?php //echo $this->getToolbarHtml() ?>
     </div>
 </div>
