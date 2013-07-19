@@ -1,139 +1,116 @@
-/* Media Queries */
-@media screen and (max-width: 910px){
-	.mi-slider nav {
-		max-width: 90%;
-	}
-	.mi-slider nav a {
-		font-size: 12px;
-		padding: 40px 10px 30px 14px;
-	}
-}
-
-@media screen and (max-width: 740px){
-	.mi-slider {
-		height: 300px;
-	}
-	.mi-slider nav {
-		top: 220px;
-	}
-}
-
-@media screen and (max-width: 490px){ 
-	.mi-slider {
-		text-align: center;
-		height: auto;
-	}
-
-	.mi-slider ul {
-		position: relative;
-		display: inline;
-		bottom: auto;
-		pointer-events: auto;
-	}
-
-	.mi-slider ul li {
-		-webkit-animation: none !important;
-		animation: none !important;
-		-webkit-transform: translateX(0) !important;
-		transform: translateX(0) !important;
-		padding: 10px 3px;
-		min-width: 140px;
-	}
-
-	.mi-slider nav {
-		display: none;
-	}
-}
-
-/* Top links ================================================================================ */
-@media screen and (max-width: 600px) {
-    .header { 
-        display: -webkit-box;
-        -webkit-box-orient: horizontal;
-        
-        display: box;
-        box-orient: horizontal;
-    }
-    .header > div:nth-child(1){
-        -webkit-box-flex: 1;
-        box-flex: 1;
-    }
-
-    .cartDiv{
+@media screen and (max-width: 800px) {
+    /* Top links =========================================================== */
+    #cartDiv{
         width: 40px;
         height: 30px;
-        background: url(../images/cart_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
         cursor: pointer;
-        border: solid 1px #666;
-        border-radius: 5px;
         margin: 2% 5% 0 2%;
     }
-    
-    .naviDiv{
-        width: 40px;
-        height: 30px;
-        background: url(../images/menu_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
-        cursor: pointer;
-        border: solid 1px #666;
-        border-radius: 5px;
-        margin: 2% 5% 0 2%;
+    #cart-icon img{
+        display: block;
+        float: left;
     }
+    #cart-text{
+        display: none;
+    }
+    .toplinks-flex-parent-container{
+        display: flex; /*Darstellung der Items in einer Reihe*/
+        flex-direction: column; /*bestimmt Richtung der main-axis*/
+        flex-wrap: wrap; /*Single line*/
+        align-items: center;
 
-    #menu-icon {
-        /*color: #000;
-        width: 100%;
-        height: 30px;
-        background: url(../images/menu_icon_tall.png) no-repeat scroll 10px center #ECEBEB;
-        padding: 8px 10px 0 20%;
-        cursor: pointer;
-        border: solid 1px #666;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px rgba(0,0,0,.3);
-        display: block;*/
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -webkit-align-items: center;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: column;
+        -moz-align-items: center;
     }
-    #cart-icon {
-        /*color: #000;
+    .toplinks-flex-parent-container div, .toplinks-flex-parent-container li{
+        padding-top: 5px;
         width: 100%;
-        height: 30px;
-        background: url(../images/cart_icon_tall.png) no-repeat scroll center #ECEBEB; /*10px center #ECEBEB;*/
-        /*padding: 8px 10px 0 20%;
-        cursor: pointer;
-        border: solid 1px #666;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px rgba(0,0,0,.3);*/
+        text-align: center;
+
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
+    } 
+    .toplinks-flex-parent-container div:hover, .toplinks-flex-parent-container li:hover{        
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
+    } 
+
+    /*variante aus dem buch*/
+    .page-wrapper{
+        position: relative;
+        padding-top: 1px; /*verhindert das rutschen*/
     }
-    
-    .top-links {
-        clear: both;
+    #nav-wrap{
+        left: 0;
         position: absolute;
-        top: 38px;
-        width: 160px;
-        z-index: 10000;
-        padding: 5px;
-        background: #f8f8f8;
-        border: solid 1px #999;
-        margin: 0;
+        top: 0;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-color: #474024;
+    }
+    .close-menu-button{
         display: none;
     }
-    
-    
-    
-    .home-slider{
+    /*open menu*/
+    #menu-open:target #nav-wrap{
+        height: 5rem;
+    }
+    #menu-open:target .header-flex-parent-container{
+        margin-top: 5rem; /*Seite nach unten schieben, wegen einblenden der navi*/
+    }
+    #menu-open:target .close-menu-button{
+        display: block;
+    }
+    #menu-open:target .open-menu-button{
         display: none;
     }
-    
-    #main{
-        -webkit-flex-flow: column;
-        flex-flow: column;
+    /*close menu*/
+    #menu-close:target #nav-wrap{
+        height: 0;
     }
-    
-    .std /*#main > aside*/{
-        -webkit-order: 0;
-        order: 0;
+    #menu-close:target .header-flex-parent-container{
+        margin-top: 0; /*Seite nach unten schieben, wegen einblenden der navi*/
     }
-    
-    #main > aside {
-        -webkit-order: 0;
-        order: 0;
+    #nav-wrap, .header-flex-parent-container{
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
     }
-}
+
+    /* flex header =========================================================================== */
+    .header-flex-child-nav{
+        order: 1; /*an erste stelle verschieben*/
+        flex-grow: 0; /*Spalte für nav wieder kleiner*/
+
+        /*für Google Chrome*/
+        -webkit-flex-grow: 0;
+        -webkit-order: 1;
+    }
+    .header-flex-child-logo{
+        order: 2; /*an erste stelle verschieben*/
+
+        /*für Google Chrome*/
+        -webkit-order: 2;
+    }
+    .header-flex-child-cart{
+        order: 3; /*an erste stelle verschieben*/
+
+        /*für Google Chrome*/
+        -webkit-order: 3;
+    }
+}    

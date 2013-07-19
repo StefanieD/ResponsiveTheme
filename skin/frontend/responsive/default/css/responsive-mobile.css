@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
     
     /* Top links =========================================================== */
     #cartDiv{
@@ -14,27 +14,84 @@
     #cart-text{
         display: none;
     }
-    
-    #naviDiv{
-        width: 40px;
-        height: 30px;
-        background: url(../images/menu_icon_tall.png) no-repeat scroll 10px center /*#ECEBEB*/;
-        cursor: pointer;
+   .toplinks-flex-parent-container{
+        display: flex; /*Darstellung der Items in einer Reihe*/
+        flex-direction: column; /*bestimmt Richtung der main-axis*/
+        flex-wrap: wrap; /*Single line*/
+        align-items: center;
+
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -webkit-align-items: center;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: column;
+        -moz-align-items: center;
     }
+    .toplinks-flex-parent-container div, .toplinks-flex-parent-container li{
+        padding-top: 5px;
+        width: 100%;
+        text-align: center;
+        
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
+    } 
+    .toplinks-flex-parent-container div:hover, .toplinks-flex-parent-container li:hover{        
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
+    } 
     
-    .top-links {
-        clear: both;
-        position: absolute;
-        top: 38px;
-        width: 160px;
-        z-index: 10000;
-        padding: 5px;
-        background: #f8f8f8;
-        margin: 0;
-        display: none;
-    }
-    
-    
+   /*variante aus dem buch*/
+   .page-wrapper{
+       position: relative;
+       padding-top: 1px; /*verhindert das rutschen*/
+   }
+   #nav-wrap{
+       left: 0;
+       position: absolute;
+       top: 0;
+       height: 0;
+       overflow: hidden;
+       width: 100%;
+       background-color: #474024;
+   }
+   .close-menu-button{
+       display: none;
+   }
+   /*open menu*/
+   #menu-open:target #nav-wrap{
+       height: 5rem;
+   }
+   #menu-open:target .header-flex-parent-container{
+       margin-top: 5rem; /*Seite nach unten schieben, wegen einblenden der navi*/
+   }
+   #menu-open:target .close-menu-button{
+       display: block;
+   }
+   #menu-open:target .open-menu-button{
+       display: none;
+   }
+   /*close menu*/
+   #menu-close:target #nav-wrap{
+       height: 0;
+   }
+   #menu-close:target .header-flex-parent-container{
+       margin-top: 0; /*Seite nach unten schieben, wegen einblenden der navi*/
+   }
+   #nav-wrap, .header-flex-parent-container{
+       transition: all 0.5s ease 0s;
+       -webkit-transition: all 0.5s ease 0s;
+   }
     /* flex header =========================================================================== */
 .header-flex-child-nav{
     order: 1; /*an erste stelle verschieben*/
@@ -56,12 +113,6 @@
     /*für Google Chrome*/
     -webkit-order: 3;
 }
-    
-    
-    
-    .home-slider{
-        display: none;
-    }
     
 /* Catalog product page ================================================================================ */
 
@@ -159,6 +210,9 @@
         -webkit-justify-content: flex-start;
         -webkit-flex-wrap: nowrap;
     }
+    .home-categories-flex-item{
+        width: 100%;
+    }
     .home-categories-flex-item .category-image{
         display: none;
     }
@@ -230,13 +284,6 @@
 }
   
   /* Home slider ======================================================= */
-  .carousel {
-      margin-left: -20px;
-      margin-right: -20px;
-  }
-  .carousel .container {
-
-  }
   .carousel .item {
       height: 300px;
   }

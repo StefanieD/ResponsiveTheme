@@ -1,16 +1,14 @@
 <script type="text/javascript">
-jQuery(document).ready(function($){
+/*jQuery(document).ready(function($){
 
-	/* prepend menu icon */
 	$('#nav-wrap').prepend('<div id="menu-icon"></div>');
 	
-	/* toggle nav */
 	$("#naviDiv").on("click", function(){
 		$(".top-links").slideToggle();
 		$(this).toggleClass("active");
 	});
 
-});
+});*/
 </script>
 
 
@@ -19,11 +17,18 @@ jQuery(document).ready(function($){
         <img src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
     </a></div>
 
-    <div id="naviDiv" class="header-flex-child-nav">
+<!--    <div id="naviDiv" class="header-flex-child-nav">
         <nav id="nav-wrap"> 
-            <?php echo $this->getChildHtml('topLinks') ?>
+            <?php //echo $this->getChildHtml('topLinks') ?>
         </nav>
+    </div>-->
+
+<div id="naviDiv" class="header-flex-child-nav">
+    <div class="nav-menu-buttons">
+        <a href="#menu-open" class="open-menu-button"><img src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
+        <a href="#menu-close" class="close-menu-button"><img class="close-menu-button" src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
     </div>
+</div>
 
     <div class="header-flex-child-cart">
         <a href="<?php echo Mage::getUrl(); ?>checkout/cart">
@@ -38,3 +43,8 @@ jQuery(document).ready(function($){
 <div class="search-flex-parent-container">
     <?php echo $this->getChildHtml('topSearch') ?>
 </div>
+
+
+<nav id="nav-wrap" class="toplinks-flex-parent-container"> 
+    <?php echo $this->getChildHtml('topLinks') ?>
+</nav>

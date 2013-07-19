@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template for Mage_Page_Block_Html
@@ -9,7 +8,8 @@
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
-<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?> id="menu-open">
+    <div class="page-wrapper" id="menu-close">
    
     <!--<div class="row-fluid">
         <div class="span12">-->
@@ -43,6 +43,7 @@
         <?php echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
     </footer>
+ </div>
    <!--    
 <?php //echo $this->getChildHtml('after_body_start') ?>
 <div class="wrapper">

@@ -34,12 +34,9 @@
             <action method="addItem"><type>skin_js</type><name>js/bootstrap/bootstrap.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/bootstrap/carousel.js</name></action>
 
-            <!-- add main styles -->
+            <!-- add responsive styles -->
             <action method="addCss"><stylesheet>css/main.css</stylesheet></action>
-            
-            <!-- add responsive css -->
-            <!--<action method="addCss"><stylesheet>css/responsive.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>-->
+            <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-mobile.css</stylesheet></action>
             
             <!-- add d3 framework -->
