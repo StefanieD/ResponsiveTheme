@@ -1,10 +1,11 @@
-<div class="filter-menu-trigger-selector">
+<!-- button on category page for open off-canvas filter -->
+<div class="filter-menu-trigger-selector" id="filter-menu-button-outside">
   <div class="filter-inner">
-      <label class="btn" for="toggle" onclick>Ergebnisse filtern</label>
+      <label class="btn" for="toggle" onclick>&#62;&#62;  Ergebnisse filtern</label>
   </div>
 </div>
 
-<?php if($this->canShowBlock()): ?><!--style="display: none;"-->
+<?php if($this->canShowBlock()): ?> 
 <div id="filter-menu-selector" class="block block-layered-nav">
     <div class="block-title">
         <strong><span><?php echo $this->__('Shop By') ?></span></strong>
@@ -28,6 +29,12 @@
             <script type="text/javascript">decorateDataList('narrow-by-list')</script>
         <?php endif; ?>
     </div>
+    <!-- button on filter page for close off-canvas navigation -->
+    <div class="filter-menu-trigger-selector">
+        <div class="filter-inner">
+            <label class="btn" for="toggle" onclick>Zurück</label>
+        </div>
+    </div>
 </div>
 <?php endif; ?>
 
@@ -35,7 +42,9 @@
     //var jPM = $.jPanelMenu();
     var jPM = $.jPanelMenu({
         menu: '#filter-menu-selector',
-        trigger: '.filter-menu-trigger-selector'
+        trigger: '.filter-menu-trigger-selector',
+        afterOpen : function(){$('#filter-menu-button-outside').css('display', 'none')},
+        afterClose : function(){$('#filter-menu-button-outside').css('display', 'block')},
     });
     jPM.on();
 </script>

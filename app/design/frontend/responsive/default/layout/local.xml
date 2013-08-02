@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<layout version="0.0.1">
+<layout version="0.0.1">   
+    
     <default>
         
         <!-- add additional css and javascript -->

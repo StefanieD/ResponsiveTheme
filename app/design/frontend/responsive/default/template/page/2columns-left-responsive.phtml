@@ -9,9 +9,8 @@
     <?php echo $this->getChildHtml('global_notices') ?>
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
-        <div class="main-container col1-layout">
             
-            <div class="main">
+            <section class="main">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
                 
                 <aside class="left-sidebar">
@@ -22,11 +21,10 @@
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </div>
-            </div>
+            </section>
             
             
             
-        </div>
         <?php echo $this->getChildHtml('footer') ?>
         <?php echo $this->getChildHtml('before_body_end') ?>
     </div>

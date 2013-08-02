@@ -1,5 +1,15 @@
 @media screen and (max-width: 480px) {
+    /* Layout =========================================================== */
     
+    .left-sidebar{
+    width: 100%;
+    float: none;
+    padding-bottom: 20px;
+}
+.col-main{
+    width: 100%;
+    float: none;
+}
     /* Top links =========================================================== */
     #cartDiv{
         width: 40px;
@@ -316,4 +326,18 @@
       margin-left: 0;
       clear: left;
   }
+  
+  /* Category off canvas filter ================================================================ */
+  .filter-menu-trigger-selector{
+    display: block;
+    width: 70%;
+}
+  #filter-menu-selector{
+    display: none;
+    }
+    #jPanelMenu-menu{
+        width: 246px !important;
+        overflow-y: auto !important;
+        border-right: 4px solid black;
+    }
 }

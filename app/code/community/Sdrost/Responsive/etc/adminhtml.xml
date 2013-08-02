@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config>
+    <acl>
+        <resources>
+            <admin>  <!--This is acl based on URL. If you see URL it would be /admin/system_config/ -->
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <responsiveslider translate="title" module="responsive">  <!-- This is name of the section created by us -->
+                                        <title>Slider Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
+                                        <sort_order>99</sort_order>
+                                    </responsiveslider>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
