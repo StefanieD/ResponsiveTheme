@@ -78,6 +78,9 @@
    .close-menu-button{
        display: none;
    }
+   .open-menu-button{
+       display: block;
+   }
    /*open menu*/
    #menu-open:target #nav-wrap{
        height: 5rem;
@@ -219,6 +222,12 @@
         -webkit-flex-direction: column;
         -webkit-justify-content: flex-start;
         -webkit-flex-wrap: nowrap;
+        
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: nowrap;
+        -moz-box-direction: column;
+        -moz-justify-content: flex-start;
     }
     .home-categories-flex-item{
         width: 100%;

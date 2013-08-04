@@ -22,15 +22,15 @@
         </routers>
     </admin>
     
-    <!-- add new page layout -->
+    <!-- add new responsive layout page -->
     <global>
         <page>
             <layouts>
-                <two_columns_right_responsive module="page" translate="label">
-                    <label>2 Columns Right Responsive</label>
-                    <template>page/2columns-right-responsive.phtml</template>
-                    <layout_handle>page_two_columns_right_responsive</layout_handle>
-                </two_columns_right_responsive>
+                <responsive_layout_index module="page" translate="label">
+                    <label>Responsive Layout Home Page</label>
+                    <template>page/responsive-page-home.phtml</template>
+                    <layout_handle>responsive_layout_index_page</layout_handle>
+                </responsive_layout_index>
             </layouts>
         </page>
         
