@@ -160,7 +160,6 @@
             <remove name="left.permanent.callout"/>
             <remove name="tags_popular"/>
             <remove name="left.newsletter"/>
-            
         </reference>
         <reference name="content">
             <reference name="product_list_toolbar_pager">
@@ -181,7 +180,11 @@
                     
             </reference>
         </reference>
-        <remove name="right"/>
+        <reference name="right">
+            <remove name="right.permanent.callout"/>
+            <remove name="paypal.partner.right.logo"/>
+            <remove name="right.poll"/>
+        </reference>
     </catalog_category_layered>
   
     

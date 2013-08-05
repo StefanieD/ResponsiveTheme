@@ -1,6 +1,26 @@
 @media screen and (max-width: 480px) {
     /* Layout =========================================================== */
-    
+    .flexible-main-parent-container{
+    display: flex; /*Darstellung der Items in einer Reihe*/
+    flex-direction: column; /*bestimmt Richtung der main-axis*/
+    flex-wrap: nowrap; /*Single line*/
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /*für Google Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-wrap: nowrap;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: flex-start;
+
+    /*für Firefox*/
+    display: -moz-box;
+    -moz-box-wrap: nowrap;
+    -moz-box-direction: column;
+    -moz-justify-content: flex-start;
+    -moz-align-items: flex-start;
+}
     .left-sidebar{
     width: 100%;
     float: none;
@@ -300,6 +320,12 @@
   .products-grid-flex-item{
     width: 50%;
     text-align: center;
+    }
+    .catalog-category-view .right-sidebar{
+       display: none;
+    }
+    .catalog-category-view .left-sidebar{
+    width: 100%;
 }
   
   /* Home slider ======================================================= */
