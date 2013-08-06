@@ -12,6 +12,10 @@
                                         <title>Slider Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
                                         <sort_order>99</sort_order>
                                     </responsiveslider>
+                                    <categorydivs translate="title" module="responsive">  <!-- This is name of the section created by us -->
+                                        <title>Category Divs Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
+                                        <sort_order>90</sort_order>
+                                    </categorydivs>
                                 </children>
                             </config>
                         </children>

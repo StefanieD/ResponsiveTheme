@@ -39,7 +39,9 @@
                 </aside>
             <?php endif; ?>
 
-            <section class="main-container">            
+            <section class="main-container">  
+                <?php echo $this->getChildHtml('homeextras') ?>
+                
                 <?php echo $this->getChildHtml('global_messages') ?>
                 <?php echo $this->getChildHtml('content') ?>
             </section>

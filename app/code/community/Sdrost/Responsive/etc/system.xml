@@ -65,5 +65,23 @@
                 </sliderimages>
             </groups>
         </responsiveslider>
+        <categorydivs translate="label" module="responsive">
+            <class>separator-top</class>
+            <label>Kategorien Übersicht</label>
+            <tab>responsivetab</tab>
+            <sort_order>110</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <categoriesoptions translate="label">
+                    <label>Optionen</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </categoriesoptions>
+            </groups>
+        </categorydivs>
     </sections>
 </config>

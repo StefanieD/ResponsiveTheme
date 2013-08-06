@@ -1,6 +1,7 @@
 <?php $categories = Mage::helper('responsive/categories')->getCategories(); ?>
 
-    
+<div class="category-wrapper">
+<p id="categorydivs"></p>   
 <div class="home-categories-flex-parent-container">   
     <?php foreach ($categories as $category) : ?>
         <div class="home-categories-flex-item">
@@ -19,4 +20,4 @@
         </div>
     <?php endforeach; ?>
 </div>
-
+</div>

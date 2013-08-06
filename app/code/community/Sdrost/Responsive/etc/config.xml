@@ -28,7 +28,7 @@
             <layouts>
                 <responsive_layout_index module="page" translate="label">
                     <label>Responsive Layout Home Page</label>
-                    <template>page/responsive-page-home.phtml</template>
+                    <template>page/responsive-page.phtml</template>
                     <layout_handle>responsive_layout_index_page</layout_handle>
                 </responsive_layout_index>
             </layouts>
