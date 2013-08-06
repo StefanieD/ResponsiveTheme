@@ -26,11 +26,21 @@
     <global>
         <page>
             <layouts>
-                <responsive_layout_index module="page" translate="label">
-                    <label>Responsive Layout Home Page</label>
-                    <template>page/responsive-page.phtml</template>
-                    <layout_handle>responsive_layout_index_page</layout_handle>
-                </responsive_layout_index>
+                <responsive_layout_1column module="page" translate="label">
+                    <label>Responsive Layout 1-spaltig</label>
+                    <template>page/responsive-1column.phtml</template>
+                    <layout_handle>responsive_layout_1column_page</layout_handle>
+                </responsive_layout_1column>
+                <responsive_layout_3columns module="page" translate="label">
+                    <label>Responsive Layout 3-spaltig</label>
+                    <template>page/responsive-3columns.phtml</template>
+                    <layout_handle>responsive_layout_3columns_page</layout_handle>
+                </responsive_layout_3columns>
+                <responsive_layout_right_sidebar module="page" translate="label">
+                    <label>Responsive Layout mit rechter Spalte</label>
+                    <template>page/responsive-right-sidebar.phtml</template>
+                    <layout_handle>responsive_layout_right_sidebar_page</layout_handle>
+                </responsive_layout_right_sidebar>
             </layouts>
         </page>
         

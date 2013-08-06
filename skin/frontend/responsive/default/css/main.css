@@ -24,21 +24,14 @@ li {
 }
 /*========================================================================================= */
 
-/* responsive Layout ================================================================================ */
+/* responsive layouts ===================================================================== */
 .wrapper {
     position: relative;
     width: 100%;
     min-height:100%;
     height:auto !important;
     height:100%;
-    
     background-color: #FAF8E6;
-    /*color:#2f2f2f; 
-    background-color: #F2ECBD;
-    background-image: -webkit-linear-gradient(bottom, #FAF8ED, #DBD079);
-    background-image: -moz-linear-gradient(bottom, #FAF8ED, #DBD079);
-    background-image: -ms-linear-gradient(bottom, #FAF8ED, #DBD079);
-    background-image: -o-linear-gradient(bottom, #FAF8ED, #DBD079);*/
 }
 .page{
     position: relative;
@@ -53,25 +46,6 @@ footer{
     width: 100%;
     height: 130px;
 }
-/*.flexible-main-container-home{
-    display: flex; 
-    flex-direction: column; 
-    flex-wrap: nowrap; 
-    justify-content: center;
-    align-items: center;
-
-    display: -webkit-flex;
-    -webkit-flex-wrap: nowrap;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    -webkit-align-items: center;
-
-    display: -moz-box;
-    -moz-box-wrap: nowrap;
-    -moz-box-direction: column;
-    -moz-justify-content: center;
-    -moz-align-items: center;
-}*/
 .flexible-main-parent-container{
     display: inline-flex; /*Darstellung der Items in einer Reihe*/
     flex-direction: row; /*bestimmt Richtung der main-axis*/
@@ -94,35 +68,37 @@ footer{
     -moz-align-items: flex-start;
 }
 .left-sidebar{
-    max-width: 20%;
+    width: 30%;
+    max-width: 30%;
     min-width: 10%;
     margin-left: 1.5%;
     border: 0.2px solid grey;
     box-shadow: 10px 10px 10px grey;
-    /*background-color: #F7EEEB;
-    border: 1% solid #DEDCDC;*/
 }
 .right-sidebar{
-    max-width: 20%;
+    width: 30%;
+    max-width: 30%;
     min-width: 10%;
     margin-right: 1.5%;
     border: 0.2px solid grey;
     box-shadow: 10px 10px 10px grey;
-    /*background-color: #F7EEEB;
-    border: 1% solid #DEDCDC;*/
 }
-
-.catalog-product-view .main-container{
-    clear: both;
-    width: 95%;
-    margin-left: 2.5%;
-}
-.cms-index-index .left-sidebar, .cms-index-index .right-sidebar{
-    display: none;
-}
-.cms-index-index .home-slider-wrapper, .cms-index-index .category-wrapper, .cms-index-index .std{
+/* one column layout ===================================================================== */
+#responsive-one-column-layout .main-container{
     margin: 0 5% 0 5%;
 }
+#responsive-one-column-layout .breadcrumbs{
+    margin-left: 5%;
+}
+/* three column layout ===================================================================== */
+#responsive-right-sidebar-layout .main-container{
+    margin: 0 5% 0 5%;
+    min-width: 65%;
+}
+#responsive-right-sidebar-layout .breadcrumbs{
+    margin-left: 5%;
+}
+/* ======================================================================================= */
 
 /* Breadcrumbs ================================================================================ */
 .breadcrumbs{
@@ -352,10 +328,13 @@ footer{
 .link-wishlist{
     float: left;
 }
+/*.product-essential form{
+    margin: 0;
+}*/
 
 /* Product Images ===================================================== */
 .product-img-box{
-    margin: 0 10% 0 10%;
+    margin-right: 10%;
 }
 .es-carousel ul li{
     height: auto !important;
@@ -516,12 +495,6 @@ footer{
 }
 
 /* Category filter menu ======================================================== */
-.catalog-category-view .left-sidebar{
-    width: 30%;
-}
-.catalog-category-view .right-sidebar{
-    width: 30%;
-}
 .filter-menu-trigger-selector{
     display: none;
 }

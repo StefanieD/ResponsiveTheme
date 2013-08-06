@@ -10,8 +10,6 @@
             <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action> 
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action> 
 
-            
-            
             <action method="addCss"><stylesheet>css/treemap.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery/jquery-1.9.1.min.js</name></action>
             <block type="core/text" name="google.cdn.jquery">
@@ -43,20 +41,14 @@
             <!-- add d3 framework -->
             <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>
             
-            </reference>
+        </reference>
         
         
         <reference name="root">
             
-            <!-- add content block for category treemap 
-            <block type="core/template" name="treemap" as="treemap" translate="label" template="page/html/categorytreemap.phtml">
-                <label>Treemap</label>
-            </block>-->
-            
-            <!-- add content block for category treemap 
-            <block type="core/template" name="divtreemap" as="divtreemap" translate="label" template="page/html/divcategorytreemap.phtml">
-                <label>Div Treemap</label>
-            </block>-->
+            <action method="setTemplate">
+                <template>page/responsive-1column.phtml</template>
+            </action>
             
             <!-- add structural block for banner and categories-div wrapper -->
             <block type="core/text_list" name="homeextras" as="homeextras" translate="label">
@@ -70,13 +62,11 @@
                 </action>
             </reference>
             
-            
             <!-- change template for top links -->
             <reference name="top.links">
                 <action method="setTemplate">
                     <template>page/template/toplinks.phtml</template>
                 </action>
-                
                 <remove name="checkout_cart_link"/>
             </reference>
         </reference>
@@ -85,9 +75,9 @@
 
         <customer_logged_out>
         <!-- Removes 'Log In' link - Default position: 60 -->
-        <reference name="top.links">
-            <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
-        </reference>
+            <reference name="top.links">
+                <action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+            </reference>
         </customer_logged_out>
 
         <customer_logged_in>
@@ -99,14 +89,29 @@
         
     </default>
     
+    <cms_index_index>
+        <remove name="left"/>
+        <remove name="right"/>
+        <!-- change template for footer -->
+        <reference name="homeextras">
+            <!-- add content block for slider -->
+            <block type="core/template" name="homeslider" as="homeslider" translate="label" template="page/html/homeslider.phtml">
+                <label>Slider</label>
+            </block>
+            <!-- add content block for category div boxes -->
+            <block type="core/template" name="categorydivs" as="category-divs" translate="label" template="page/html/categorydivs.phtml">
+                <label>Category Divs</label>
+            </block>
+        </reference>
+    </cms_index_index>
     
     <!-- main category page -->
     <catalog_category_layered>
         <reference name="root">
             <action method="setTemplate">
-                <template>page/responsive-page.phtml</template>
+                <template>page/responsive-3columns.phtml</template>
             </action>
-        </reference> 
+        </reference>
         <reference name="left">
             <remove name="left.permanent.callout"/>
             <remove name="tags_popular"/>
@@ -122,11 +127,6 @@
     
     <!-- main product view -->
     <catalog_product_view>
-        <reference name="root">
-            <action method="setTemplate">
-                <template>page/responsive-page.phtml</template>
-            </action>
-        </reference>
         <reference name="head">
             <!-- add responsive image gallery -->
             <action method="addItem"><type>skin_js</type><name>js/responsiveImageGallery/jquery.tmpl.min.js</name></action>
@@ -136,21 +136,52 @@
             <action method="addCss"><stylesheet>css/responsiveImageGallery/style.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsiveImageGallery/elastislide.css</stylesheet></action>
         </reference>
-        <remove name="product_tag_list"/>
-        <reference name="head">
-            <remove name="left.permanent.callout"/>
-            <remove name="tags_popular"/>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
         </reference>
-        <!--<remove name="left"/>
-        <remove name="right"/>-->
+        <remove name="product_tag_list"/>
+        <reference name="right">
+            <remove name="right.permanent.callout"/>
+            <remove name="paypal.partner.right.logo"/>
+            <remove name="right.poll"/>
+        </reference>
     </catalog_product_view>
 
     <!-- cart main view -->
     <checkout_cart_index>
         <reference name="root">
             <action method="setTemplate">
-                <template>page/responsive-page.phtml</template>
+                <template>page/responsive-1column.phtml</template>
             </action>
         </reference>
     </checkout_cart_index>
+    
+    <!-- contact page -->
+    <contacts_index_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </contacts_index_index>
+    
+    <!-- advanced search page -->
+    <catalogsearch_advanced_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </catalogsearch_advanced_index>
+    
+    <!-- login page -->
+    <customer_account_login>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </customer_account_login>
 </layout>
