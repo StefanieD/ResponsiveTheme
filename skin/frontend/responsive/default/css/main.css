@@ -55,6 +55,71 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'exoblack';
+    src: url('../fonts/Exo/exo-black-webfont.eot');
+    src: url('../fonts/Exo/exo-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo/exo-black-webfont.woff') format('woff'),
+         url('../fonts/Exo/exo-black-webfont.ttf') format('truetype'),
+         url('../fonts/Exo/exo-black-webfont.svg#exoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'exoextralight';
+    src: url('../fonts/Exo/exo-extralight-webfont.eot');
+    src: url('../fonts/Exo/exo-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo/exo-extralight-webfont.woff') format('woff'),
+         url('../fonts/Exo/exo-extralight-webfont.ttf') format('truetype'),
+         url('../fonts/Exo/exo-extralight-webfont.svg#exoextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'exolight';
+    src: url('../fonts/Exo/exo-light-webfont.eot');
+    src: url('../fonts/Exo/exo-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Exo/exo-light-webfont.woff') format('woff'),
+         url('../fonts/Exo/exo-light-webfont.ttf') format('truetype'),
+         url('../fonts/Exo/exo-light-webfont.svg#exolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pacificoregular';
+    src: url('../fonts/Pacifico/pacifico-webfont.eot');
+    src: url('../fonts/Pacifico/pacifico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Pacifico/pacifico-webfont.woff') format('woff'),
+         url('../fonts/Pacifico/pacifico-webfont.ttf') format('truetype'),
+         url('../fonts/Pacifico/pacifico-webfont.svg#pacificoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'journalregular';
+    src: url('../fonts/Journal/journal-webfont.eot');
+    src: url('../fonts/Journal/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Journal/journal-webfont.woff') format('woff'),
+         url('../fonts/Journal/journal-webfont.ttf') format('truetype'),
+         url('../fonts/Journal/journal-webfont.svg#journalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'poetsenoneregular';
+    src: url('../fonts/Poetsen/poetsenone-regular-webfont.eot');
+    src: url('../fonts/Poetsen/poetsenone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poetsen/poetsenone-regular-webfont.woff') format('woff'),
+         url('../fonts/Poetsen/poetsenone-regular-webfont.ttf') format('truetype'),
+         url('../fonts/Poetsen/poetsenone-regular-webfont.svg#poetsenoneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* =================================================================================== */
 
 /* Main ================================================================================= */
@@ -75,6 +140,7 @@ body{
 }
 a{
     font-family: 'kaffeesatzregular';
+    /*font-family: 'poetsenoneregular';*/
     font-size: 1rem;
     letter-spacing: 0.07em;
     color: #A18E6D;
@@ -86,12 +152,19 @@ img{
     max-width: 100%;
 }
 h1{
-    font-family: 'airstreamregular';
+    
+    /*font-family: 'airstreamregular';*/
+    /*font-family: 'exoblack';*/
+    font-family: 'pacificoregular';
+    /*font-family: 'poetsenoneregular';*/
     /*font-family: 'kaffeesatzregular';*/
+    /*font-weight: lighter;*/
     text-align: center;
     /*color: #C45949;*/
     color: #9a2f2f;
-    text-shadow: -1px 0 #543939, 0 1px #543939, 1px 0 #543939, 0 -1px #543939;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    /*text-shadow: -1px 0 #543939, 0 1px #543939, 1px 0 #543939, 0 -1px #543939;*/
 }
 /*========================================================================================= */
 
@@ -155,22 +228,21 @@ footer{
 .content-wrapper{
     margin-top: 20px;
 }
-/* one column layout ===================================================================== */
+/* ONE COLUMN LAYOUT ===================================================================== */
 #responsive-one-column-layout .main-container{
     margin: 0 5% 0 5%;
 }
 #responsive-one-column-layout .breadcrumbs{
     margin-left: 5%;
 }
-/* right sidebar layout ===================================================================== */
+/* RIGHT SIDEBAR LAYOUT ===================================================================== */
 #responsive-right-sidebar-layout .main-container{
-    
-    /*min-width: 65%;*/
+    margin: 0 5% 0 5%;
 }
 #responsive-right-sidebar-layout .breadcrumbs{
     margin-left: 5%;
 }
-/* three column layout ===================================================================== */
+/* THREE COLUMNS LAYOUT ===================================================================== */
 #responsive-three-columns-layout .main-container{
 /*    margin: 0 5% 0 5%;
     min-width: 65%;*/
@@ -206,7 +278,9 @@ footer{
 }
 .header-flex-parent-container a{
     font-family: 'kaffeesatzregular';
+    /*font-family: 'poetsenoneregular';*/
     font-size: 1.15rem;
+    /*font-weight: lighter;*/
     color: #BAA682;
 }
 .header-flex-child-nav{
@@ -333,5 +407,23 @@ footer a{
 /* CATEGORY DIVS ========================================================================= */
 .home-categories-flex-item a{
     text-decoration: none;
+}
+/* ======================================================================================= */
+
+/* CATEGORY PRODUCT TOOLBAR ================================================================ */
+.toolbar-flex-parent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /*Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+
+    /*Firefox*/
+    display: -moz-box;
+    -moz-box-direction: column;
+    -moz-justify-content: center;
 }
 /* ======================================================================================= */

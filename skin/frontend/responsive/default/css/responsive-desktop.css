@@ -173,33 +173,13 @@
     /* ======================================================================================= */
 
 
-    /* Category product top ================================================================ */
-    .page-title h1{
-        letter-spacing: 0.1em;
-       /* text-align: center;
-        letter-spacing: 0.1em;
-        text-shadow: #D6CECE 3px 2px;*/
-    }
+    /* CATEGORY PRODUCT TOP ================================================================ */
     .pages{
         text-align: center;
     }
 
-    /* Category product toolbar ================================================================ */
-    .toolbar-flex-parent-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        /*Chrome*/
-        display: -webkit-flex;
-        -webkit-flex-direction: column;
-        -webkit-justify-content: center;
-
-        /*Firefox*/
-        display: -moz-box;
-        -moz-box-direction: column;
-        -moz-justify-content: center;
-    }
+    /* CATEGORY PRODUCT TOOLBAR ================================================================ */
+    
     .toolbar-flex-parent-container .limiter select{
         width: 80px;
     }

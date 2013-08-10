@@ -1,4 +1,9 @@
 @media screen and (max-width: 480px) {
+    /* MAIN ======================================================================== */
+    
+    
+    /* ============================================================================= */
+    
     /* RESPONSIVE LAYOUT =========================================================== */
     header{
         background-color: #111111;
@@ -34,13 +39,34 @@
     }
     .left-sidebar{
         width: 100%;
-        float: none;
-        padding-bottom: 20px;
+        min-width: 90%;
+        max-width: 90%;
+        margin: 0 5% 0 5%;
+        box-shadow: none;
+/*        float: none;
+        padding-bottom: 20px;*/
+    }
+    .right-sidebar{
+        width: 90%;
+        min-width: 90%;
+        max-width: 90%;
+        margin: 0 5% 0 5%;
+        border: none;
+        box-shadow: none;
     }
     .col-main{
         width: 100%;
         float: none;
     }
+    /* ==================================================================================== */
+
+    /* THREE COLUMNS LAYOUT ===================================================================== */
+    #responsive-three-columns-layout .main-container{
+        margin: 0 5% 0 5%;
+        min-width: 90%;
+    }
+    /* ==================================================================================== */
+
     /* TOP LINKS =========================================================== */
     #cartDiv{
         width: 40px;
@@ -178,6 +204,12 @@
         -moz-align-items: center;
     }
 
+    /* BREADCRUMBS ================================================================================ */
+    .breadcrumbs{
+        margin-top: 5%;
+    }
+    /* ======================================================================================= */
+
     /* CATALOG PRODUCT PAGE ================================================================================ */
     .add-review-icon{
         width: 35px;
@@ -228,10 +260,6 @@
     #description-down-icon, #additional-down-icon{
         cursor: pointer;
     }
-    .product-img-box{
-        width: 80%;
-        margin-left: 10%;
-    }
     .short-description{
         margin: 0 10px 0 10px;
         /*font-family: sans-serif;*/
@@ -243,7 +271,6 @@
     .bjqs li img{
         width: 10%;
     }
-
     .flexible-product-shop-parent-container{
         display: flex;
         flex-direction: column;
@@ -257,7 +284,9 @@
     .flexible-product-saleable-item{
         width: 100%;
     }
-
+    .right-sidebar .block-cart{
+        display: none;
+    }
 
     /* CATEGORY DIVS ======================================================= */
     .home-categories-flex-parent-container{
@@ -280,6 +309,9 @@
     }
     .home-categories-flex-item{
         width: 100%;
+    }
+    .home-categories-flex-item h1{
+        font-size: 1.5rem;
     }
     .home-categories-flex-item .category-image{
         display: none;
@@ -341,18 +373,51 @@
     /* ======================================================================================= */
 
     /* CATALOG DEFAULT PAGE ======================================================= */
+    .products-grid-flex-parent-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: flex-start;
+
+        /*Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: column;
+        -moz-justify-content: flex-start;
+    }
     .limiter select{
         width: 30%;
     }
     .products-grid-flex-item{
-        width: 50%;
+        /*clear: both;*/
+        /*width: 100%;*/
         text-align: center;
+        margin-top: 20px;
     }
     .catalog-category-view .right-sidebar{
         display: none;
     }
     .catalog-category-view .left-sidebar{
         width: 100%;
+    }
+    .product-image img{
+        float: left;
+        width: 30%;
+    }
+    .product-grid-information-wrapper{
+/*        clear: both;*/
+        float: left;
+        margin-left: 5%;
+        width: 60%;
+    }
+    .products-grid-wrapper{
+        clear: both;
     }
     /* ======================================================================================= */
 
@@ -381,21 +446,7 @@
     }
     /* ====================================================================== */
 
-    /* Category product grid ================================================================ */
-    /* grid4 */
-    .grid4 .col {
-        width: 48.4%;
-    }
-    .grid4 .col:nth-of-type(3n+1) {
-        margin-left: 3.2%;
-        clear: none;
-    }
-    .grid4 .col:nth-of-type(2n+1) {
-        margin-left: 0;
-        clear: left;
-    }
-
-    /* Category off canvas filter ================================================================ */
+    /* CATEGORY FILTER MENU =================================================== */
     .filter-menu-trigger-selector{
         display: block;
         width: 70%;
@@ -404,8 +455,8 @@
         display: none;
     }
     #jPanelMenu-menu{
-        width: 246px !important;
+        width: 100% !important;
         overflow-y: auto !important;
-        border-right: 4px solid black;
     }
+    /* ====================================================================== */
 }
