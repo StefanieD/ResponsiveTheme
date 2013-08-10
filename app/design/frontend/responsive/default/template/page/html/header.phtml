@@ -1,52 +1,30 @@
-<script type="text/javascript">
-/*jQuery(document).ready(function($){
-
-	$('#nav-wrap').prepend('<div id="menu-icon"></div>');
-	
-	$("#naviDiv").on("click", function(){
-		$(".top-links").slideToggle();
-		$(this).toggleClass("active");
-	});
-
-});*/
-</script>
-
 <header>
-<div class="header-flex-parent-container">
-    <div class="header-flex-child-logo"><a href="<?php echo Mage::getUrl(); ?>">
-        <img src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
-    </a></div>
-
-<!--    <div id="naviDiv" class="header-flex-child-nav">
-        <nav id="nav-wrap"> 
-            <?php //echo $this->getChildHtml('topLinks') ?>
-        </nav>
-    </div>-->
-
-<div id="naviDiv" class="header-flex-child-nav">
-    <div class="nav-menu-buttons">
-        <a href="#menu-open" class="open-menu-button"><img src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
-        <a href="#menu-close" class="close-menu-button"><img class="close-menu-button" src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
-    </div>
-    <nav id="nav-wrap" class="toplinks-flex-parent-container"> 
-        <?php echo $this->getChildHtml('topLinks') ?>
-    </nav>
-</div>
-
-    <div class="header-flex-child-cart">
-        <a href="<?php echo Mage::getUrl(); ?>checkout/cart">
-            <div id="cart-icon">
-                <img src="<?php echo $this->getSkinUrl('images/cart_icon_tall.png'); ?>" />
-                <span id="cart-text">Mein Warenkorb </span><span class="badge badge-important"><?php echo Mage::helper('checkout/cart')->getItemsCount(); ?></span>
+    <div class="header-flex-parent-container">
+        <div class="header-flex-child-logo"><a href="<?php echo Mage::getUrl(); ?>">
+                <img src="<?php echo $this->getSkinUrl('images/Logo2_light.png'); ?>" />
+            </a></div>
+        
+        <div id="naviDiv" class="header-flex-child-nav">
+            <div class="nav-menu-buttons">
+                <a href="#menu-open" class="open-menu-button"><img src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
+                <a href="#menu-close" class="close-menu-button"><img class="close-menu-button" src="<?php echo $this->getSkinUrl('images/menu_icon_tall.png'); ?>"/></a>
             </div>
-        </a>  
+            <nav id="nav-wrap" class="toplinks-flex-parent-container"> 
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </nav>
+        </div>
+
+        <div class="header-flex-child-cart">
+            <a href="<?php echo Mage::getUrl(); ?>checkout/cart">
+                <div id="cart-icon">
+                    <img src="<?php echo $this->getSkinUrl('images/cart_icon_tall.png'); ?>" />
+                    <span id="cart-text">Mein Warenkorb </span><span class="badge badge-important"><?php echo Mage::helper('checkout/cart')->getItemsCount(); ?></span>
+                </div>
+            </a>  
+        </div>
     </div>
-</div>
 
-<div class="search-flex-parent-container">
-    <?php echo $this->getChildHtml('topSearch') ?>
-</div>
-
-
-
+    <div class="search-flex-parent-container">
+        <?php echo $this->getChildHtml('topSearch') ?>
+    </div>
 </header>

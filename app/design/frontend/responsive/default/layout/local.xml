@@ -35,8 +35,9 @@
 
             <!-- add responsive styles -->
             <action method="addCss"><stylesheet>css/main.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-mobile.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsive-desktop.css</stylesheet></action>
             
             <!-- add d3 framework -->
             <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>
@@ -45,7 +46,6 @@
         
         
         <reference name="root">
-            
             <action method="setTemplate">
                 <template>page/responsive-1column.phtml</template>
             </action>
@@ -90,8 +90,6 @@
     </default>
     
     <cms_index_index>
-        <remove name="left"/>
-        <remove name="right"/>
         <!-- change template for footer -->
         <reference name="homeextras">
             <!-- add content block for slider -->

@@ -15,9 +15,9 @@
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
-<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?> id="menu-open">
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
+<div class="wrapper" id="menu-close">
     <?php echo $this->getChildHtml('global_notices') ?>
     
     <!-- header -->

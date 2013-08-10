@@ -1,5 +1,37 @@
-@media screen and (max-width: 800px) {
-    /* Top links =========================================================== */
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    /* LAYOUT ================================================================================ */
+    .page{
+        padding-bottom: 130px; /*to prevent footer from overflow content*/
+    }
+    footer{
+        height: 130px;
+    }
+    /* ========================================================================================= */
+
+    /* HEADER =========================================================================== */
+    .header-flex-child-nav{
+        order: 1; /*an erste stelle verschieben*/
+        flex-grow: 0; /*Spalte für nav wieder kleiner*/
+
+        /*für Google Chrome*/
+        -webkit-flex-grow: 0;
+        -webkit-order: 1;
+    }
+    .header-flex-child-logo{
+        order: 2; /*an erste stelle verschieben*/
+
+        /*für Google Chrome*/
+        -webkit-order: 2;
+    }
+    .header-flex-child-cart{
+        order: 3; /*an erste stelle verschieben*/
+
+        /*für Google Chrome*/
+        -webkit-order: 3;
+    }
+    /* ================================================================================== */
+    
+    /* TOP LINKS =========================================================== */
     #cartDiv{
         width: 40px;
         height: 30px;
@@ -7,16 +39,12 @@
         margin: 2% 5% 0 2%;
     }
     #cart-icon img{
-        display: block;
-        float: left;
-    }
-    #cart-text{
         display: none;
     }
     .toplinks-flex-parent-container{
-        display: flex; /*Darstellung der Items in einer Reihe*/
-        flex-direction: column; /*bestimmt Richtung der main-axis*/
-        flex-wrap: wrap; /*Single line*/
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
 
         /*für Google Chrome*/
@@ -49,10 +77,34 @@
         background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
         background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
     } 
+    /* =================================================================================*/
+    
+   
+    /* FOOTER ================================================================================ */
+    .footer-flex-parent-container, .footer-cms-flex-parent-container{
+        margin-top: 20px;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
-    /*variante aus dem buch*/
-    .page-wrapper{
-        position: relative;
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: space-around;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: row;
+        -moz-justify-content: space-around;
+    }
+    /* ======================================================================================= */
+    
+    /* TOGGLE MAIN MENU ======================================================================*/
+    .wrapper{
+        /*position: relative;*/
         padding-top: 1px; /*verhindert das rutschen*/
     }
     #nav-wrap{
@@ -91,26 +143,62 @@
         transition: all 0.5s ease 0s;
         -webkit-transition: all 0.5s ease 0s;
     }
+    /* =================================================================================*/
+    
+    /* CATEGORY DIV ONE HOME PAGE ============================================================ */
+    .home-categories-flex-parent-container{
+        display: flex-inline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        align-items: stretch;
+        align-content: space-around;
 
-    /* flex header =========================================================================== */
-    .header-flex-child-nav{
-        order: 1; /*an erste stelle verschieben*/
-        flex-grow: 0; /*Spalte für nav wieder kleiner*/
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: space-around;
+        -webkit-align-items: stretch;
+        -webkit-align-content: space-around;
 
-        /*für Google Chrome*/
-        -webkit-flex-grow: 0;
-        -webkit-order: 1;
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: row;
+        -moz-justify-content: space-around;
+        -moz-align-items: stretch;
+        -moz-align-content: space-around;
     }
-    .header-flex-child-logo{
-        order: 2; /*an erste stelle verschieben*/
-
-        /*für Google Chrome*/
-        -webkit-order: 2;
+    .home-categories-flex-item{
+        width: 45%;
+        margin: 2% 1% 0 1%;
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
     }
-    .header-flex-child-cart{
-        order: 3; /*an erste stelle verschieben*/
-
-        /*für Google Chrome*/
-        -webkit-order: 3;
+    .home-categories-flex-item:hover{
+        background-color: #630B20;
+        background-image: -webkit-linear-gradient(top, #FADCE3, #FABECC);
+        background-image: -moz-linear-gradient(top, #FADCE3, #FABECC);
+        background-image: -ms-linear-gradient(top, #FADCE3, #FABECC);
+        background-image: -o-linear-gradient(top, #FADCE3, #FABECC);
     }
+    .category-name h4{
+        text-align: center;
+        font-weight: bold;
+    }
+    .category-name span{
+        display: none;
+    }
+    .home-categories-flex-item .category-image{
+        display: block;
+    }
+    .category-image img{
+        max-width: 90%;
+    }
+    /* ======================================================================================= */
+
 }    

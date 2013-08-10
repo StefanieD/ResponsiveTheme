@@ -3,9 +3,9 @@
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
-<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?> id="menu-open">
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper">
+<div class="wrapper" id="menu-close">
     <?php echo $this->getChildHtml('global_notices') ?>
     
     <!-- header -->
@@ -22,7 +22,9 @@
                 <?php echo $this->getChildHtml('homeextras') ?>
                 
                 <?php echo $this->getChildHtml('global_messages') ?>
-                <?php echo $this->getChildHtml('content') ?>
+                <div class="content-wrapper">
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
             </section>
         </div>
     </div>
