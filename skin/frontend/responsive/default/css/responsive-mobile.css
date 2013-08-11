@@ -47,10 +47,10 @@
         padding-bottom: 20px;*/
     }
     .right-sidebar{
-        width: 90%;
-        min-width: 90%;
-        max-width: 90%;
-        margin: 0 5% 0 5%;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0;
         border: none;
         box-shadow: none;
     }
@@ -59,11 +59,16 @@
         float: none;
     }
     /* ==================================================================================== */
+    /* RIGHT SIDEBAR LAYOUT ===================================================================== */
+    #responsive-right-sidebar-layout .main-container{
+        margin: 0;
+    }
+    /* ========================================================================================== */
 
     /* THREE COLUMNS LAYOUT ===================================================================== */
     #responsive-three-columns-layout .main-container{
-        margin: 0 5% 0 5%;
-        min-width: 90%;
+        /*margin: 0 5% 0 5%;*/
+        min-width: 100%;
     }
     /* ==================================================================================== */
 
@@ -224,20 +229,19 @@
         float: left;
     }
     #product-description-header, #product-additional-header{
-        background-color: #630B20;
-        background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
-        background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
-        background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
-        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
-        width: 100%;
+        background-color: #F5EDD5;
+        background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
+        background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
+        background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
+        background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
         height: 30px;
     }
     #product-description-header:hover, #product-additional-header:hover{
-        background-color: #630B20;
-        background-image: -webkit-linear-gradient(top, #FADCE3, #FABECC);
-        background-image: -moz-linear-gradient(top, #FADCE3, #FABECC);
-        background-image: -ms-linear-gradient(top, #FADCE3, #FABECC);
-        background-image: -o-linear-gradient(top, #FADCE3, #FABECC);
+        background-color: #F5EDD5;
+        background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
+        background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
+        background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
+        background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
         color: #111;
     }
     #product-description-header span, #product-additional-header span{
@@ -287,6 +291,44 @@
     .right-sidebar .block-cart{
         display: none;
     }
+    .block-compare{
+        clear: both;
+        margin-top: 20px;
+    }
+    .flexible-product-saleable-item{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center; 
+        align-content: space-around; 
+        
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -webkit-align-content: space-around; 
+        
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: nowrap;
+        -moz-box-direction: column;
+        -moz-justify-content: center;
+        -moz-align-content: space-around; 
+    }
+    .add-to-links li{
+        float: left;
+    }
+    .product-type-data-wrapper{
+        clear: both;
+    }
+    .price-box{
+        font-weight: bold;
+    }
+    .flexible-related-parent-div .product{
+        width: 40%;
+    }
+    /* ===================================================================== */
 
     /* CATEGORY DIVS ======================================================= */
     .home-categories-flex-parent-container{

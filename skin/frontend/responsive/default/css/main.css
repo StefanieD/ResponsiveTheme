@@ -166,6 +166,12 @@ h1{
     letter-spacing: 0.1em;
     /*text-shadow: -1px 0 #543939, 0 1px #543939, 1px 0 #543939, 0 -1px #543939;*/
 }
+h3{
+    font-family: 'pacificoregular';
+    color: #9a2f2f;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
 /*========================================================================================= */
 
 /* RESPONSIVE LAYOUTS ===================================================================== */
@@ -235,13 +241,22 @@ footer{
 #responsive-one-column-layout .breadcrumbs{
     margin-left: 5%;
 }
+/* ========================================================================================== */
+
 /* RIGHT SIDEBAR LAYOUT ===================================================================== */
 #responsive-right-sidebar-layout .main-container{
     margin: 0 5% 0 5%;
 }
+#responsive-right-sidebar-layout .right-sidebar{
+    width: 20%;
+    max-width: 20%;
+    min-width: 20%;
+}
 #responsive-right-sidebar-layout .breadcrumbs{
     margin-left: 5%;
 }
+/* ========================================================================================== */
+
 /* THREE COLUMNS LAYOUT ===================================================================== */
 #responsive-three-columns-layout .main-container{
 /*    margin: 0 5% 0 5%;
@@ -428,5 +443,39 @@ footer a{
     display: -moz-box;
     -moz-box-direction: column;
     -moz-justify-content: center;
+}
+/* ======================================================================================= */
+
+/* PRODUCT PAGE ================================================================ */
+.mini-products-list{
+    margin: 0;
+}
+.flexible-related-parent-div{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /*für Google Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: flex-start;
+
+    /*für Firefox*/
+    display: -moz-box;
+    -moz-box-wrap: nowrap;
+    -moz-box-direction: row;
+    -moz-justify-content: flex-start;
+    -moz-align-items: flex-start;
+}
+.flexible-related-parent-div .product img{
+    float: none;
+    width: 80%;
+}
+.product-details{
+    text-align: center;
 }
 /* ======================================================================================= */

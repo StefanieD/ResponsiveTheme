@@ -1,16 +1,16 @@
 <?php $_description = $this->getProduct()->getDescription(); ?>
 <?php if ($_description): ?>
 
-<div id="product-description-header">
+    <div id="product-description-header">
         <span><?php echo $this->__('Details') ?></span>
         <i id="description-down-icon" class="icon-chevron-down"></i>
-  </div>
+    </div>
 
     <div id="description-content-hidden">
         <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
     </div>
     <script type="text/javascript">
-        $('#description-down-icon').click(function () {
+        $('#description-down-icon').click(function() {
             if ($('#description-content-hidden').is(":hidden")) {
                 $('#description-content-hidden').slideDown("slow");
             } else {
