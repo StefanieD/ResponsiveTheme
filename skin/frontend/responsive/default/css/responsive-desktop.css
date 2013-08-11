@@ -92,13 +92,13 @@
         -moz-justify-content: space-around;
     }
     .flexible-product-information{
-        flex-grow: 2;
+/*        flex-grow: 2;
 
-        /*für Google Chrome*/
+        für Google Chrome
         -webkit-flex-grow: 2;
 
-        /*für Firefox*/
-        -moz-flex-grow: 2;
+        für Firefox
+        -moz-flex-grow: 2;*/
     }
     .add-to-cart input{
         width: 70px;
@@ -130,7 +130,10 @@
     }
     /* ======================================================================================= */
 
-    /* PRODUCT IMAGES ===================================================== */
+    /* PRODUCT IMAGES ======================================================================== */
+    .flexible-product-img-item{
+        /*width: 20%;*/
+    }
     .product-img-box{
         margin-right: 10%;
     }
@@ -139,7 +142,11 @@
     }
     /* ======================================================================================= */
 
-    /* CATEGORY DIV ONE HOME PAGE ============================================================ */
+    /* PRODUCT PRICES ======================================================================== */
+    
+    /* ======================================================================================= */
+
+    /* CATEGORY DIV ON HOME PAGE ============================================================ */
     .home-categories-flex-parent-container{
         display: flex-inline;
         flex-direction: row;
@@ -167,18 +174,6 @@
     .home-categories-flex-item{
         width: 20%;
         padding: 2% 2.5% 2% 2.5%;
-/*        background-color: #F5EDD5;
-        background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
-        background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
-        background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
-        background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 80%);*/
-    }
-    .home-categories-flex-item:hover{
-/*        background-color: #F5EDD5;
-        background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
-        background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
-        background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
-        background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 40%);*/
     }
     .category-name span{
         display: none;
@@ -186,19 +181,19 @@
     .home-categories-flex-item .category-image{
         display: block;
     }
-    
     .category-image img{
         max-width: 90%;
     }
     /* ======================================================================================= */
 
 
-    /* CATEGORY PRODUCT TOP ================================================================ */
+    /* PRODUCT TOP ================================================================ */
     .pages{
         text-align: center;
     }
+    /* ======================================================================================= */
 
-    /* CATEGORY PRODUCT TOOLBAR ================================================================ */
+    /* PRODUCT TOOLBAR ================================================================ */
     .toolbar-flex-parent-container .limiter select{
         width: 80px;
     }
