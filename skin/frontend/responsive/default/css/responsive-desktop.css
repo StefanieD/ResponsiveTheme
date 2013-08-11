@@ -109,6 +109,25 @@
     .flexible-related-parent-div .product{
         width: 50%;
     }
+    .add-to-box{
+        float: left;
+        width: 50%;
+    }
+    .product-type-data-wrapper{
+        float: left;
+        width: 40%;
+        margin-left: 5%;
+    }
+    .ratings{
+        clear: both;
+        margin-top: 20px;
+    }
+    .short-description{
+        margin-bottom: 20px;
+    }
+    #description-down-icon, #additional-down-icon{
+        display: none;
+    }
     /* ======================================================================================= */
 
     /* PRODUCT IMAGES ===================================================== */

@@ -166,6 +166,11 @@ h1{
     letter-spacing: 0.1em;
     /*text-shadow: -1px 0 #543939, 0 1px #543939, 1px 0 #543939, 0 -1px #543939;*/
 }
+h2{
+    font-family: 'kaffeesatzregular';
+    font-size: 1.8rem;
+    letter-spacing: 0.07em;
+}
 h3{
     font-family: 'pacificoregular';
     color: #9a2f2f;
@@ -446,6 +451,12 @@ footer a{
 }
 /* ======================================================================================= */
 
+/* CATALOG PRODUCT GRID ================================================================ */
+.minimal-price-link{
+    clear: both;
+}
+/* ======================================================================================= */
+
 /* PRODUCT PAGE ================================================================ */
 .mini-products-list{
     margin: 0;
@@ -476,6 +487,29 @@ footer a{
     width: 80%;
 }
 .product-details{
+    text-align: center;
+}
+.in-stock, .out-of-stock{
+    font-weight: bold;
+}
+.in-stock span{
+    color: green;
+}
+.out-of-stock span{
+    color: red;
+}
+.regular-price{
+    padding: 5px 5px 5px 5px;
+    background-color: #d49e41;
+    border-radius: 18px;
+}
+.tax-details{
+    margin-top: 5px;
+}
+.tax-details, .tax-details a{
+    font-size: 0.8rem;
+}
+.product-type-data-wrapper{
     text-align: center;
 }
 /* ======================================================================================= */
