@@ -408,6 +408,9 @@ footer a{
 .home-categories-flex-item a{
     text-decoration: none;
 }
+.category-image{
+    text-align: center;
+}
 /* ======================================================================================= */
 
 /* CATEGORY PRODUCT TOOLBAR ================================================================ */

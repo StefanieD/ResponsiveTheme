@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Description of Categories
  *
@@ -26,7 +25,7 @@ class Sdrost_Responsive_Helper_Categories extends Mage_Core_Helper_Abstract
             foreach ($ids as $id) {
                 $cat = Mage::getModel('catalog/category');
                 $cat->load($id);
-                if($cat->level == 2) {
+                if($cat->level == 2 && $cat->getIsActive()) {
                     array_push($categories, $cat);
                 }
             }

@@ -164,9 +164,7 @@
     .home-categories-flex-item .category-image{
         display: block;
     }
-    .category-image{
-        text-align: center;
-    }
+    
     .category-image img{
         max-width: 90%;
     }
@@ -179,7 +177,6 @@
     }
 
     /* CATEGORY PRODUCT TOOLBAR ================================================================ */
-    
     .toolbar-flex-parent-container .limiter select{
         width: 80px;
     }
@@ -201,12 +198,10 @@
         text-align: center;
         width: 50%;
     }
+    /* ============================================================================== */
 
-
-    /* Category product grid ================================================================ */
-    /*flex variante*/
+    /* CATEGORY PRODUCT GRID ================================================================ */
     .products-grid-flex-parent-container{
-
         margin-left: 5%;
         margin-right: 5%;
         box-shadow: 5px 5px 5px grey;
@@ -248,14 +243,15 @@
         margin: 0;
     }
 
-    /* Category filter menu ======================================================== */
+    /* CATEGORY FILTER MENU ======================================================== */
     .filter-menu-trigger-selector{
         display: none;
     }
     #filter-menu-selector{
         display: block;
     }
-    
+    /* ============================================================================== */
+
     /* CAROUSEL ===================================================================== */
  
     /* ============================================================================== */

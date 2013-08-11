@@ -18,6 +18,7 @@
         -webkit-order: 1;
     }
     .header-flex-child-logo{
+        width: 30%;
         order: 2; /*an erste stelle verschieben*/
 
         /*für Google Chrome*/
@@ -173,18 +174,18 @@
     .home-categories-flex-item{
         width: 45%;
         margin: 2% 1% 0 1%;
-        background-color: #630B20;
+/*        background-color: #630B20;
         background-image: -webkit-linear-gradient(top, #F7EDF0, #F7E4E8);
         background-image: -moz-linear-gradient(top, #F7EDF0, #F7E4E8);
         background-image: -ms-linear-gradient(top, #F7EDF0, #F7E4E8);
-        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);
+        background-image: -o-linear-gradient(top, #F7EDF0, #F7E4E8);*/
     }
     .home-categories-flex-item:hover{
-        background-color: #630B20;
+/*        background-color: #630B20;
         background-image: -webkit-linear-gradient(top, #FADCE3, #FABECC);
         background-image: -moz-linear-gradient(top, #FADCE3, #FABECC);
         background-image: -ms-linear-gradient(top, #FADCE3, #FABECC);
-        background-image: -o-linear-gradient(top, #FADCE3, #FABECC);
+        background-image: -o-linear-gradient(top, #FADCE3, #FABECC);*/
     }
     .category-name h4{
         text-align: center;
