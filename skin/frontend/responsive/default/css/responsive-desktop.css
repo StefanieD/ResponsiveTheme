@@ -79,26 +79,26 @@
     .flexible-product-shop-parent-container{
         display: flex-inline;
         flex-direction: row;
-        justify-content: space-around; 
+        /*justify-content: space-around;*/ 
 
         /*Chrome*/
         display: -webkit-flex;
         -webkit-flex-direction: row;
-        -webkit-justify-content: space-around;
+        /*-webkit-justify-content: space-around;*/
 
         /*Firefox*/
         display: -moz-box;
         -moz-box-direction: row;
-        -moz-justify-content: space-around;
+        /*-moz-justify-content: space-around;*/
     }
     .flexible-product-information{
-/*        flex-grow: 2;
+        flex-grow: 2;
 
-        für Google Chrome
+        /*für Google Chrome*/
         -webkit-flex-grow: 2;
 
-        für Firefox
-        -moz-flex-grow: 2;*/
+        /*für Firefox*/
+        -moz-flex-grow: 2;
     }
     .add-to-cart input{
         width: 70px;
@@ -114,9 +114,9 @@
         width: 50%;
     }
     .product-type-data-wrapper{
-        float: left;
+/*        float: left;
         width: 40%;
-        margin-left: 5%;
+        margin-left: 5%;*/
     }
     .ratings{
         clear: both;
@@ -127,6 +127,35 @@
     }
     #description-down-icon, #additional-down-icon{
         display: none;
+    }
+    
+    .product-collateral{
+        clear: both;
+    }
+    /* ======================================================================================= */
+
+    /* PRODUCT OPTIONS ======================================================================== */
+    .product-options{
+        float: left;
+    }
+    .product-options dl{
+        margin-bottom: 0;
+    }
+    .product-options label{
+        font-weight: bold;
+    }
+    .product-options select{
+        width: auto;
+    }
+    .product-options em{
+        margin-right: 2px;
+    }
+    .product-options-bottom{
+        float: left;
+        margin-left: 5px;
+        border: 1px solid black;
+        padding: 10px 5px 5px 5px;
+        text-align: center;
     }
     /* ======================================================================================= */
 
@@ -219,8 +248,8 @@
 
     /* CATEGORY PRODUCT GRID ================================================================ */
     .products-grid-flex-parent-container{
-        margin-left: 5%;
-        margin-right: 5%;
+/*        margin-left: 5%;
+        margin-right: 5%;*/
         box-shadow: 5px 5px 5px grey;
 
         display: flex-inline;
@@ -247,7 +276,8 @@
         -moz-align-content: stretch;
     }
     .products-grid-flex-item{
-        width: 22.1%;
+        width: 22%;
+        min-width: 22%;
         text-align: center;
         padding: 10px 10px 10px 10px;
         border: 1px solid #D6CECE;

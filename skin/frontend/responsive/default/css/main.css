@@ -24,9 +24,6 @@ a{
     letter-spacing: 0.07em;
     color: #A18E6D;
 }
-li {
-    list-style: none;
-}
 img{
     max-width: 100%;
 }
@@ -71,41 +68,45 @@ footer{
     width: 100%;
 }
 .flexible-main-parent-container{
+    width: 100%;
+    
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 
     /*für Google Chrome*/
     display: -webkit-flex;
     -webkit-flex-wrap: nowrap;
     -webkit-flex-direction: row;
-    -webkit-justify-content: flex-start;
+    -webkit-justify-content: space-between;
     -webkit-align-items: flex-start;
 
     /*für Firefox*/
     display: -moz-box;
     -moz-box-wrap: nowrap;
     -moz-box-direction: row;
-    -moz-justify-content: flex-start;
+    -moz-justify-content: space-between;
     -moz-align-items: flex-start;
 }
 .left-sidebar{
-    width: 30%;
-    max-width: 30%;
-    min-width: 16%;
+    width: 17%;
+    max-width: 17%;
+    min-width: 17%;
     margin-left: 1.5%;
     border: 0.2px solid grey;
     box-shadow: 5px 5px 5px grey;
+    font-size: 0.8rem;
 }
 .right-sidebar{
-    width: 30%;
-    max-width: 30%;
-    min-width: 14%;
+    width: 18%;
+    max-width: 18%;
+    min-width: 18%;
     margin-right: 1.5%;
     border: 0.2px solid grey;
     box-shadow: 5px 5px 5px grey;
+    font-size: 0.8rem;
 }
 .content-wrapper{
     margin-top: 20px;
@@ -122,7 +123,10 @@ footer{
 
 /* RIGHT SIDEBAR LAYOUT ===================================================================== */
 #responsive-right-sidebar-layout .main-container{
-    margin: 0 5% 0 5%;
+    /*width: 56%;*/
+    min-width: 73%;
+    /*max-width: 56%;*/
+    margin: 0 2% 0 5%;
 }
 /*#responsive-right-sidebar-layout .right-sidebar{
     width: 20%;
@@ -136,8 +140,10 @@ footer{
 
 /* THREE COLUMNS LAYOUT ===================================================================== */
 #responsive-three-columns-layout .main-container{
-/*    margin: 0 5% 0 5%;
-    min-width: 65%;*/
+    /*width: 56%;*/
+    min-width: 56%;
+    /*max-width: 56%;*/
+    margin: 0 2% 0 2%;
 }
 #responsive-three-columns-layout .breadcrumbs{
     margin-left: 5%;
@@ -145,6 +151,9 @@ footer{
 /* ======================================================================================= */
 
 /* HEADER =========================================================================== */
+header li {
+    list-style: none;
+}
 .header-flex-parent-container{
     padding-top: 10px;
 
@@ -317,6 +326,9 @@ footer a{
 /* ======================================================================================= */
 
 /* PRODUCT PAGE ================================================================ */
+.add-to-links li{
+    list-style: none;
+}
 .mini-products-list{
     margin: 0;
 }
@@ -370,5 +382,8 @@ footer a{
 }
 .product-type-data-wrapper{
     text-align: center;
+}
+.pager{
+    margin: 0;
 }
 /* ======================================================================================= */

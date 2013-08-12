@@ -40,14 +40,15 @@
 <?php endif; ?>
 
 <script type="text/javascript">
-    //var jPM = $.jPanelMenu();
-    var jPM = $.jPanelMenu({
-        menu: '#filter-menu-selector',
-        trigger: '.filter-menu-trigger-selector',
-        afterOpen : function(){$('#filter-menu-button-outside').css('display', 'none')},
-        afterClose : function(){$('#filter-menu-button-outside').css('display', 'block')},
-    });
-    jPM.on();
+    if( $(window).width() <= 480 ){
+        var jPM = $.jPanelMenu({
+            menu: '#filter-menu-selector',
+            trigger: '.filter-menu-trigger-selector',
+            afterOpen : function(){$('#filter-menu-button-outside').css('display', 'none')},
+            afterClose : function(){$('#filter-menu-button-outside').css('display', 'block')},
+        });
+        jPM.on();
+    }
 </script>
 
 
