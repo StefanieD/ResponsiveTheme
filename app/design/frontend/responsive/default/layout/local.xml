@@ -201,4 +201,13 @@
             </action>
         </reference>
     </review_product_list>
+    
+    <!-- checkout page -->
+    <checkout_cart_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </checkout_cart_index>
 </layout>

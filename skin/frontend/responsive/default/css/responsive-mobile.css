@@ -222,7 +222,7 @@
     }
     /* ======================================================================================= */
 
-    /* CATALOG PRODUCT PAGE ================================================================================ */
+    /* PRODUCT PAGE ================================================================================ */
     .add-review-icon{
         width: 35px;
         height: 30px;
@@ -328,6 +328,7 @@
     }
     .product-type-data-wrapper{
         clear: both;
+        margin: 10px 5px;
     }
     .price-box{
         font-weight: bold;
@@ -468,6 +469,20 @@
     .products-grid-wrapper{
         clear: both;
     }
+    .name-and-price-wrapper{
+        float: left;
+        width: 60%;
+    }
+    .product-grid-information-wrapper .actions{
+        float: right;
+        margin: 20% 10px 0 0;
+    }
+    #add-to-cart-icon{
+        display: block;
+    }
+    #add-to-cart-button{
+        display: none;
+    }
     /* ======================================================================================= */
 
     /* CAROUSEL ======================================================= */
@@ -506,6 +521,9 @@
     #jPanelMenu-menu{
         width: 100% !important;
         overflow-y: auto !important;
+    }
+    #jPanelMenu-menu li{
+        list-style: none;
     }
     /* ====================================================================== */
 }

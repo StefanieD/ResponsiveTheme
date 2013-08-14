@@ -6,6 +6,10 @@
     footer{
         height: 130px;
     }
+    .right-sidebar .actions button{
+        padding: 5px;
+        border-radius: 5px;
+    }
     /* ========================================================================================= */
 
     /* HEADER ================================================================================ */
@@ -67,10 +71,7 @@
     }
     /* ======================================================================================= */
     
-    /* CATALOG PRODUCT VIEW ================================================================== */
-    .product-type-data-wrapper{
-        border: 1px solid black;
-    }
+    /* PRODUCT PAGE ================================================================== */
     .product-name h1{
         text-align: center;
         letter-spacing: 0.1em;
@@ -157,25 +158,13 @@
     .product-options dl{
         margin-bottom: 0;
     }
-    .product-options label{
-        font-weight: bold;
-    }
     .product-options select{
         width: auto;
-    }
-    .product-options em{
-        margin-right: 2px;
-    }
-    .product-options-bottom{
-        /*float: left;*/
-        margin-left: 5px;
-        border: 1px solid black;
-        padding: 10px 5px 5px 5px;
-        text-align: center;
     }
     .product-options-bottom .add-to-links{
         text-align: left;
         margin-left: 25%;
+        margin-top: 10px;
     }
     /* ======================================================================================= */
 
@@ -191,11 +180,7 @@
     }
     /* ======================================================================================= */
 
-    /* PRODUCT PRICES ======================================================================== */
-    
-    /* ======================================================================================= */
-   
-    /* PRODUCT PRICES ======================================================================== */
+    /* PRODUCT REVIEWS ======================================================================== */
     .box-reviews table{
         width: 60%;
     }
@@ -334,6 +319,9 @@
     .price-box .minimal-price{
         margin: 0;
     }
+    #add-to-cart-icon{
+        display: none;
+    }
 
     /* CATEGORY FILTER MENU ======================================================== */
     .filter-menu-trigger-selector{
@@ -348,6 +336,47 @@
  
     /* ============================================================================== */
 
+    /* CHECKOUT PAGE ========================================================================= */
+    
+    /* ======================================================================================= */
+
+    /* CHECKOUT TABLE ========================================================================= */
+    .cart form{
+        clear: both;
+    }
+    #shopping-cart-table button span{
+        font-size: 1rem;
+        font-family: 'kaffeesatzregular';
+        letter-spacing: 0.05em;
+    }
+    /* ======================================================================================= */
+
+    /* CHECKOUT BUTTON ======================================================================= */
+    .checkout-types{
+        float: right;
+    }
+    .checkout-types .button span{
+        font-size: 1.3rem;
+        font-family: 'kaffeesatzregular';
+        letter-spacing: 0.07em;
+    }
+    .checkout-types .button{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    /* ======================================================================================= */
+    
+    /* CHECKOUT CROSSSELL ==================================================================== */
+    .flexible-cart-crosssell-item{
+        width: 45%;
+        margin-right: 5%;
+    }
+    .flexible-cart-crosssell-item a{
+        width: 30%;
+    }
+    .flexible-cart-crosssell-item .product-details{
+        width: 70%;
+    }
 }
 
 

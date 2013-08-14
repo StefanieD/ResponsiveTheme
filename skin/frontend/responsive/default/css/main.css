@@ -45,6 +45,24 @@ h3{
     font-size: 1.3rem;
     letter-spacing: 0.1em;
 }
+.btn, .button{
+    padding: 4px 12px;
+    background-image: linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -webkit-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -moz-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -ms-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -o-linear-gradient(to bottom,#fff,#E0BC7E);
+}
+.btn:hover, .button:hover{
+    background-position: 0px 0px;
+    transition: none;
+    -webkit-transition: none;
+    background-image: linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -webkit-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -moz-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -ms-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -o-linear-gradient(to bottom,#fff,#d49e41);
+}
 /*========================================================================================= */
 
 /* RESPONSIVE LAYOUTS ===================================================================== */
@@ -110,6 +128,26 @@ footer{
 }
 .content-wrapper{
     margin-top: 20px;
+}
+.right-sidebar li, .left-sidebar li{
+    list-style: none;
+}
+.right-sidebar ol, .left-sidebar ol{
+    margin: 0;
+}
+.right-sidebar .actions button{
+    background-image: linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -webkit-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -moz-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -ms-linear-gradient(to bottom,#fff,#E0BC7E);
+    background-image: -o-linear-gradient(to bottom,#fff,#E0BC7E);
+}
+.right-sidebar .actions .button:hover{
+    background-image: linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -webkit-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -moz-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -ms-linear-gradient(to bottom,#fff,#d49e41);
+    background-image: -o-linear-gradient(to bottom,#fff,#d49e41);
 }
 
 /* ONE COLUMN LAYOUT ===================================================================== */
@@ -301,8 +339,18 @@ footer a{
 }
 /* ======================================================================================= */
 
+/* CATEGORY PAGE ========================================================================= */
+.category-description{
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 10px 0;
+}
+/* ======================================================================================= */
+
 /* CATEGORY PRODUCT TOOLBAR ================================================================ */
 .toolbar-flex-parent-container{
+    font-size: 0.9rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -374,25 +422,84 @@ footer a{
     background-color: #d49e41;
     border-radius: 18px;
 }
-.tax-details{
-    margin-top: 5px;
+.price-box{
+    margin-bottom: 5px;
 }
 .tax-details, .tax-details a{
     font-size: 0.8rem;
 }
 .product-type-data-wrapper{
     text-align: center;
+    border: 1px solid black;
 }
 .pager{
     margin: 0;
 }
+.add-to-cart{
+    margin: 10px 0;
+}
+.add-to-cart label{
+    display: none;
+}
 /* ======================================================================================= */
 
-/* FILTER MENU =========================================================================== */
-.left-sidebar li{
-    list-style: none;
+/* PRODUCT OPTIONS ======================================================================== */
+.product-options label{
+    font-weight: bold;
 }
-.left-sidebar ol{
-    margin: 0;
+.product-options em{
+    margin-right: 2px;
+}
+.product-options-bottom{
+    /*float: left;*/
+    margin: 0 5px;
+    border: 1px solid black;
+    padding: 10px 5px 5px 5px;
+    text-align: center;
 }
 /* ======================================================================================= */
+
+
+/* FILTER MENU =========================================================================== */
+/* ======================================================================================= */
+
+/* CHECKOUT PAGE ========================================================================= */
+#crosssell-products-list{
+    list-style: none;
+}
+/* ======================================================================================= */
+
+/* CHECKOUT TABLE ========================================================================= */
+
+/* ======================================================================================= */
+
+/* CHECKOUT BUTTON ======================================================================= */
+.checkout-types li{
+    list-style: none;
+}
+/* ======================================================================================= */
+
+/* CHECKOUT CROSSSELL ==================================================================== */
+.flexible-cart-crosssell-parent-container, .flexible-cart-crosssell-item{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    /*für Google Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: flex-start;
+
+    /*für Firefox*/
+    display: -moz-box;
+    -moz-box-wrap: nowrap;
+    -moz-box-direction: row;
+    -moz-justify-content: flex-start;
+    -moz-align-items: flex-start;
+}
+/* ======================================================================================= */
+
