@@ -464,8 +464,17 @@ footer a{
 /* ======================================================================================= */
 
 /* CHECKOUT PAGE ========================================================================= */
+.flexible-checkout-parent-container li{
+    list-style: none;
+}
 #crosssell-products-list{
     list-style: none;
+}
+.flexible-checkout-parent-container h2{
+    font-size: 1rem;
+}
+#shopping-cart-totals-table{
+    border: 1px solid black;
 }
 /* ======================================================================================= */
 
@@ -477,10 +486,25 @@ footer a{
 .checkout-types li{
     list-style: none;
 }
+.checkout-types button{
+    margin: 10px 0;
+}
 /* ======================================================================================= */
 
 /* CHECKOUT CROSSSELL ==================================================================== */
-.flexible-cart-crosssell-parent-container, .flexible-cart-crosssell-item{
+.flexible-cart-crosssell-parent-container{
+    display: flex;
+    flex-direction: column;
+
+    /*für Google Chrome*/
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+
+    /*für Firefox*/
+    display: -moz-box;
+    -moz-box-direction: column;
+}
+.flexible-cart-crosssell-item{
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -501,5 +525,6 @@ footer a{
     -moz-justify-content: flex-start;
     -moz-align-items: flex-start;
 }
+
 /* ======================================================================================= */
 

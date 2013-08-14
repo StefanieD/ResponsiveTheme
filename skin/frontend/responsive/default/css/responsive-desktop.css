@@ -337,7 +337,30 @@
     /* ============================================================================== */
 
     /* CHECKOUT PAGE ========================================================================= */
-    
+    .flexible-checkout-parent-container{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: nowrap;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: flex-start;
+        -webkit-align-items: flex-start;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: nowrap;
+        -moz-box-direction: row;
+        -moz-justify-content: flex-start;
+        -moz-align-items: flex-start;
+    }
+    .cart #shopping-cart-table{
+        box-shadow: 0 0 5px 5px grey;
+    }
     /* ======================================================================================= */
 
     /* CHECKOUT TABLE ========================================================================= */
@@ -367,10 +390,22 @@
     /* ======================================================================================= */
     
     /* CHECKOUT CROSSSELL ==================================================================== */
-    .flexible-cart-crosssell-item{
-        width: 45%;
+    .flexible-checkout-parent-container .crosssell{
+        box-shadow: 0 0 5px 5px grey;
+    }
+    .checkout-crosssell-wrapper{
+        width: 30%;
         margin-right: 5%;
     }
+    .checkout-coupon-wrapper{
+        width: 30%;
+        margin-right: 5%;
+        text-align: center;
+        box-shadow: 0 0 5px 5px grey;
+    }
+    .flexible-checkout-parent-container .totals{
+        text-align: center;
+    }    
     .flexible-cart-crosssell-item a{
         width: 30%;
     }
