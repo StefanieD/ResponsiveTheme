@@ -76,6 +76,20 @@
         letter-spacing: 0.1em;
         text-shadow: #D6CECE 3px 2px;;
     }
+    .product-description-and-stock-wrapper .short-description{
+        width: 50%;
+    }
+    .product-description-and-stock-wrapper .product-type-data-wrapper{
+        margin: 20px 0;
+        padding: 5px;
+    }
+    .product-description-and-stock-wrapper .short-description, 
+    .product-description-and-stock-wrapper .product-type-data-wrapper{
+        float: left;
+    }
+    .add-to-box{
+        clear: both;
+    }
     .flexible-product-shop-parent-container{
         display: flex-inline;
         flex-direction: row;
@@ -110,8 +124,9 @@
         width: 50%;
     }
     .add-to-box{
-        float: left;
-        width: 50%;
+        /*float: left;*/
+        clear: both;
+        /*width: 50%;*/
     }
     .product-type-data-wrapper{
 /*        float: left;
@@ -136,7 +151,8 @@
 
     /* PRODUCT OPTIONS ======================================================================== */
     .product-options{
-        float: left;
+        clear: both;
+        /*float: left;*/
     }
     .product-options dl{
         margin-bottom: 0;
@@ -151,17 +167,21 @@
         margin-right: 2px;
     }
     .product-options-bottom{
-        float: left;
+        /*float: left;*/
         margin-left: 5px;
         border: 1px solid black;
         padding: 10px 5px 5px 5px;
         text-align: center;
     }
+    .product-options-bottom .add-to-links{
+        text-align: left;
+        margin-left: 25%;
+    }
     /* ======================================================================================= */
 
     /* PRODUCT IMAGES ======================================================================== */
     .flexible-product-img-item{
-        /*width: 20%;*/
+        max-width: 40%;
     }
     .product-img-box{
         margin-right: 10%;
@@ -173,6 +193,31 @@
 
     /* PRODUCT PRICES ======================================================================== */
     
+    /* ======================================================================================= */
+   
+    /* PRODUCT PRICES ======================================================================== */
+    .box-reviews table{
+        width: 60%;
+    }
+    .box-reviews table th{
+        width: 5%;
+    }
+    .box-reviews span{
+        width: 10%;
+        margin: 0 5px 0 5px;
+    }
+    .box-reviews tbody .value{
+        text-align: center;
+    }
+    .box-reviews .form-list li{
+        list-style: none;
+    }
+    .box-reviews .form-list em{
+        margin-right: 5px;
+    }
+    .box-reviews .form-list label{
+        font-weight: bold;
+    }
     /* ======================================================================================= */
 
     /* CATEGORY DIV ON HOME PAGE ============================================================ */

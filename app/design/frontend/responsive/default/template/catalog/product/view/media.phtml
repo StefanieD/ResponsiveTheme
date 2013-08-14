@@ -27,7 +27,8 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" 
+                            <img src="<?php echo $this->helper('catalog/image')
+                                    ->init($_product, 'image'); ?>" 
                                  data-large="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" 
                                  alt="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" 
                                  data-description="<?php echo $this->htmlEscape($this->getImageLabel()); ?>" />
@@ -37,7 +38,9 @@
                         <?php foreach ($this->getGalleryImages() as $_image): ?>
                             <li>
                                 <a href="#">
-                                    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(56); ?>" 
+                                    <img src="<?php echo $this->helper('catalog/image')
+                                            ->init($this->getProduct(), 'thumbnail', $_image->getFile())
+                                            ->resize(56); ?>" 
                                     data-large="<?php echo $this->htmlEscape($_image->getUrl()); ?>" 
                                     alt="<?php echo $this->htmlEscape($_image->getLabel()); ?>" 
                                     data-description="<?php echo $this->htmlEscape($_image->getLabel()); ?>" />

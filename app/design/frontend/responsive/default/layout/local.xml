@@ -89,6 +89,7 @@
         
     </default>
     
+    <!-- main home page -->
     <cms_index_index>
         <!-- change template for footer -->
         <reference name="homeextras">
@@ -182,4 +183,22 @@
             </action>
         </reference>
     </customer_account_login>
+    
+    <!-- review page -->
+    <review_product_list>
+        <reference name="head">
+            <!-- add responsive image gallery -->
+            <action method="addItem"><type>skin_js</type><name>js/responsiveImageGallery/jquery.tmpl.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/responsiveImageGallery/jquery.easing.1.3.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/responsiveImageGallery/jquery.elastislide.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/responsiveImageGallery/gallery.js</name></action>
+            <action method="addCss"><stylesheet>css/responsiveImageGallery/style.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsiveImageGallery/elastislide.css</stylesheet></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </review_product_list>
 </layout>
