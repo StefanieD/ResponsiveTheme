@@ -2,7 +2,7 @@
 <config>
     <acl>
         <resources>
-            <admin>  <!--This is acl based on URL. If you see URL it would be /admin/system_config/ -->
+            <admin>
                 <children>
                     <system>
                         <children>

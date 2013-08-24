@@ -7,8 +7,7 @@
  * @package
  * @version 0.1.0
  */
-class Sdrost_Responsive_Adminhtml_SliderController 
-    extends Mage_Adminhtml_Controller_Action
+class Sdrost_Responsive_Adminhtml_SliderController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {

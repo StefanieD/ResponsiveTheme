@@ -526,4 +526,25 @@
         list-style: none;
     }
     /* ====================================================================== */
+    
+    /* CART ================================================================= */
+    #flexible-cart-buttons{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: flex-start;
+
+        /*Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: column;
+        -moz-justify-content: flex-start;
+    }
+    /* ====================================================================== */
 }

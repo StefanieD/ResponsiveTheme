@@ -358,8 +358,9 @@
         -moz-justify-content: flex-start;
         -moz-align-items: flex-start;
     }
-    .cart #shopping-cart-table{
+    .cart #cart-item-form{
         box-shadow: 0 0 5px 5px grey;
+        width: 80%;
     }
     /* ======================================================================================= */
 
