@@ -69,6 +69,9 @@ h3{
 .price{
     font-weight: bold;
 }
+form li{
+    list-style: none;
+}
 /*========================================================================================= */
 
 /* RESPONSIVE LAYOUTS ===================================================================== */
@@ -172,11 +175,9 @@ footer{
     /*max-width: 56%;*/
     margin: 0 2% 0 5%;
 }
-/*#responsive-right-sidebar-layout .right-sidebar{
-    width: 20%;
-    max-width: 20%;
-    min-width: 20%;
-}*/
+#responsive-right-sidebar-layout .right-sidebar{
+    margin-top: 50px;
+}
 #responsive-right-sidebar-layout .breadcrumbs{
     margin-left: 5%;
 }
