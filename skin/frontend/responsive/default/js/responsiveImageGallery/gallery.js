@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function() {
 	// ======================= imagesLoaded Plugin ===============================
 	// https://github.com/desandro/imagesloaded
 
@@ -12,7 +12,7 @@ $(function() {
 	// original: mit license. paul irish. 2010.
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
-	$.fn.imagesLoaded 		= function( callback ) {
+	jQuery.fn.imagesLoaded 		= function( callback ) {
 	var $images = this.find('img'),
 		len 	= $images.length,
 		_this 	= this,
@@ -48,7 +48,7 @@ $(function() {
 	};
 
 	// gallery container
-	var $rgGallery			= $('#rg-gallery'),
+	var $rgGallery			= jQuery('#rg-gallery'),
 	// carousel container
 	$esCarousel			= $rgGallery.find('div.es-carousel-wrapper'),
 	// the carousel items
@@ -139,7 +139,7 @@ $(function() {
 				// adds the structure for the large image and the navigation buttons (if total items > 1)
 				// also initializes the navigation events
 				
-				$('#img-wrapper-tmpl').tmpl( {itemsCount : itemsCount} ).prependTo( $rgGallery );
+				jQuery('#img-wrapper-tmpl').tmpl( {itemsCount : itemsCount} ).prependTo( $rgGallery );
 				
 				if( itemsCount > 1 ) {
 					// addNavigation
@@ -168,7 +168,7 @@ $(function() {
 						preventDefaultEvents: false
 					});
 				
-					$(document).on('keyup.rgGallery', function( event ) {
+					jQuery(document).on('keyup.rgGallery', function( event ) {
 						if (event.keyCode == 39)
 							_navigate( 'right' );
 						else if (event.keyCode == 37)
@@ -214,7 +214,7 @@ $(function() {
 					largesrc	= $thumb.data('large'),
 					title		= $thumb.data('description');
 				
-				$('<img/>').load( function() {
+				jQuery('<img/>').load( function() {
 					
 					$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
 					

@@ -121,9 +121,18 @@
     .link-wishlist{
         float: left;
     }
-    .flexible-related-parent-div .product{
+/*    .flexible-related-parent-div .product{
         width: 50%;
-    }
+    }*/
+.flexible-related-parent-div input{
+    width: 6%;
+}
+.flexible-related-parent-div .product-image{
+    width: 30%;
+}
+.flexible-related-parent-div .product-details{
+    width: 60%;
+}
     .add-to-box{
         /*float: left;*/
         clear: both;
@@ -147,6 +156,38 @@
     
     .product-collateral{
         clear: both;
+    }
+    /* ======================================================================================= */
+    
+    /* CONFIGURABLE PRODUCT PAGE ============================================================= */
+    .flexible-grouped-items-container, .flexible-grouped-items-container-header{
+        margin-top: 20px;
+        
+        display: flex-inline;
+        flex-direction: row;
+        justify-content: space-between;
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: row;
+        -webkit-justify-content: space-between;
+
+        /*Firefox*/
+        display: -moz-box;
+        -moz-box-direction: row;
+        -moz-justify-content: space-between;
+    }
+    .flexible-grouped-items-container-header{
+        font-weight: bold;
+    }
+    .flexible-grouped-items-container .product-name{
+        width: 20%;
+    }
+    .flexible-grouped-items-container #qty{
+        width: 20%;
+    }
+    .flexible-grouped-items-container #qty input{
+        width: 50%;
     }
     /* ======================================================================================= */
 
@@ -336,7 +377,7 @@
  
     /* ============================================================================== */
 
-    /* CHECKOUT PAGE ========================================================================= */
+    /* CART PAGE ========================================================================= */
     .flexible-checkout-parent-container{
         display: inline-flex;
         flex-direction: row;
@@ -364,7 +405,7 @@
     }
     /* ======================================================================================= */
 
-    /* CHECKOUT TABLE ========================================================================= */
+    /* CART TABLE ========================================================================= */
     .cart form{
         clear: both;
     }
@@ -373,24 +414,21 @@
         font-family: 'kaffeesatzregular';
         letter-spacing: 0.05em;
     }
+    .cart-delete-item-icon{
+        display: none;
+    }
+    .cart-edit-item-icon{
+        display: none;
+    }
     /* ======================================================================================= */
 
-    /* CHECKOUT BUTTON ======================================================================= */
+    /* CART BUTTON ======================================================================= */
     .checkout-types{
         float: right;
     }
-    .checkout-types .button span{
-        font-size: 1.3rem;
-        font-family: 'kaffeesatzregular';
-        letter-spacing: 0.07em;
-    }
-    .checkout-types .button{
-        padding: 10px;
-        border-radius: 10px;
-    }
     /* ======================================================================================= */
     
-    /* CHECKOUT CROSSSELL ==================================================================== */
+    /* CART CROSSSELL ==================================================================== */
     .flexible-checkout-parent-container .crosssell{
         box-shadow: 0 0 5px 5px grey;
     }
@@ -413,6 +451,7 @@
     .flexible-cart-crosssell-item .product-details{
         width: 70%;
     }
+    /* ======================================================================================= */
 }
 
 

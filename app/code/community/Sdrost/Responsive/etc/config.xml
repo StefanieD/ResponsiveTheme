@@ -7,6 +7,19 @@
         </Sdrost_Responsive>
     </modules>
     
+    <frontend>
+        <!-- file for translations -->
+         <translate>
+            <modules>
+                <Sdrost_Responsive>
+                    <files>
+                        <default>Sdrost_Responsive.csv</default>
+                    </files>
+                </Sdrost_Responsive>
+            </modules>
+        </translate>
+    </frontend>
+    
     <!-- controller for admin panel -->
     <admin>
         <routers>

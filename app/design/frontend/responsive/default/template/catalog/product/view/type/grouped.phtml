@@ -1,0 +1,58 @@
+<?php $this->setPreconfiguredValue(); ?>
+<?php $_product = $this->getProduct(); ?>
+<?php $_associatedProducts = $this->getAssociatedProducts(); ?>
+<?php $_hasAssociatedProducts = count($_associatedProducts) > 0; ?>
+<?php if ($_product->isAvailable() && $_hasAssociatedProducts): ?>
+    <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
+<?php else: ?>
+    <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
+<?php endif; ?>
+<?php echo $this->getChildHtml('product_type_data_extra') ?>
+    
+<div class="data-table grouped-items-table" id="super-product-table">
+    <!-- table header -->
+    <div class="flexible-grouped-items-container-header">
+        <div class="product-name"><?php echo $this->__('Product Name') ?></div>
+        <?php if ($this->getCanShowProductPrice($_product)): ?>
+            <span class="a-right"><?php echo $this->__('Price') ?></span>
+        <?php endif; ?>
+        <?php if ($_product->isSaleable()): ?>
+            <div class="a-center" id="qty"><?php echo $this->__('Qty') ?></div>
+        <?php endif; ?>
+    </div>
+    
+    <!-- table items -->
+    <?php if ($_hasAssociatedProducts): ?>
+        <?php foreach ($_associatedProducts as $_item): ?>
+            <div class="flexible-grouped-items-container">
+                <?php $_finalPriceInclTax = $this->helper('tax')->getPrice($_item, $_item->getFinalPrice(), true) ?>
+
+                <div class="product-name"><h5><?php echo $this->htmlEscape($_item->getName()) ?></h5></div>
+
+                <?php if ($this->getCanShowProductPrice($_product)): ?>
+                    <div class="a-right">
+                        <?php if ($this->getCanShowProductPrice($_item)): ?>
+                            <?php echo $this->getPriceHtml($_item, true) ?>
+                            <?php echo $this->getTierPriceHtml($_item) ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($_product->isSaleable()): ?>
+                    <div class="a-center" id="qty">
+                    <?php if ($_item->isSaleable()) : ?>
+                        <input type="text" name="super_group[<?php echo $_item->getId() ?>]" maxlength="12" value="<?php echo $_item->getQty()*1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+                    <?php else: ?>
+                        <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                    <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <span colspan="<?php if ($_product->isSaleable()): ?>4<?php else : ?>3<?php endif; ?>"><?php echo $this->__('No options of this product are available.') ?></span>
+    <?php endif; ?>
+</div>    
+    
+ 
+<script type="text/javascript">decorateTable('super-product-table')</script>

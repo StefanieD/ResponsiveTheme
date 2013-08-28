@@ -12,12 +12,13 @@
 
             <action method="addCss"><stylesheet>css/treemap.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery/jquery-1.9.1.min.js</name></action>
-            <!-- include jquery -->
+            <action method="addItem"><type>skin_js</type><name>js/jquery/noconflict.js</name></action>
+            <!-- include jquery 
             <block type="core/text" name="google.cdn.jquery">
                 <action method="setText">
                     <text><![CDATA[<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]></text>
                 </action>
-            </block>
+            </block>-->
             <!-- add viewport meta tag -->
             <block type="core/text" name="meta_viewport">
                 <action method="setText">
@@ -46,8 +47,8 @@
             <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-desktop.css</stylesheet></action>
             
-            <!-- add d3 framework -->
-            <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>
+            <!-- add d3 framework 
+            <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>-->
             
         </reference>
         

@@ -17,23 +17,31 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php if ($this->hasProductUrl()):?></a><?php endif;?>
         
         <!-- edit item link -->
-        <div class="cart-edit-item">
+        <div class="cart-edit-item-link">
             <?php if ($isVisibleProduct): ?>
                 <a href="<?php echo $this->getConfigureUrl() ?>" 
                    title="<?php echo $this->__('Edit item parameters') ?>"><?php echo $this->__('Edit') ?></a>
+            <?php endif ?>
+        </div>
+        <div class="cart-edit-item-icon">
+            <?php if ($isVisibleProduct): ?>
+                <a href="<?php echo $this->getConfigureUrl() ?>" 
+                   title="<?php echo $this->__('Edit item parameters') ?>"><img src="<?php echo $this->getSkinUrl('images/btn_edit.gif'); ?>"
+              title="<?php echo $this->__('Edit item parameters')?>"
+              alt="<?php echo $this->__('Edit item parameters')?>" /></a>
             <?php endif ?>
         </div>
     </div>
     
     <!-- item price -->
     <div class="cart-item-price">
-        <h2 class="product-name">
+        <h5 class="product-name">
             <?php if ($this->hasProductUrl()):?>
                 <a href="<?php echo $this->getProductUrl() ?>"><?php echo $this->htmlEscape($this->getProductName()) ?></a>
             <?php else: ?>
                 <?php echo $this->htmlEscape($this->getProductName()) ?>
             <?php endif; ?>
-        </h2>
+        </h5>
         
         <!-- option list -->
         <div class="option-list">
@@ -278,11 +286,21 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     </div>
     
     <!-- delete item link -->
-    <div class="cart-delete-item">
+    <div class="cart-delete-item-link">
         <a href="<?php echo $this->getDeleteUrl()?>" 
            title="<?php echo $this->__('Remove item')?>" 
            class="btn-remove btn-remove2"><?php echo $this->__('Remove item')?></a>
+    </div>    
+    <div class="cart-delete-item-icon">
+        <a href="<?php echo $this->getDeleteUrl()?>" 
+            title="<?php echo $this->__('Remove item')?>" 
+            class="btn-remove btn-remove2"><img src="<?php echo $this->getSkinUrl('images/btn_remove.gif'); ?>"
+              title="<?php echo $this->__('Remove item')?>"
+              alt="<?php echo $this->__('Remove item')?>" />
+        </a>
     </div>
+        
+    
 </div>
 
 <!-- wishlist -->
