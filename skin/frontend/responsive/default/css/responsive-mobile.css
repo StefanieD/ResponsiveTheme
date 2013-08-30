@@ -1,9 +1,9 @@
 @media screen and (max-width: 480px) {
     /* MAIN ======================================================================== */
-    
-    
+
+
     /* ============================================================================= */
-    
+
     /* RESPONSIVE LAYOUT =========================================================== */
     header{
         background-color: #111111;
@@ -57,7 +57,13 @@
         float: none;
     }
     /* ==================================================================================== */
-    
+
+    /* ONE COLUMN LAYOUT ===================================================================== */
+    #responsive-one-column-layout .main-container{
+        margin: 0;
+    }
+    /* ========================================================================================== */
+
     /* RIGHT SIDEBAR LAYOUT ===================================================================== */
     #responsive-right-sidebar-layout .main-container{
         margin: 0;
@@ -186,7 +192,7 @@
     }
     .header-flex-child-logo{
         width: 30%;
-        
+
         order: 2; /*an erste stelle verschieben*/
 
         /*für Google Chrome*/
@@ -203,7 +209,7 @@
     /* SEARCH FORM IN HEADER ================================================================================ */
     .search-flex-parent-container{
         padding: none;
-        
+
         justify-content: space-around; 
         align-items: center; 
 
@@ -222,19 +228,7 @@
     }
     /* ======================================================================================= */
 
-    /* PRODUCT PAGE ================================================================================ */
-    .add-review-icon{
-        width: 35px;
-        height: 30px;
-        background: url(../images/add_icon_tall.png) no-repeat scroll 5px center #ECEBEB;
-        cursor: pointer;
-        border: solid 1px #666;
-        border-radius: 5px;
-    }
-
-    .add-review-icon{
-        float: left;
-    }
+    /* PRODUCT PAGE ========================================================================== */
     #product-description-header, #product-additional-header{
         background-color: #F5EDD5;
         background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
@@ -308,14 +302,14 @@
         flex-wrap: nowrap;
         justify-content: center; 
         align-content: space-around; 
-        
+
         /*für Google Chrome*/
         display: -webkit-flex;
         -webkit-flex-direction: column;
         -webkit-flex-wrap: nowrap;
         -webkit-justify-content: center;
         -webkit-align-content: space-around; 
-        
+
         /*für Firefox*/
         display: -moz-box;
         -moz-box-wrap: nowrap;
@@ -337,6 +331,7 @@
         width: 40%;
     }
     /* ===================================================================== */
+
 
     /* CATEGORY DIVS ======================================================= */
     .home-categories-flex-parent-container{
@@ -394,7 +389,7 @@
         margin-right: 15px;
     }
     /* ======================================================================================= */
-    
+
     /* FOOTER ================================================================================ */
     #footer_adress{
         color: #fff;
@@ -441,9 +436,6 @@
         -moz-box-direction: column;
         -moz-justify-content: flex-start;
     }
-    .limiter select{
-        width: 30%;
-    }
     .products-grid-flex-item{
         text-align: center;
         margin-top: 20px;
@@ -461,7 +453,6 @@
         width: 30%;
     }
     .product-grid-information-wrapper{
-/*        clear: both;*/
         float: left;
         margin-left: 5%;
         width: 60%;
@@ -481,6 +472,9 @@
         display: block;
     }
     #add-to-cart-button{
+        display: none;
+    }
+    .sorter label{
         display: none;
     }
     /* ======================================================================================= */
@@ -526,8 +520,23 @@
         list-style: none;
     }
     /* ====================================================================== */
-    
+
     /* CART ================================================================= */
+    .flexible-cart-item-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column;
+
+        /*Firefox*/
+        display: -moz-box;
+        -moz-box-wrap: wrap;
+        -moz-box-direction: column;
+    }
     #flexible-cart-buttons{
         display: flex;
         flex-direction: column;
@@ -560,6 +569,70 @@
     }
     #add-to-cart-icon #success-icon{
         margin: 7px 0 0 -10px;
+    }
+    .flexible-checkout-parent-container{
+        display: flex;
+        flex-direction: column;
+
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-direction: column;
+    }
+    /* ====================================================================== */
+   
+    /* CART COUPON =========================================================================== */
+    .checkout-coupon-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: flex-start;
+        -webkit-align-items: flex-start;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-direction: column;
+        -moz-justify-content: flex-start;
+        -moz-align-items: flex-start;
+    }
+    .checkout-coupon-wrapper .discount{
+        border: none;
+    }
+    .shipping{
+        margin: 0;
+    }
+    .shipping ul{
+        margin: 0;
+    }
+    /* ====================================================================== */
+
+    /* CART CROSSSELL================================================================= */
+    .flexible-cart-crosssell-item{
+        padding: 0 5%;
+
+        /*border: 1px solid black;*/
+        display: flex;
+        flex-direction: column;
+
+        /*für Google Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+
+        /*für Firefox*/
+        display: -moz-box;
+        -moz-box-direction: column;
+    }
+    .flexible-cart-crosssell-item .product-image img{
+        max-width: none;
+        max-height: none;
     }
     /* ====================================================================== */
 }

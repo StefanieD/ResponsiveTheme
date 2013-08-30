@@ -54,9 +54,6 @@
     </form>
     
     <div class="flexible-checkout-parent-container">
-        <div class="checkout-crosssell-wrapper">
-            <?php echo $this->getChildHtml('crosssell') ?>
-        </div>
         <div class="checkout-coupon-wrapper">
             <?php /* Extensions placeholder */ ?>
             <?php echo $this->getChildHtml('checkout.cart.extra') ?>
@@ -75,5 +72,9 @@
             </ul>
             <?php endif; ?>
         </div>
+    </div>
+    
+    <div class="checkout-crosssell-wrapper">
+        <?php echo $this->getChildHtml('crosssell') ?>
     </div>
 </div>

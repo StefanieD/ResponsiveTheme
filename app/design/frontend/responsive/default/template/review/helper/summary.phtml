@@ -12,10 +12,9 @@
             <a href="<?php echo $this->getReviewsUrl() ?>">
                 <?php echo $this->__('%d Review(s)', $this->getReviewsCount()) ?>
             </a>
-            <i id="new-review-icon" class="icon-plus-sign"></i>
-            <!--<div class="add-review-icon">
-                 <a href="<?php // echo $this->getReviewsUrl() ?>#review-form"></a>
-            </div>-->
+            <div class="add-review-icon">
+                <a href="<?php echo $this->getReviewsUrl() ?>#review-form"><i id="new-review-icon" class="icon-plus-sign"></i></a>
+            </div>
         </div>
     </div>
 <?php elseif ($this->getDisplayIfEmpty()): ?>

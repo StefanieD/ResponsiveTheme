@@ -1,0 +1,39 @@
+.slider {
+    width: 400px; height: 300px;
+    overflow: hidden;
+}
+.slider > ul {
+    /* styled by JS to match the added width and height of all <li>’s */
+    position: relative;
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+
+    list-style: none;
+    margin: 0; padding: 0;
+}
+.slider > ul > li {
+    float: left;
+    width: 400px; height: 300px;
+}
+.slider-nav span{
+	position:absolute;
+/*	top:50%;
+	left:8px;*/
+	background:transparent url(../../images/responsiveImageGallery/nav_thumbs.png) no-repeat top left;
+	width:14px;
+	height:26px;
+	margin-top:-13px;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.8;
+}
+.slider-nav span.es-nav-next{
+	right:8px;
+	left:auto;
+	background-position:top right;
+}
+.slider-nav span:hover{
+	opacity:1.0;
+}
