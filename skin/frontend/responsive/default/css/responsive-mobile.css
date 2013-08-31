@@ -641,4 +641,38 @@
         max-height: none;
     }
     /* ====================================================================== */
+
+    /* ONE PAGE CHECKOUT ===================================================================== */
+    .checkout-onepage-index .right-sidebar{
+        display: none;
+    }
+    .opc{
+        margin: 0;
+    }
+    .opc .step{
+        padding: 15px 2%;
+    }
+    /* ======================================================================================= */
+    
+    /* ONE PAGE CHECKOUT STEP1 ================================================================ */
+    #checkout-step-login #flexible-step1{
+        display: flex;
+        flex-direction: column;
+
+        /*Chrome*/
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+
+        /*Firefox*/
+        display: -moz-box;
+        -moz-box-direction: column;
+    }
+    #co-billing-form .form-list{
+        margin: 0;
+    }
+    #co-billing-form .form-list ul{
+        margin: 0;
+    }
+    /* ======================================================================================= */
+
 }

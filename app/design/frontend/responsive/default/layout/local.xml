@@ -190,6 +190,15 @@
         
     </checkout_cart_index>
     
+    <!-- one page checkout -->
+    <checkout_onepage_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-right-sidebar.phtml</template>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+    
     <!-- contact page -->
     <contacts_index_index>
         <reference name="root">
