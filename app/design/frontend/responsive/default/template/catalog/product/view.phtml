@@ -48,7 +48,12 @@
                                 <?php echo $this->getChildHtml('product_type_data') ?>
                             </div>
                         </div>
-                
+                        
+                        <!-- Reviews -->
+                        <div class="product-reviews-wrapper">
+                            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+                        </div>
+                        
                         <!-- add to buttons if product has no options-->
                         <?php if (!$this->hasOptions()):?>
                             <div class="add-to-box">
@@ -90,24 +95,50 @@
                 
             </div>
             
-            <!-- Reviews -->
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
             
+            
+            <!-- bootstrap tabs for additional information -->
+            <?php $tabCounter = 0; ?>
             <div class="product-collateral">
+                <ul class="nav nav-tabs" id="product-collateral-tabs">
                 <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-                    <div class="box-collateral <?php echo "box-{$alias}"?>">
+                    <?php $tabCounter++; ?>
+                    <li <?php if($tabCounter == 1): ?>class="active"<?php endif; ?>><a href="#<?php echo $alias; ?>" data-toggle="tab">
+<!--                    <div class="box-collateral <?php // echo "box-{$alias}"?>">-->
                         <?php if ($title = $this->getChildData($alias, 'title')):?>
-                            <h2><?php echo $this->escapeHtml($title); ?></h2>
+                            <h3><?php echo $this->__($this->escapeHtml(ucfirst($title))); ?></h3>
+                        <?php else: ?>
+                            <h3><?php echo $this->__(ucfirst($alias)); ?></h3>
                         <?php endif;?>
-                    </div>
-                    <?php echo $html; ?>
+                    <!--</div>-->
+                            </a>
+                    
+                    </li>
                 <?php endforeach;?>
+                </ul>
+                
+                <?php $tabCounter = 0; ?>
+                <div class="tab-content">
+                    <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                        <?php $tabCounter++; ?>
+                        <div class="tab-pane<?php if($tabCounter == 1): ?> active<?php endif; ?>" 
+                             id="<?php echo $alias; ?>">
+                            <?php echo $html; ?>
+                        </div>
+                    <?php endforeach;?>
+                </div>
             </div>
+            
     </form>
       
     <?php echo $this->getChildHtml('upsell_products') ?>
     <?php echo $this->getChildHtml('product_additional_data') ?>
         
+    <script>
+        $(function () {
+            $('#product-collateral-tabs a:first').tab('show');
+        })
+    </script>
     <script type="text/javascript">
     //<![CDATA[
         var productAddToCartForm = new VarienForm('product_addtocart_form');
@@ -159,6 +190,7 @@
         }.bind(productAddToCartForm);
     //]]>
     </script>
+    
     
     </div>
 </div>

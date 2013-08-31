@@ -230,40 +230,46 @@
 
     /* PRODUCT PAGE ========================================================================== */
     #product-description-header, #product-additional-header{
-        background-color: #F5EDD5;
+/*        background-color: #F5EDD5;
         background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
         background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
         background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
         background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 80%);
-        height: 30px;
+        height: 30px;*/
     }
     #product-description-header:hover, #product-additional-header:hover{
-        background-color: #F5EDD5;
+/*        background-color: #F5EDD5;
         background-image: -webkit-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
         background-image: -moz-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
         background-image: -ms-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
         background-image: -o-linear-gradient(top, #F5EDD5, #EBD6B5 40%);
-        color: #111;
+        color: #111;*/
     }
     #product-description-header span, #product-additional-header span{
-        clear: both;
+/*        clear: both;
         float: none;
-        font-size: 12pt;
+        font-size: 12pt;*/
     }
     #product-description-header img, #product-additional-header img{
-        width: 30px;
+/*        width: 30px;
         height: 20px;
         margin: 5px 10px 5px 0;
-        float: right;
+        float: right;*/
     }
     #description-content-hidden{
-        display: none;
+        /*display: none;*/
     }
     #product-attribute-specs-table{
-        display: none;
+        /*display: none;*/
     }
     #description-down-icon, #additional-down-icon{
-        cursor: pointer;
+        /*cursor: pointer;*/
+    }
+    #product-collateral-tabs li h3{
+        /*color: #9a2f2f;*/
+        font-family: 'kaffeesatzregular';
+        font-size: 1.15rem;
+        letter-spacing: 0.1em;
     }
     .short-description{
         margin: 0 10px 0 10px;

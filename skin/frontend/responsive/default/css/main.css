@@ -308,7 +308,7 @@ footer a{
 }
 /* ======================================================================================= */
 
-/* CAROUSEL ================================================================================ */
+/* CAROUSEL HOME SLIDER ================================================================================ */
 .home-slider-wrapper{
     margin-top: 20px;
 }
@@ -471,7 +471,29 @@ footer a{
 }
 /* ======================================================================================= */
 
+/* PRODUCT RATINGS ======================================================================== */
+.product-reviews-wrapper{
+    clear: both;
+}
+.rating-box { 
+    width:69px; 
+    height:13px; 
+    font-size:0; 
+    line-height:0; 
+    background:url(../images/bkg_rating.gif) 0 0 repeat-x; text-indent:-999em; 
+    overflow:hidden; 
+}
+.rating-box .rating { 
+    float:left; 
+    height:13px; 
+    background:url(../images/bkg_rating.gif) 0 100% repeat-x; 
+}
+/* ======================================================================================= */
+
 /* PRODUCT OPTIONS ======================================================================== */
+.product-options{
+    margin-top: 20px;
+}
 .product-options label{
     font-weight: bold;
 }
