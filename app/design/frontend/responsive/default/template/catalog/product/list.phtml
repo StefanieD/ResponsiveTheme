@@ -60,7 +60,7 @@
         foreach ($_productCollection as $_product): ?>
         
             <div class="products-grid-flex-item">
-                <div class="products-grid-wrapper">
+                <!--<div class="products-grid-wrapper">-->
                     <a href="<?php echo $_product->getProductUrl() ?>" 
                        title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" 
                        class="product-image">
@@ -91,7 +91,7 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                </div>
+                <!--</div>-->
             </div>
         
         <?php endforeach ?>
