@@ -105,7 +105,7 @@
             <!-- add content block for category div boxes -->
             <block type="core/template" name="categorydivs" as="category-divs" translate="label" template="page/html/categorydivs.phtml">
                 <label>Category Divs</label>
-            </block>
+            </block>-->
         </reference>
     </cms_index_index>
     

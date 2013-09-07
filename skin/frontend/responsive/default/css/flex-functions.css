@@ -1,0 +1,26 @@
+/*@mixin flex-space-between-mixin{
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+}*/
+/*@mixin flex-start-mixin{
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+}*/
+/*@mixin flex-space-around-mixin{
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+}*/
+/*@mixin flex-justify-content-flex-end-mixin{
+    justify-content: flex-end; 
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+}*/
+/*@mixin flex-align-items-flex-end-mixin{
+    align-items: flex-end; 
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+} */
