@@ -1,5 +1,6 @@
 <?php $i = 0; ?>
-<?php $images = Mage::helper('responsive/slider')->getSliderImages(); ?>
+<?php // $images = Mage::helper('responsive/slider')->getSliderImages(); ?>
+<?php $images = Mage::getModel('responsive/sliderimages')->getCollection(); ?>
 <div class="home-slider-wrapper">
     <figure class="carousel-figure">
         <div id="myCarousel" class="carousel slide">
@@ -15,7 +16,7 @@
             <div class="carousel-inner">
                 <?php foreach ($images as $image) : ?>
                     <div class="item<?php if ($i == 0) : ?> active<?php endif; ?>" >
-                    <img src="<?php echo $image; ?>" alt="">
+                    <img src="<?php echo $image->getPath(); ?>" alt="">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Example headline.</h1>

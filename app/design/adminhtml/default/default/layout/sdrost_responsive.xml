@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_slider_index>
+        <reference name="left">
+            <block type="responsive/adminhtml_slider_form_tabs" name="slider.tabs" />
+        </reference>
+        <reference name="content">
+            <block type="responsive/adminhtml_slider_form_container" name="slider.form" />
+        </reference>
+    </adminhtml_slider_index>
+</layout>

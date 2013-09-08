@@ -1,7 +1,9 @@
 app/etc/modules/Sdrost_Responsive.xml app/etc/modules/Sdrost_Responsive.xml
 
 app/code/community/Sdrost/Responsive app/code/community/Sdrost/Responsive
-
-
 app/design/frontend/responsive/default app/design/frontend/responsive/default
 skin/frontend/responsive/default skin/frontend/responsive/default
+
+app/design/adminhtml/default/default/layout/sdrost_responsive.xml app/design/adminhtml/default/default/layout/sdrost_responsive.xml
+
+app/locale/de_DE/Sdrost_Responsive.csv app/locale/de_DE/Sdrost_Responsive.csv

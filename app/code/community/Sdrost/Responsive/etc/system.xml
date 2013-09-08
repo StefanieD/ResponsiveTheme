@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<config>
-    <!-- create new tab in admin system configuration -->
+<!--<config>
     <tabs>
         <responsivetab translate="label" module="responsive">
             <label>Sdrost Responsive</label>
@@ -24,12 +23,12 @@
                     <show_in_website>0</show_in_website>
                     <show_in_store>0</show_in_store>
                     <fields>
-                        <sliderimagefield1> <!-- Make up a field key -->
+                        <sliderimagefield1>
                             <label>Slider Image 1</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
-                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> <!-- would upload into media/uploaddir -->
-                            <base_url type="media" scope_info="1">sliderimages</base_url> <!-- same as previous line -->
+                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> 
+                            <base_url type="media" scope_info="1">sliderimages</base_url> 
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -37,12 +36,12 @@
                         </sliderimagefield1>
                     </fields>
                     <fields>
-                        <sliderimagefield2> <!-- Make up a field key -->
+                        <sliderimagefield2>
                             <label>Slider Image 2</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
-                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> <!-- would upload into media/uploaddir -->
-                            <base_url type="media" scope_info="1">sliderimages</base_url> <!-- same as previous line -->
+                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> 
+                            <base_url type="media" scope_info="1">sliderimages</base_url> 
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -50,12 +49,12 @@
                         </sliderimagefield2>
                     </fields>
                     <fields>
-                        <sliderimagefield3> <!-- Make up a field key -->
+                        <sliderimagefield3>
                             <label>Slider Image 3</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
-                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> <!-- would upload into media/uploaddir -->
-                            <base_url type="media" scope_info="1">sliderimages</base_url> <!-- same as previous line -->
+                            <upload_dir config="system/filesystem/media" scope_info="1">sliderimages</upload_dir> 
+                            <base_url type="media" scope_info="1">sliderimages</base_url> 
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -65,6 +64,7 @@
                 </sliderimages>
             </groups>
         </responsiveslider>
+        
         <categorydivs translate="label" module="responsive">
             <class>separator-top</class>
             <label>Kategorien Übersicht</label>
@@ -84,4 +84,4 @@
             </groups>
         </categorydivs>
     </sections>
-</config>
+</config>-->

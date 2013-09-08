@@ -7,7 +7,7 @@
         </Sdrost_Responsive>
     </modules>
     
-    <frontend>
+    <frontend>        
         <!-- file for translations -->
          <translate>
             <modules>
@@ -20,23 +20,11 @@
         </translate>
     </frontend>
     
-    <!-- controller for admin panel -->
-    <admin>
-        <routers>
-            <adminhtml>
-                <args>
-                    <modules>
-                        <!-- route to my controllers first then fall back -->
-                        <!-- defines the route for the admin controllers -->
-                        <responsive before="Mage_Adminhtml">Sdrost_Responsive_Adminhtml</responsive>
-                    </modules>
-                </args>
-            </adminhtml>
-        </routers>
-    </admin>
     
-    <!-- add new responsive layout page -->
+    
+    
     <global>
+        <!-- add new responsive layout pages -->
         <page>
             <layouts>
                 <responsive_layout_1column module="page" translate="label">
@@ -70,7 +58,81 @@
                 <class>Sdrost_Responsive_Helper</class>
             </responsive>
         </helpers>
+        
+        <resources>
+            <responsive_setup>
+                <setup>
+                    <module>Sdrost_Responsive</module>
+                    <class>Sdrost_Responsive_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </responsive_setup>
+            <responsive_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </responsive_write>
+            <responsive_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </responsive_read>
+        </resources>
+        
+        <models>
+            <responsive>
+                <class>Sdrost_Responsive_Model</class>
+                <resourceModel>responsive_mysql4</resourceModel>
+            </responsive>
+            
+            <responsive_mysql4>
+                <class>Sdrost_Responsive_Model_Mysql4</class>
+                <entities>
+                    <sliderimages>
+                        <table>sdrost_responsive_slider</table>
+                    </sliderimages>
+                </entities>
+            </responsive_mysql4>
+        </models>
     </global>
     
+    <!-- controller for admin panel -->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <!-- route to my controllers first then fall back -->
+                        <!-- defines the route for the admin controllers -->
+                        <responsive before="Mage_Adminhtml">Sdrost_Responsive_Adminhtml</responsive>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+     
+    <adminhtml>
+        <!-- file for admin layout updates -->
+        <layout>
+            <updates>
+                <responsive>
+                    <file>sdrost_responsive.xml</file>
+                </responsive>
+            </updates>
+       </layout>
+        
+        <!-- file for translations -->
+        <translate>
+            <modules>
+                <Sdrost_Responsive>
+                    <files>
+                        <default>Sdrost_Responsive.csv</default>
+                    </files>
+                </Sdrost_Responsive>
+            </modules>
+        </translate>
+    </adminhtml>
     
 </config>

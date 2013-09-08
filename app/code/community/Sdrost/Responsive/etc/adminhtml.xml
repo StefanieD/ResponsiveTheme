@@ -1,6 +1,60 @@
 <?xml version="1.0" ?>
 <config>
+    <!-- create new menu tab in admin panel -->
+    <menu>
+        <sdrost_responsive_menu module="responsive" translate="title">
+            <title>Sdrost Responsive</title>
+            <sort_order>100</sort_order>
+            <children>
+                <index module="responsive" translate="title">
+                    <title>Responsive Slider</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/slider</action>
+                </index>
+            </children>
+        </sdrost_responsive_menu>
+    </menu>
+    <!-- set rights for new menu -->   
     <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sdrost translate="title" module="responsive">
+                        <title>Responsive Slider Controller</title>
+                        <sort_order>-100</sort_order>
+                        <children>
+                            <index translate="title">
+                                <title>Index Action</title>
+                                <sort_order>1</sort_order>
+                            </index>
+                        </children>
+                    </sdrost>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    
+    <!-- layout updates for new menu 
+    <layout>
+        <updates>
+            <responsive>
+                <file>sdrost_responsive.xml</file>
+            </responsive>
+        </updates>
+    </layout>-->
+    
+    <!-- file for translations 
+    <translate>
+        <modules>
+            <Sdrost_Responsive>
+                <files>
+                    <default>Sdrost_Responsive.csv</default>
+                </files>
+            </Sdrost_Responsive>
+        </modules>
+    </translate>-->
+    
+    <!--<acl>
         <resources>
             <admin>
                 <children>
@@ -8,12 +62,11 @@
                         <children>
                             <config>
                                 <children>
-                                    <responsiveslider translate="title" module="responsive">  <!-- This is name of the section created by us -->
-                                        <title>Slider Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
-                                        <sort_order>99</sort_order>
+                                    <responsiveslider translate="title" module="responsive"> 
+                                        <title>Slider Section ACL</title>  
                                     </responsiveslider>
-                                    <categorydivs translate="title" module="responsive">  <!-- This is name of the section created by us -->
-                                        <title>Category Divs Section ACL</title>  <!-- Title as shown in User->Roles->Permissions Window -->
+                                    <categorydivs translate="title" module="responsive"> 
+                                        <title>Category Divs Section ACL</title> 
                                         <sort_order>90</sort_order>
                                     </categorydivs>
                                 </children>
@@ -23,5 +76,5 @@
                 </children>
             </admin>
         </resources>
-    </acl>
+    </acl>-->
 </config>
