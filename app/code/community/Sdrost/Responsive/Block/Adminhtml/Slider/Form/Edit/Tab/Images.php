@@ -15,7 +15,8 @@ class Sdrost_Responsive_Block_Adminhtml_Slider_Form_Edit_Tab_Images
         
         while($imageCounter <= $imageNumber){
             $fieldname = 'slider_image' . $imageCounter;
-            $value = Mage::getModel('responsive/sliderimages')->load($imageCounter)->getPath();
+            $value = Mage::getModel('responsive/sliderimages')->load($imageCounter)->getUrl();
+//            $urlPath = Mage::getBaseUrl('media') . 'sliderimages';
             
             $fieldset->addField($fieldname, 'image', array(
                 'label'     =>  Mage::helper('responsive')->__('Image ' . $imageCounter),

@@ -16,7 +16,7 @@
             <div class="carousel-inner">
                 <?php foreach ($images as $image) : ?>
                     <div class="item<?php if ($i == 0) : ?> active<?php endif; ?>" >
-                    <img src="<?php echo $image->getPath(); ?>" alt="">
+                    <img src="<?php echo $image->getUrl(); ?>" alt="">
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Example headline.</h1>
