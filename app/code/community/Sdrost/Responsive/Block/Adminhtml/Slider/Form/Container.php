@@ -22,6 +22,11 @@ class Sdrost_Responsive_Block_Adminhtml_Slider_Form_Container
             'onclick'   => 'saveAndContinueEdit()',
             'class'     => 'save',
         ), -100);
+        
+        $this->_formScripts[] = " function saveAndContinueEdit(){
+            editForm.submit($('edit_form').action+'back/edit/');
+            }
+        ";
     }
  
     public function getHeaderText()
