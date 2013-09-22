@@ -5,13 +5,13 @@
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?> id="menu-open">
 <?php echo $this->getChildHtml('after_body_start') ?>
-<div class="wrapper" id="menu-close">
+<div class="wrapper responsive-one-column-layout" id="menu-close">
     <?php echo $this->getChildHtml('global_notices') ?>
     
     <!-- header -->
     <?php echo $this->getChildHtml('header') ?>
     
-    <div class="page" id="responsive-one-column-layout">
+    <!--<div class="page" id="responsive-one-column-layout">-->
         
         <!-- breadcumbs -->
         <?php echo $this->getChildHtml('breadcrumbs') ?>
@@ -22,12 +22,12 @@
                 <?php echo $this->getChildHtml('homeextras') ?>
                 
                 <?php echo $this->getChildHtml('global_messages') ?>
-                <div class="content-wrapper">
+                <!--<div class="content-wrapper">-->
                     <?php echo $this->getChildHtml('content') ?>
-                </div>
+                <!--</div>-->
             </section>
         </div>
-    </div>
+    <!--</div>-->
     
     <!-- footer -->
     <?php echo $this->getChildHtml('footer') ?>

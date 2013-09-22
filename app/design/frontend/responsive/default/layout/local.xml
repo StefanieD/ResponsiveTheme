@@ -12,13 +12,22 @@
 
             <!--<action method="addCss"><stylesheet>css/treemap.css</stylesheet></action>-->
             <action method="addItem"><type>skin_js</type><name>js/jquery/jquery-1.9.1.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/jquery/noconflict.js</name></action>
+            <!--<block type="core/text" name="google.cdn.jquery">
+                <action method="setText">
+                    <text><![CDATA[<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>]]></text>
+                </action>
+            </block>-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery/noconflict.js</name>
+            </action>
             <!-- include jquery 
             <block type="core/text" name="google.cdn.jquery">
                 <action method="setText">
                     <text><![CDATA[<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]></text>
                 </action>
             </block>-->
+            
             <!-- add viewport meta tag -->
             <block type="core/text" name="meta_viewport">
                 <action method="setText">

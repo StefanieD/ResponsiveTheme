@@ -31,14 +31,9 @@
   header {
     background-color: #111111; }
 
-  .page {
-    padding-bottom: 250px;
-    /*to prevent footer from overflow content*/ }
-
   footer {
     background-color: #111111;
-    width: 98%;
-    padding: 2% 0 0 2%; }
+    padding: 2%; }
 
   .flexible-main-parent-container {
     display: flex;
@@ -69,35 +64,29 @@
     -ms-box-align: flex-start; }
 
   .left-sidebar {
-    width: 100%;
+    width: 90%;
     min-width: 90%;
     max-width: 90%;
     margin: 0 5% 0 5%;
-    box-shadow: none; }
-
-  .right-sidebar {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0;
     border: none;
     box-shadow: none; }
 
-  /*    .col-main{
-          width: 100%;
-          float: none;
-      }*/
-  /* ==================================================================================== */
-  /* ONE COLUMN LAYOUT ===================================================================== */
+  .right-sidebar {
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0 5% 0 5%;
+    border: none;
+    box-shadow: none; }
+
+  /* ================================================== */
+  /* ONE COLUMN LAYOUT ================================ */
   #responsive-one-column-layout .main-container {
     margin: 0;
     width: 100%; }
 
-  /* ========================================================================================== */
-  /* RIGHT SIDEBAR LAYOUT ===================================================================== */
-  #responsive-right-sidebar-layout .main-container {
-    margin: 0; }
-
+  /* ================================================== */
+  /* RIGHT SIDEBAR LAYOUT ============================= */
   #responsive-right-sidebar-layout .main-container {
     width: 100%;
     min-width: 100%;
@@ -106,11 +95,15 @@
     border: none;
     box-shadow: none; }
 
-  /* ========================================================================================== */
-  /* THREE COLUMNS LAYOUT ===================================================================== */
+  /* ================================================== */
+  /* THREE COLUMNS LAYOUT ============================= */
   #responsive-three-columns-layout .main-container {
-    /*margin: 0 5% 0 5%;*/
-    min-width: 100%; }
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border: none;
+    box-shadow: none; }
 
   /* ==================================================================================== */
   /* TOP LINKS =========================================================== */
@@ -127,7 +120,7 @@
   #cart-text {
     display: none; }
 
-  .toplinks-flex-parent-container {
+  .header-flex-child-nav nav {
     display: flex;
     /*Firefox*/
     display: -webkit-flex;
@@ -148,36 +141,36 @@
     -ms-align-items: center;
     -ms-box-align: center; }
 
-  .toplinks-flex-parent-container div, .toplinks-flex-parent-container li {
-    padding-top: 5px;
+  .header-flex-child-nav nav div, .header-flex-child-nav nav li {
+    padding: 1rem 0 1rem 0;
     width: 100%;
     text-align: center;
-    background-color: #630B20;
-    background-image: -webkit-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -moz-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -ms-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -o-linear-gradient(top, #f7edf0, #f7e4e8); }
+    background-color: #4F4E4E;
+    background-image: -webkit-linear-gradient(top, #4f4e4e, #111111);
+    background-image: -moz-linear-gradient(top, #4f4e4e, #111111);
+    background-image: -ms-linear-gradient(top, #4f4e4e, #111111);
+    background-image: -o-linear-gradient(top, #4f4e4e, #111111); }
 
-  .toplinks-flex-parent-container div:hover, .toplinks-flex-parent-container li:hover {
-    background-color: #630B20;
-    background-image: -webkit-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -moz-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -ms-linear-gradient(top, #f7edf0, #f7e4e8);
-    background-image: -o-linear-gradient(top, #f7edf0, #f7e4e8); }
+  .header-flex-child-nav nav div:hover, .header-flex-child-nav nav li:hover {
+    background-color: #636161;
+    background-image: -webkit-linear-gradient(top, #636161, #111111);
+    background-image: -moz-linear-gradient(top, #636161, #111111);
+    background-image: -ms-linear-gradient(top, #636161, #111111);
+    background-image: -o-linear-gradient(top, #636161, #111111); }
 
   /* TOGGLE MAIN MENU ======================================================================*/
   .wrapper {
     padding-top: 1px;
     /*verhindert das rutschen*/ }
 
-  #nav-wrap {
+  .header-flex-child-nav nav {
     left: 0;
     position: absolute;
     top: 0;
     height: 0;
     overflow: hidden;
     width: 100%;
-    background-color: #474024; }
+    background-color: #111111; }
 
   .close-menu-button {
     display: none; }
@@ -186,11 +179,11 @@
     display: block; }
 
   /*open menu*/
-  #menu-open:target #nav-wrap {
-    height: 5rem; }
+  #menu-open:target .header-flex-child-nav nav {
+    height: 11rem; }
 
   #menu-open:target .header-flex-parent-container {
-    margin-top: 5rem;
+    margin-top: 10rem;
     /*Seite nach unten schieben, wegen einblenden der navi*/ }
 
   #menu-open:target .close-menu-button {
@@ -200,14 +193,14 @@
     display: none; }
 
   /*close menu*/
-  #menu-close:target #nav-wrap {
+  #menu-close:target .header-flex-child-nav nav {
     height: 0; }
 
   #menu-close:target .header-flex-parent-container {
     margin-top: 0;
     /*Seite nach unten schieben, wegen einblenden der navi*/ }
 
-  #nav-wrap, .header-flex-parent-container {
+  .header-flex-child-nav nav, .header-flex-parent-container {
     transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s; }
 
@@ -356,7 +349,7 @@
     width: 40%; }
 
   /* ===================================================================== */
-  /* CATEGORY DIVS ======================================================= */
+  /* HOME CATEGORY DIVS ======================================================= */
   .home-categories-flex-container {
     display: flex;
     /*Firefox*/
@@ -443,6 +436,7 @@
     color: #fff; }
 
   .footer-flex-parent-container, .footer-cms-flex-parent-container {
+    width: 50%;
     display: flex;
     /*Firefox*/
     display: -webkit-flex;
@@ -621,6 +615,7 @@
     margin: 7px 0 0 -10px; }
 
   .flexible-checkout-parent-container {
+    padding: 0 2% 0 2%;
     display: flex;
     /*Firefox*/
     display: -webkit-flex;
@@ -632,6 +627,10 @@
     flex-direction: column;
     -webkit-flex-direction: column;
     /*-moz-box-direction: column;*/ }
+
+  .checkout-types {
+    float: none;
+    margin: 0; }
 
   /* ====================================================================== */
   /* CART COUPON =========================================================================== */
@@ -668,6 +667,9 @@
 
   .shipping ul {
     margin: 0; }
+
+  .shipping-form select {
+    width: 90%; }
 
   /* ====================================================================== */
   /* CART CROSSSELL================================================================= */

@@ -40,12 +40,12 @@
 <?php endif; ?>
 
 <script type="text/javascript">
-    if( $(window).width() <= 480 ){
-        var jPM = $.jPanelMenu({
+    if( jQuery(window).width() <= 480 ){
+        var jPM = jQuery.jPanelMenu({
             menu: '#filter-menu-selector',
             trigger: '.filter-menu-trigger-selector',
-            afterOpen : function(){$('#filter-menu-button-outside').css('display', 'none')},
-            afterClose : function(){$('#filter-menu-button-outside').css('display', 'block')},
+            afterOpen : function(){jQuery('#filter-menu-button-outside').css('display', 'none')},
+            afterClose : function(){jQuery('#filter-menu-button-outside').css('display', 'block')},
         });
         jPM.on();
     }

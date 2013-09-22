@@ -34,7 +34,7 @@
                     <?php if ($category->getImageUrl()) : ?>
                         <img class="img-polaroid" src="<?php echo $category->getImageUrl(); ?>" />
                     <?php else : ?>
-                        <img class="img-polaroid" src="<?php echo $this->getSkinUrl('images/logo.gif'); ?>" />
+                        <img class="img-polaroid" src="<?php echo Mage::helper('responsive/categories')->getDefaultImage(); ?>" />
                     <?php endif; ?>
                 </figure>
             </a> 

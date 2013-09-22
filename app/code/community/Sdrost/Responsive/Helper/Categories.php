@@ -8,6 +8,8 @@
  */
 class Sdrost_Responsive_Helper_Categories extends Mage_Core_Helper_Abstract
 {
+    public $defaultImage = 'category_default.jpg';
+    
     public function getCategories()
     {
         $categories = array();
@@ -32,5 +34,10 @@ class Sdrost_Responsive_Helper_Categories extends Mage_Core_Helper_Abstract
         }
         
         return $categories;
+    }
+    
+    public function getDefaultImage()
+    {
+        return Mage::getBaseUrl('skin') . 'frontend/responsive/default/images' . DS . $this->defaultImage;
     }
 }

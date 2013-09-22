@@ -28,11 +28,14 @@
   } */
   /* LAYOUT ================================================================================ */
   .page {
-    padding-bottom: 130px;
-    /*to prevent footer from overflow content*/ }
+    /*padding-bottom: 130px; to prevent footer from overflow content*/ }
+
+  .main-container {
+    margin-left: 2%;
+    margin-right: 2%; }
 
   footer {
-    height: 130px; }
+    /*height: 130px;*/ }
 
   .right-sidebar .actions button {
     padding: 5px;
@@ -50,7 +53,7 @@
   .open-menu-button, .close-menu-button {
     display: none; }
 
-  .toplinks-flex-parent-container {
+  .header-flex-child-nav nav {
     display: flex;
     /*Firefox*/
     display: -webkit-flex;
@@ -85,7 +88,7 @@
     -ms-align-items: center;
     -ms-box-align: center; }
 
-  .toplinks-flex-parent-container div, .toplinks-flex-parent-container li {
+  .header-flex-child-nav nav div, .header-flex-child-nav nav li {
     padding-right: 20px; }
 
   /* ======================================================================================= */
@@ -118,6 +121,11 @@
     /*-moz-justify-content: $value;
     -ms-justify-content: $value;
     -ms-box-pack: $value;*/ }
+
+  /* ======================================================================================= */
+  /* BREADCRUMBS ================================================================================ */
+  .breadcrumbs {
+    margin-left: 1.5%; }
 
   /* ======================================================================================= */
   /* PRODUCT PAGE ================================================================== */
@@ -266,6 +274,10 @@
   .home-categories-flex-container .home-categories-flex-item {
     width: 23%; }
 
+  .home-categories-flex-container .home-categories-flex-item:nth-of-type(4n+1) {
+    margin-left: 0;
+    clear: left; }
+
   /* clear col */
   /*    .home-categories-flex-container .home-categories-flex-item:nth-of-type(4n+1),
       .home-categories-flex-container .home-categories-flex-item:nth-of-type(3n+1),
@@ -333,63 +345,38 @@
   /* ============================================================================== */
   /* CATEGORY PRODUCT GRID ================================================================ */
   .products-grid-flex-parent-container {
+    overflow: auto;
     box-shadow: 5px 5px 5px grey;
-    display: flex;
-    /*Firefox*/
-    display: -webkit-flex;
-    /*Chrome*/
-    /*   display: -moz-box; 
-      display: -ms-flexbox;
-      display: -ms-flex;
-      display: -webkit-box;*/
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    /*    -moz-box-direction: row;
-        -ms-box-orient: horizontal;
-        
-        -webkit-box-orient: horizontal;
-        -moz-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -moz-box-direction: normal;
-        -ms-flex-direction: row;*/
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -moz-box-wrap: wrap;
-    justify-content: flex-start;
-    /*Firefox*/
-    -webkit-justify-content: flex-start;
-    /*Chrome*/
-    /*-moz-justify-content: $value;
-    -ms-justify-content: $value;
-    -ms-box-pack: $value;*/
-    align-items: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    -ms-align-items: stretch;
-    -ms-box-align: stretch;
-    align-content: stretch;
-    -webkit-align-content: stretch;
-    -moz-align-content: stretch;
-    -ms-align-content: stretch; }
+    background-color: #ebe8ce;
+    padding-top: 10px;
+    /*        @include flex-mixin;
+            @include flex-row-mixin;
+            @include flex-wrap-mixin;
+            @include flex-justify-content-mixin(flex-start);
+            @include flex-align-items-mixin(stretch);
+            @include flex-align-content-mixin(stretch);*/ }
 
   .products-grid-flex-item {
-    display: flex;
-    /*Firefox*/
-    display: -webkit-flex;
-    /*Chrome*/
-    /*   display: -moz-box; 
-      display: -ms-flexbox;
-      display: -ms-flex;
-      display: -webkit-box;*/
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    /*-moz-box-direction: column;*/
-    width: 22%;
-    min-width: 22%;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-    border: 1px solid #D6CECE;
-    background-color: #FCF7F7; }
+    /*        @include flex-mixin;
+            @include flex-column-mixin;        
+            width: 22%;
+            min-width: 22%;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+            border: 1px solid #D6CECE;
+            background-color: #FCF7F7;*/
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 30px;
+    height: 300px;
+    text-align: center; }
+
+  .products-grid-flex-item {
+    width: 23%; }
+
+  .products-grid-flex-item:nth-of-type(4n+1) {
+    margin-left: 0;
+    clear: left; }
 
   .products-grid-flex-item button {
     margin-top: auto; }
