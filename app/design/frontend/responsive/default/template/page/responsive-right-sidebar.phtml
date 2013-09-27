@@ -11,28 +11,24 @@
     <!-- header -->
     <?php echo $this->getChildHtml('header') ?>
     
-    <!--<div class="page" id="responsive-right-sidebar-layout">-->
+    <!-- breadcumbs -->
+    <?php echo $this->getChildHtml('breadcrumbs') ?>
         
-        <!-- breadcumbs -->
-        <?php echo $this->getChildHtml('breadcrumbs') ?>
-        
-           
-        <!-- 3 columns on page -->
-        <div class="flexible-main-parent-container">
+    <!-- 2 columns on page -->
+    <div class="flexible-main-parent-container">
 
-            <section class="main-container">  
-                <?php echo $this->getChildHtml('homeextras') ?>
-                
-                <?php echo $this->getChildHtml('global_messages') ?>
-                <?php echo $this->getChildHtml('content') ?>
-            </section>
+        <section class="main-container">  
+            <?php echo $this->getChildHtml('homeextras') ?>
 
-            <!-- right sidebar -->
-            <aside class="right-sidebar">
-                <?php echo $this->getChildHtml('right') ?>
-            </aside>
-        </div>
-    <!--</div>-->
+            <?php echo $this->getChildHtml('global_messages') ?>
+            <?php echo $this->getChildHtml('content') ?>
+        </section>
+
+        <!-- right sidebar -->
+        <aside class="right-sidebar">
+            <?php echo $this->getChildHtml('right') ?>
+        </aside>
+    </div>
     
     <!-- footer -->
     <?php echo $this->getChildHtml('footer') ?>

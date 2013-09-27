@@ -1,8 +1,12 @@
 <header>
     <div class="header-flex-parent-container">
-        <div class="header-flex-child-logo"><a href="<?php echo Mage::getUrl(); ?>">
-                <img src="<?php echo $this->getSkinUrl('images/Logo2_light.png'); ?>" />
-            </a></div>
+        <div class="header-flex-child-logo">
+            <a href="<?php echo Mage::getUrl(); ?>">
+                <img id="logo" src="<?php echo $this->getSkinUrl('images/logo_small.png'); ?>" 
+                     alt="Logo" 
+                     data-fullsrc="<?php echo $this->getSkinUrl('images/logo_tall.png'); ?>" />
+            </a>
+        </div>
         
         <div id="naviDiv" class="header-flex-child-nav">
             <div class="nav-menu-buttons">
@@ -28,3 +32,6 @@
         <?php echo $this->getChildHtml('topSearch') ?>
     </div>
 </header>
+<script type="text/javascript">
+    responsiveEnhance(document.getElementById('logo'), 100);
+</script>

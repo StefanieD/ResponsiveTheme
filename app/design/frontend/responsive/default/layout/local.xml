@@ -10,6 +10,7 @@
             <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action> 
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action> 
 
+            
             <!--<action method="addCss"><stylesheet>css/treemap.css</stylesheet></action>-->
             <action method="addItem"><type>skin_js</type><name>js/jquery/jquery-1.9.1.min.js</name></action>
             <!--<block type="core/text" name="google.cdn.jquery">
@@ -21,6 +22,10 @@
                 <type>skin_js</type>
                 <name>js/jquery/noconflict.js</name>
             </action>
+            
+            <!-- add js for responsive enhance -->
+            <action method="addItem"><type>skin_js</type><name>js/responsive_enhance/responsive-enhance.js</name></action>
+
             <!-- include jquery 
             <block type="core/text" name="google.cdn.jquery">
                 <action method="setText">
@@ -52,8 +57,9 @@
             <action method="addCss"><stylesheet>css/responsive-mobile.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-tablet.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-desktop.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/responsive-tall.css</stylesheet></action>
             
-            <!-- add d3 framework 
+             <!--add d3 framework 
             <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>-->
             
         </reference>
@@ -85,7 +91,13 @@
             </reference>
         </reference>
 
-        
+        <reference name="right">
+            <remove name="paypal.partner.right.logo"/>
+        </reference>
+        <reference name="left">
+            <remove name="tags_popular"/>
+            <remove name="left.newsletter"/>
+        </reference>
 
         <customer_logged_out>
         <!-- Removes 'Log In' link - Default position: 60 -->
@@ -125,16 +137,15 @@
                 <template>page/responsive-3columns.phtml</template>
             </action>
         </reference>
-        <reference name="left">
-            <remove name="left.permanent.callout"/>
+        <reference name="right">
+            <!--<remove name="paypal.partner.right.logo"/>-->
+            <block type="newsletter/subscribe" name="right.newsletter" template="newsletter/subscribe.phtml"/>
+        </reference>
+        <!--<reference name="left">
             <remove name="tags_popular"/>
             <remove name="left.newsletter"/>
-        </reference>
-        <reference name="right">
-            <remove name="right.permanent.callout"/>
-            <remove name="paypal.partner.right.logo"/>
-            <remove name="right.poll"/>
-        </reference>
+        </reference>-->
+        
     </catalog_category_layered>
   
     

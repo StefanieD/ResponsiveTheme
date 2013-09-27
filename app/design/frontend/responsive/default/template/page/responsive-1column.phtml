@@ -11,23 +11,17 @@
     <!-- header -->
     <?php echo $this->getChildHtml('header') ?>
     
-    <!--<div class="page" id="responsive-one-column-layout">-->
-        
-        <!-- breadcumbs -->
-        <?php echo $this->getChildHtml('breadcrumbs') ?>
-           
-        <!-- 1 column on page -->
-        <div class="flexible-main-parent-container">
-            <section class="main-container">  
-                <?php echo $this->getChildHtml('homeextras') ?>
-                
-                <?php echo $this->getChildHtml('global_messages') ?>
-                <!--<div class="content-wrapper">-->
-                    <?php echo $this->getChildHtml('content') ?>
-                <!--</div>-->
-            </section>
-        </div>
-    <!--</div>-->
+    <!-- breadcumbs -->
+    <?php echo $this->getChildHtml('breadcrumbs') ?>
+
+    <!-- 1 column on page -->
+    <div class="flexible-main-parent-container">
+        <section class="main-container">  
+            <?php echo $this->getChildHtml('homeextras') ?>
+            <?php echo $this->getChildHtml('global_messages') ?>
+            <?php echo $this->getChildHtml('content') ?>
+        </section>
+    </div>
     
     <!-- footer -->
     <?php echo $this->getChildHtml('footer') ?>
