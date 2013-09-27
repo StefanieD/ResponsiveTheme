@@ -29,11 +29,16 @@
   /* ============================================================================= */
   /* RESPONSIVE LAYOUT =========================================================== */
   header {
-    background-color: #111111; }
+    background-color: #111111;
+    height: 130px; }
 
   footer {
     background-color: #111111;
     padding: 2%; }
+
+  figure {
+    display: none;
+    margin: 0; }
 
   .flexible-main-parent-container {
     display: flex;
@@ -63,6 +68,12 @@
     -ms-align-items: flex-start;
     -ms-box-align: flex-start; }
 
+  .main-container {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0; }
+
   .left-sidebar {
     width: 90%;
     min-width: 90%;
@@ -81,30 +92,30 @@
 
   /* ================================================== */
   /* ONE COLUMN LAYOUT ================================ */
-  #responsive-one-column-layout .main-container {
-    margin: 0;
-    width: 100%; }
-
+  /*    #responsive-one-column-layout .main-container{
+          margin: 0;
+          width: 100%;
+      }*/
   /* ================================================== */
   /* RIGHT SIDEBAR LAYOUT ============================= */
-  #responsive-right-sidebar-layout .main-container {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0;
-    border: none;
-    box-shadow: none; }
-
+  /*    #responsive-right-sidebar-layout .main-container{
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          margin: 0;
+          border: none;
+          box-shadow: none;
+      }*/
   /* ================================================== */
   /* THREE COLUMNS LAYOUT ============================= */
-  #responsive-three-columns-layout .main-container {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin: 0;
-    border: none;
-    box-shadow: none; }
-
+  /*    #responsive-three-columns-layout .main-container{
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          margin: 0;
+          border: none;
+          box-shadow: none;
+      }*/
   /* ==================================================================================== */
   /* TOP LINKS =========================================================== */
   #cartDiv {
@@ -228,7 +239,10 @@
     -moz-order: 2;
     -webkit-box-ordinal-group: 2;
     -moz-box-ordinal-group: 2;
-    -ms-flex-order: 2; }
+    -ms-flex-order: 2;
+    /*        background-image:url(../images/logo_small.png); 100px mal 33px
+            background-repeat: no-repeat;
+            height: 33px;*/ }
 
   .header-flex-child-cart {
     order: 3;
@@ -257,7 +271,8 @@
 
   /* BREADCRUMBS ================================================================================ */
   .breadcrumbs {
-    margin-top: 5%; }
+    margin-top: 5%;
+    margin-left: 5%; }
 
   /* ======================================================================================= */
   /* PRODUCT PAGE ========================================================================== */
@@ -482,13 +497,16 @@
 
   .products-grid-flex-item {
     text-align: center;
-    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid lightgray; }
 
-  .catalog-category-view .right-sidebar {
-    display: none; }
+  .products-grid-flex-item:nth-of-type(odd) {
+    background-color: #ebe8ce; }
 
+  /*    .catalog-category-view .right-sidebar{
+          display: none;
+      }*/
   .catalog-category-view .left-sidebar {
     width: 100%; }
 
@@ -520,6 +538,12 @@
 
   .sorter label {
     display: none; }
+
+  .toolbar-flex-parent-container > p {
+    text-align: center; }
+
+  .toolbar-select-menus > div {
+    text-align: center; }
 
   /* ======================================================================================= */
   /* CAROUSEL ======================================================= */

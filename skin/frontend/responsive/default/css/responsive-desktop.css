@@ -41,6 +41,19 @@
     padding: 5px;
     border-radius: 5px; }
 
+  .block-compare {
+    padding: 5px;
+    box-shadow: 0px 2px 10px grey;
+    /*        border: 0.2px solid grey;
+            box-shadow: 5px 5px 5px grey;*/ }
+
+  .block-cart {
+    margin-top: 20px;
+    padding: 5px;
+    box-shadow: 0px 2px 10px grey;
+    /*        border: 0.2px solid grey;
+            box-shadow: 5px 5px 5px grey;*/ }
+
   /* ========================================================================================= */
   /* HEADER ================================================================================ */
   .top-links li {
@@ -90,6 +103,11 @@
 
   .header-flex-child-nav nav div, .header-flex-child-nav nav li {
     padding-right: 20px; }
+
+  .header-flex-child-logo {
+    /*        background-image:url(../images/logo_tall.png); 250px mal 85px
+            background-repeat: no-repeat;
+            height: 85px;*/ }
 
   /* ======================================================================================= */
   /* FOOTER ================================================================================ */
@@ -346,7 +364,9 @@
   /* CATEGORY PRODUCT GRID ================================================================ */
   .products-grid-flex-parent-container {
     overflow: auto;
-    box-shadow: 5px 5px 5px grey;
+    /*        border-top: 1px solid grey;
+            border-left: 1px solid grey;*/
+    box-shadow: 0px 2px 10px grey;
     background-color: #ebe8ce;
     padding-top: 10px;
     /*        @include flex-mixin;
@@ -368,10 +388,8 @@
     float: left;
     margin-left: 2%;
     margin-bottom: 30px;
-    height: 300px;
-    text-align: center; }
-
-  .products-grid-flex-item {
+    height: 350px;
+    text-align: center;
     width: 23%; }
 
   .products-grid-flex-item:nth-of-type(4n+1) {
@@ -395,7 +413,12 @@
     display: none; }
 
   #filter-menu-selector {
-    display: block; }
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-shadow: 0px 2px 10px grey;
+    /*        border: 0.2px solid grey;
+            box-shadow: 5px 5px 5px grey;*/ }
 
   /* ============================================================================== */
   /* CAROUSEL ===================================================================== */
