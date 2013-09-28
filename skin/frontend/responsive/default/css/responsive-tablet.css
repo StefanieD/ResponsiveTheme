@@ -26,8 +26,9 @@
       -moz-align-items: flex-end;
   } */
   /* LAYOUT ================================================================================ */
-  .page {
-    /*padding-bottom: 250px; to prevent footer from overflow content*/ }
+  .wrapper {
+    padding-bottom: 250px;
+    /*to prevent footer from overflow content*/ }
 
   .main-container {
     margin-left: 2%;
@@ -38,7 +39,7 @@
     /*height: 150px;*/ }
 
   footer {
-    /*height: 250px;*/
+    height: 250px;
     background-color: #111111; }
 
   /* ========================================================================================= */

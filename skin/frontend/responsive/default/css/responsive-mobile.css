@@ -32,6 +32,9 @@
     background-color: #111111;
     height: 130px; }
 
+  .wrapper {
+    padding-bottom: 250px; }
+
   footer {
     background-color: #111111;
     padding: 2%; }
