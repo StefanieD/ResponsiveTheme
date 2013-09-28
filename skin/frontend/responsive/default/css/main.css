@@ -40,17 +40,14 @@ html, body {
 body {
   background-color: #FAF8E6 !important;
   font: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  /*font-size: 100%;*/
-  width: 100%;
-  padding: 0; }
+  font-size: 100%;
+  /*16px*/
+  width: 100%; }
 
 a {
   font-family: 'kaffeesatzregular';
   font-size: 16px;
   font-size: 1rem;
-  /*font-size: 1rem;*/
   letter-spacing: 0.07em;
   color: #A18E6D; }
 
@@ -68,33 +65,25 @@ h1 {
   font-family: 'pacificoregular';
   text-align: center;
   color: #9a2f2f;
-  /*font-size: 2rem;*/
-  font-size: 32px;
-  font-size: 2rem;
   letter-spacing: 0.1em; }
 
 h2 {
   font-family: 'kaffeesatzregular';
-  font-size: 29px;
-  font-size: 1.8125rem;
-  /*font-size: 1.8rem;*/
   letter-spacing: 0.07em; }
 
 h3 {
   font-family: 'pacificoregular';
   color: #9a2f2f;
-  font-size: 21px;
-  font-size: 1.3125rem;
-  /*font-size: 1.3rem;*/
   letter-spacing: 0.1em; }
 
 h5, h5 a {
   color: #9a2f2f;
   font-family: 'kaffeesatzregular';
-  font-size: 18px;
-  font-size: 1.125rem;
-  /*font-size: 1.15rem;*/
   letter-spacing: 0.1em; }
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 ol {
   list-style-type: none; }
@@ -104,8 +93,7 @@ li {
 
 .main-container {
   font-size: 12px;
-  font-size: 0.75rem;
-  /*font-size: 0.9rem;*/ }
+  font-size: 0.75rem; }
 
 .btn, .button {
   padding: 4px 12px;
@@ -146,36 +134,27 @@ input[type="text"] {
 select {
   width: auto; }
 
+.label {
+  display: inline;
+  color: #111111;
+  background-color: transparent;
+  padding: 0;
+  text-shadow: none; }
+
 /*========================================================================================= */
 /* RESPONSIVE LAYOUTS ===================================================================== */
-.wrapper {
-  /*    position: relative;
-      width: 100%;
-      min-height:100%;
-      height:auto !important;
-      height:100%;*/
-  /*    @include flex-mixin;
-      @include flex-nowrap-mixin;
-      @include flex-column-mixin;
-      @include flex-align-content-mixin(space-between);*/ }
-
 .wrapper {
   position: relative;
   width: 100%;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  background-color: #FAF8E6;
-  /*    position: relative;
-      min-height: 100%;  
-      height:auto !important;  
-      height:100%;  */ }
+  background-color: #FAF8E6; }
 
 footer {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  /*width: 100%;*/ }
+  width: 100%; }
 
 figure {
   margin-top: 20px; }

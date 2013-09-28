@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width: 480px) and (max-width: 800px) {
   /*@mixin flex-space-between-mixin{
       justify-content: space-between;
@@ -25,14 +26,40 @@
       -webkit-align-items: flex-end;
       -moz-align-items: flex-end;
   } */
-  /* LAYOUT ================================================================================ */
+  /* MAIN ================================================================ */
+  body {
+    font-size: 100%;
+    /*setzt Standardgröße auf 14px*/ }
+
+  h1 {
+    font-size: 32px;
+    font-size: 2rem; }
+
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 21px;
+    font-size: 1.3125rem; }
+
+  h5, h5 a {
+    font-size: 18px;
+    font-size: 1.125rem; }
+
+  h6 {
+    font-size: 16px;
+    font-size: 1rem; }
+
+  label {
+    font-size: 12px;
+    font-size: 0.75rem; }
+
+  /* ====================================================================== */
+  /* LAYOUT =============================================================== */
   .wrapper {
     padding-bottom: 250px;
     /*to prevent footer from overflow content*/ }
-
-  .main-container {
-    margin-left: 2%;
-    margin-right: 2%; }
 
   header {
     background-color: #111111;
@@ -41,6 +68,60 @@
   footer {
     height: 250px;
     background-color: #111111; }
+
+  figure {
+    display: none;
+    margin: 0; }
+
+  .flexible-main-parent-container {
+    display: flex;
+    /*Firefox*/
+    display: -webkit-flex;
+    /*Chrome*/
+    /*   display: -moz-box; 
+      display: -ms-flexbox;
+      display: -ms-flex;
+      display: -webkit-box;*/
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    /*-moz-box-direction: column;*/
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    -moz-box-wrap: nowrap;
+    justify-content: flex-start;
+    /*Firefox*/
+    -webkit-justify-content: flex-start;
+    /*Chrome*/
+    /*-moz-justify-content: $value;
+    -ms-justify-content: $value;
+    -ms-box-pack: $value;*/
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -ms-box-align: flex-start; }
+
+  .main-container {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0; }
+
+  .left-sidebar {
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0 5% 0 5%;
+    border: none;
+    box-shadow: none; }
+
+  .right-sidebar {
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0 5% 0 5%;
+    border: none;
+    box-shadow: none; }
 
   /* ========================================================================================= */
   /* HEADER =========================================================================== */
@@ -198,6 +279,22 @@
     -webkit-transition: all 0.5s ease 0s; }
 
   /* =================================================================================*/
+  /* CATEGORY FILTER MENU =================================================== */
+  .filter-menu-trigger-selector {
+    display: block;
+    width: 70%; }
+
+  #filter-menu-selector {
+    display: none; }
+
+  #jPanelMenu-menu {
+    width: 100% !important;
+    overflow-y: auto !important; }
+
+  #jPanelMenu-menu li {
+    list-style: none; }
+
+  /* ====================================================================== */
   /* CATEGORY DIV ONE HOME PAGE ============================================================ */
   .home-categories-flex-item {
     float: left;
@@ -284,6 +381,29 @@
   #add-to-cart-button {
     display: none; }
 
+  /* PRODUCT TOOLBAR ================================================================ */
+  .toolbar-flex-parent-container .limiter select {
+    width: 80px; }
+
+  .sort-by label, .limiter label {
+    float: left;
+    padding-top: 5px;
+    padding-right: 2px; }
+
+  .pages-amount {
+    text-align: center; }
+
+  .toolbar-select-menus .limiter {
+    float: left; }
+
+  .toolbar-select-menus .sorter {
+    float: left; }
+
+  .toolbar-select-menus .limiter, .toolbar-select-menus .sorter {
+    text-align: center;
+    width: 50%; }
+
+  /* ============================================================================== */
   /* CAROUSEL HOME SLIDER ================================================ */
   .carousel-inner {
     height: 200px;

@@ -59,6 +59,7 @@
             <action method="addCss"><stylesheet>css/responsive-desktop.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-tall.css</stylesheet></action>
             
+            <!-- add conditional comments for mediaqueries -->
              <!--add d3 framework 
             <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>-->
             

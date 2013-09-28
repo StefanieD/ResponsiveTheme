@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (max-width: 480px) {
   /*@mixin flex-space-between-mixin{
       justify-content: space-between;
@@ -26,6 +27,30 @@
       -moz-align-items: flex-end;
   } */
   /* MAIN ======================================================================== */
+  body {
+    font-size: 87.5%;
+    /*setzt Standardgröße auf 14px*/ }
+
+  h1 {
+    font-size: 28px;
+    font-size: 1.75rem; }
+
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 21px;
+    font-size: 1.3125rem; }
+
+  h5, h5 a {
+    font-size: 18px;
+    font-size: 1.125rem; }
+
+  h6 {
+    font-size: 16px;
+    font-size: 1rem; }
+
   /* ============================================================================= */
   /* RESPONSIVE LAYOUT =========================================================== */
   header {
@@ -94,32 +119,6 @@
     box-shadow: none; }
 
   /* ================================================== */
-  /* ONE COLUMN LAYOUT ================================ */
-  /*    #responsive-one-column-layout .main-container{
-          margin: 0;
-          width: 100%;
-      }*/
-  /* ================================================== */
-  /* RIGHT SIDEBAR LAYOUT ============================= */
-  /*    #responsive-right-sidebar-layout .main-container{
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-          margin: 0;
-          border: none;
-          box-shadow: none;
-      }*/
-  /* ================================================== */
-  /* THREE COLUMNS LAYOUT ============================= */
-  /*    #responsive-three-columns-layout .main-container{
-          width: 100%;
-          min-width: 100%;
-          max-width: 100%;
-          margin: 0;
-          border: none;
-          box-shadow: none;
-      }*/
-  /* ==================================================================================== */
   /* TOP LINKS =========================================================== */
   #cartDiv {
     width: 40px;
@@ -507,9 +506,6 @@
   .products-grid-flex-item:nth-of-type(odd) {
     background-color: #ebe8ce; }
 
-  /*    .catalog-category-view .right-sidebar{
-          display: none;
-      }*/
   .catalog-category-view .left-sidebar {
     width: 100%; }
 
