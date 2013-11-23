@@ -46,10 +46,15 @@
 
             
             
-            <!-- add items for bootstrap framework -->
+            <!-- add items for bootstrap framework 
             <action method="addCss"><stylesheet>css/bootstrap/bootstrap.min.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/bootstrap/bootstrap-responsive.min.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/bootstrap/bootstrap.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/bootstrap/carousel.js</name></action>
+-->
+            <action method="addCss"><stylesheet>css/bootstrap/bootstrap.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/bootstrap/bootstrap-responsive.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/bootstrap/bootstrap.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/bootstrap/carousel.js</name></action>
 
             <!-- add responsive styles -->
@@ -59,10 +64,11 @@
             <action method="addCss"><stylesheet>css/responsive-desktop.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/responsive-tall.css</stylesheet></action>
             
-            <!-- add conditional comments for mediaqueries -->
-             <!--add d3 framework 
-            <action method="addItem"><type>skin_js</type><name>js/d3/d3.v3.min.js</name></action>-->
-            
+            <!-- add js workaround for mediaqueries in ie-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/respond/respond.min.js</name>
+            </action>
         </reference>
         
         
@@ -127,7 +133,7 @@
             <!-- add content block for category div boxes -->
             <block type="core/template" name="categorydivs" as="category-divs" translate="label" template="page/html/categorydivs.phtml">
                 <label>Category Divs</label>
-            </block>-->
+            </block>
         </reference>
     </cms_index_index>
     
@@ -327,4 +333,12 @@
             <remove name="right.poll"/>
         </reference>
     </catalogsearch_result_index>
+    
+    <catalog_seo_sitemap>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/responsive-1column.phtml</template>
+            </action>
+        </reference>
+    </catalog_seo_sitemap>
 </layout>

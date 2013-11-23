@@ -1,5 +1,4 @@
-@charset "UTF-8";
-@media screen and (min-width: 480px) and (max-width: 800px) {
+@media screen and (min-width: 480px) and (max-width: 1024px) {
   /*@mixin flex-space-between-mixin{
       justify-content: space-between;
       -webkit-justify-content: space-between;
@@ -29,7 +28,7 @@
   /* MAIN ================================================================ */
   body {
     font-size: 100%;
-    /*setzt Standardgröße auf 14px*/ }
+    /*16px*/ }
 
   h1 {
     font-size: 32px;
@@ -69,7 +68,7 @@
     height: 250px;
     background-color: #111111; }
 
-  figure {
+  .right-sidebar > figure, .left-sidebar > figure {
     display: none;
     margin: 0; }
 
@@ -132,13 +131,7 @@
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
     -ms-flex-order: 1;
-    flex-grow: 0;
-    -webkit-flex-grow: 0;
-    -moz-flex-grow: 0;
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    -webkit-flex: 0;
-    -ms-flex: 0; }
+    /*@include flex-grow-mixin(0);*/ }
 
   .header-flex-child-logo {
     width: 30%;
@@ -211,6 +204,9 @@
 
   /* =================================================================================*/
   /* FOOTER ================================================================================ */
+  footer a {
+    color: #d49e41; }
+
   .footer-flex-parent-container, .footer-cms-flex-parent-container {
     clear: both;
     /*        margin-top: 20px;
@@ -360,9 +356,15 @@
             background-color: #FCF7F7;*/
     float: left;
     margin-left: 3.2%;
-    margin-bottom: 30px;
-    height: 300px;
+    margin-bottom: 50px;
+    /*height: 350px;*/
     text-align: center; }
+
+  .product-grid-information-wrapper .actions {
+    margin-top: 10px; }
+
+  .name-and-price-wrapper .product-name {
+    height: 40px; }
 
   .products-grid-flex-item {
     width: 31.2%; }
@@ -406,7 +408,6 @@
   /* ============================================================================== */
   /* CAROUSEL HOME SLIDER ================================================ */
   .carousel-inner {
-    height: 200px;
-    /*height: auto;*/ }
+    height: 200px; }
 
   /* ===================================================================== */ }

@@ -48,7 +48,7 @@ a {
   font-family: 'kaffeesatzregular';
   font-size: 16px;
   font-size: 1rem;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.07rem;
   color: #A18E6D; }
 
 img {
@@ -65,21 +65,21 @@ h1 {
   font-family: 'pacificoregular';
   text-align: center;
   color: #9a2f2f;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1rem; }
 
 h2 {
   font-family: 'kaffeesatzregular';
-  letter-spacing: 0.07em; }
+  letter-spacing: 0.07rem; }
 
 h3 {
   font-family: 'pacificoregular';
   color: #9a2f2f;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1rem; }
 
 h5, h5 a {
   color: #9a2f2f;
   font-family: 'kaffeesatzregular';
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.13rem; }
 
 h6 {
   font-size: 18px;
@@ -90,10 +90,6 @@ ol {
 
 li {
   list-style: none; }
-
-.main-container {
-  font-size: 12px;
-  font-size: 0.75rem; }
 
 .btn, .button {
   padding: 4px 12px;
@@ -124,7 +120,8 @@ form li {
   color: #eb340a; }
 
 p.required {
-  font-size: 0.7rem;
+  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: right;
   color: #EB340A; }
 
@@ -135,11 +132,18 @@ select {
   width: auto; }
 
 .label {
-  display: inline;
   color: #111111;
   background-color: transparent;
   padding: 0;
   text-shadow: none; }
+
+.button-light {
+  border-radius: 3px;
+  background-image: linear-gradient(top, white, #d49e41 99%);
+  background-image: -webkit-linear-gradient(top, white, #d49e41 99%);
+  background-image: -moz-linear-gradient(top, white, #d49e41 99%);
+  background-image: -ms-linear-gradient(top, white, #d49e41 99%);
+  background-image: -o-linear-gradient(top, white, #d49e41 99%); }
 
 /*========================================================================================= */
 /* RESPONSIVE LAYOUTS ===================================================================== */
@@ -197,18 +201,16 @@ figure {
   max-width: 17%;
   min-width: 17%;
   margin-left: 1.5%;
-  /*    border: 0.2px solid grey;
-      box-shadow: 5px 5px 5px grey;*/
-  font-size: 0.8rem; }
+  font-size: 13px;
+  font-size: 0.8125rem; }
 
 .right-sidebar {
   width: 18%;
   max-width: 18%;
   min-width: 18%;
   margin-right: 1.5%;
-  /*    border: 0.2px solid grey;
-      box-shadow: 5px 5px 5px grey;*/
-  font-size: 0.8rem; }
+  font-size: 13px;
+  font-size: 0.8125rem; }
 
 .std {
   clear: both; }
@@ -219,20 +221,12 @@ figure {
 .right-sidebar ol, .left-sidebar ol {
   margin: 0; }
 
-.right-sidebar .actions button {
-  background-image: linear-gradient(to bottom, white, #e0bc7e);
-  background-image: -webkit-linear-gradient(to bottom, white, #e0bc7e);
-  background-image: -moz-linear-gradient(to bottom, white, #e0bc7e);
-  background-image: -ms-linear-gradient(to bottom, white, #e0bc7e);
-  background-image: -o-linear-gradient(to bottom, white, #e0bc7e); }
-
-.right-sidebar .actions .button:hover {
-  background-image: linear-gradient(to bottom, white, #d49e41);
-  background-image: -webkit-linear-gradient(to bottom, white, #d49e41);
-  background-image: -moz-linear-gradient(to bottom, white, #d49e41);
-  background-image: -ms-linear-gradient(to bottom, white, #d49e41);
-  background-image: -o-linear-gradient(to bottom, white, #d49e41); }
-
+/*.right-sidebar .actions button{
+    @include button-style;
+}
+.right-sidebar .actions .button:hover{
+    @include button-style-hover;
+}*/
 /* ONE COLUMN LAYOUT ===================================================================== */
 #responsive-one-column-layout .main-container {
   margin: 0 5% 0 5%; }
@@ -243,9 +237,7 @@ figure {
 /* ========================================================================================== */
 /* RIGHT SIDEBAR LAYOUT ===================================================================== */
 #responsive-right-sidebar-layout .main-container {
-  /*width: 56%;*/
   min-width: 73%;
-  /*max-width: 56%;*/
   margin: 0 2% 0 5%; }
 
 #responsive-right-sidebar-layout .right-sidebar {
@@ -257,9 +249,7 @@ figure {
 /* ========================================================================================== */
 /* THREE COLUMNS LAYOUT ===================================================================== */
 #responsive-three-columns-layout .main-container {
-  /*width: 56%;*/
   min-width: 56%;
-  /*max-width: 56%;*/
   margin: 0 2% 0 2%; }
 
 #responsive-three-columns-layout .breadcrumbs {
@@ -371,13 +361,14 @@ header #logo {
   margin-top: 20px;
   text-align: center;
   font-family: 'kaffeesatzlight';
+  font-size: 16px;
   font-size: 1rem; }
 
 footer a {
   font-family: 'kaffeesatzlight';
   font-size: 16px;
   font-size: 1rem;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.07rem;
   color: #A18E6D; }
 
 /* ======================================================================================= */
@@ -400,6 +391,7 @@ footer a {
 .carousel-control {
   height: 80px;
   margin-top: 0;
+  font-size: 32px;
   font-size: 2rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   background-color: transparent;
@@ -439,8 +431,7 @@ footer a {
   margin-bottom: 20px; }
 
 .carousel-inner {
-  height: 300px;
-  /*height: auto;*/ }
+  height: 300px; }
 
 .rg-image img {
   width: 100%; }
@@ -463,7 +454,8 @@ footer a {
 /* ======================================================================================= */
 /* CATEGORY PRODUCT TOOLBAR ================================================================ */
 .toolbar-flex-parent-container {
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   display: flex;
   /*Firefox*/
   display: -webkit-flex;
@@ -552,8 +544,9 @@ footer a {
 .price-box {
   margin-bottom: 5px; }
 
-.tax-details, .tax-details a {
-  font-size: 0.8rem; }
+.main-container > .tax-details, .main-container > .tax-details a {
+  font-size: 14px;
+  font-size: 0.875rem; }
 
 .product-type-data-wrapper {
   text-align: center;
@@ -570,6 +563,11 @@ footer a {
 
 .product-tall-image {
   width: 100%; }
+
+/* ======================================================================================= */
+/* PRICES ======================================================================== */
+.minimal-price {
+  display: inline; }
 
 /* ======================================================================================= */
 /* PRODUCT RATINGS ======================================================================== */
@@ -642,6 +640,7 @@ footer a {
   list-style: none; }
 
 .flexible-checkout-parent-container h2 {
+  font-size: 16px;
   font-size: 1rem; }
 
 .totals {
@@ -893,6 +892,7 @@ footer a {
   margin-top: 40px; }
 
 .crosssell h2 {
+  font-size: 16px;
   font-size: 1rem; }
 
 .crosssell .product-name a {
@@ -920,9 +920,10 @@ footer a {
   float: right; }
 
 .checkout-types .button span {
-  font-size: 1.3rem;
+  font-size: 21px;
+  font-size: 1.3125rem;
   font-family: 'kaffeesatzregular';
-  letter-spacing: 0.07em; }
+  letter-spacing: 0.07rem; }
 
 .checkout-types .button {
   padding: 10px;
@@ -1170,6 +1171,14 @@ footer a {
   @inlude flex-justify-content-mixin(space-between); }
 
 /* ======================================================================================= */
+/* POLLS ================================================================ */
+/* ======================================================================================= */
+.block-poll {
+  width: 80%; }
+
+.block-poll button {
+  float: right; }
+
 /* Clears ================================================================================ */
 .clearer:after,
 .header-container:after,
